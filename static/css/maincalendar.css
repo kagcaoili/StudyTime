@@ -1,0 +1,134 @@
+body {
+     font-family: Verdana, sans-serif;
+     /*border: 1px dotted gray;
+     padding: 20px;
+     background-color: azure;
+     text-align: center;*/
+}
+
+ul {
+     list-style-type: none;
+}
+
+.month {
+     padding: 70px 25px;
+     width: 100%;
+     background: #000000;
+}
+
+.month ul {
+     margin: 0;
+     padding: 0;
+}
+
+.month ul li {
+     color: white;
+     font-size: 20px;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+}
+
+.month .calnav-title {
+     display: inline-block;
+}
+
+.month .calnav-prev {
+     float: left;
+     padding-top: 10px;
+}
+
+.month .calnav-next {
+     float: right;
+     padding-top: 10px;
+}
+
+.weekdays {
+     margin: 0;
+     padding: 10px 0;
+     background-color: #ddd;
+}
+
+.weekdays li {
+     display: inline-block;
+     width: 13.6%;
+     color: #666;
+     text-align: center;
+}
+
+.days-odd-month {
+     padding: 10px 0;
+     background: #eee;
+     margin: 0;
+}
+
+.days-even-month {
+     display: none;
+}
+
+.days-odd-month li {
+     list-style-type: : none;
+     display: inline-block;
+     width: 13.6%;
+     text-align: center;
+     margin-bottom: 5px;
+     font-size: 12px;
+     color: #777;
+}
+
+.days-odd-month li .active {
+     padding: 5px;
+     background: #1abc9c;
+     color: white !important;
+}
+
+/*
+.jumbotron {
+	position: relative;
+	background: none;
+}
+
+.jumbotron:after {
+     content:"";
+     background: url("http://lorempixel.com/1140/283");
+     opacity: 0.2;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;	
+}
+
+img .thumbnail {
+     width: 50px;
+     height: 100px;
+     border: 1px solid #434343;
+}
+
+.contact-info {
+     font-size: 10pt;
+     color:#cccccc;
+}
+
+.project {
+     background-color: powderblue;
+     margin-left: 20px;
+     padding:10px;
+     width: 521px;
+     margin-bottom: 10px;
+}
+
+
+
+p {
+     font-variant: small-caps;
+}
+
+.project p {
+     font-variant: small-caps;
+}
+
+#project1 {
+     font-variant: small-caps;
+}
+*/
