@@ -5,40 +5,32 @@ $(document).ready(function() {
 	initializePage();
 })
 
-function depressedButton(e) {
+function depressedButtonPrev(e) {
 	console.log("depress");
 	console.log($(this));
 	//$('.calnav-prev').addClass('depressed');
 	$(this).addClass('depressed');
 	console.log("the name is: " + $('.calnav-month').text());
 	$('.calnav-month').text(getNewName(-1));
-
-	/*
-	console.log("the old name is: " + $(this).text());
-	$(this).text(anagrammedName($(this).text()));
-	//console.log("the new name is: " + $(this).text());
-	*/
 }
 
-function releasedButton(e) {
-	console.log("release");
+function depressedButtonNext(e) {
+	console.log("depress");
 	console.log($(this));
-	$(this).removeClass("depressed");
-	console.log($(this));
-	/*
+	//$('.calnav-prev').addClass('depressed');
+	$(this).addClass('depressed');
 	console.log("the name is: " + $('.calnav-month').text());
 	$('.calnav-month').text(getNewName(1));
-	*/
-
 }
+
 
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
-	$("#button").mousedown(depressedButton);
-	$("#button").mouseup(releasedButton)
+	$(".calnav-prev").click(depressedButtonPrev);
+	$(".calnav-next").click(depressedButtonNext);
 }
 
 function getIndex() {
@@ -94,8 +86,12 @@ function getIndex() {
 }
 
 function getName(index) {
+	var year = $('.calnav-year').text();
+	console.log("the year is: " + year);
 	if (index === -1) {
 		console.log("It is December");
+		year = year - 1;
+		$('.calnav-year').text(year);
 		return "December";
 	}
 	else if (index === 0) {
@@ -148,6 +144,8 @@ function getName(index) {
 	}
 	else if (index === 12) {
 		console.log("It is January");
+		year = +year+1; //act like an integer
+		$('.calnav-year').text(year);
 		return "January";
 	}
 }
