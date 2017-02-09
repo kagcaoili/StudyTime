@@ -1,49 +1,61 @@
-<!--css file to handle the sidebar navigation-->
-<!DOCTYPE html>
-<html>
-	<title>SideNav.css</title>
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="/css/w3.css">
-	<body>
 
-	<nav class="w3-sidenav w3-collapse w3-white w3-card-2 w3-animate-left" style="width:200px;" id="sideNav">
-  		<a href="javascript:void(0)" onclick="w3_close()" 
-  		class="w3-closenav w3-large w3-hide-large">Close &times;</a>
-  		<a class="w3-border-bottom" href="#">Main Calendar</a>
-  		<a href="#">Assignment List</a>
-  		<a class="w3-border-bottom" href="#">Create Assignment</a>
-  		<a href="#">Settings</a>
-  		<a href="#">Help</a>
- 		<a href="#">Sign Out</a>
-	</nav>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
-	<div class="w3-main" style="margin-left:200px">
-		<header class="w3-container w3-teal">
- 		 <span class="w3-opennav w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</span>
- 		 <h2>StudyTime</h2>
-		</header>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>Responsive Sidebar Navigation | CodyHouse</title>
+</head>
+<body>
+	<header class="cd-main-header">
+		<a href="#0" class="cd-logo"><img src="images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>
 
-		<div class="w3-container">
-  			<p>In this example, the side navigation will always be displayed on desktop computers and laptops (screens wider than 992px), and hidden on tablets and mobile phones (screens that are less than 992px wide).</p>
-  			<p>On tablets and mobile phones the side navigation is replaced with a menu icon that opens the navigation pane when clicked on: it will then overlay/sit on top of the page content.</p>
-  			<p><b>Resize the browser window to understand how it works.</b></p>
-		</div>
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
-<footer class="w3-container w3-teal">
-  <h5>Footer</h5>
-  <p>Footer information goes here</p>
-</footer>
+	</header> <!-- .cd-main-header -->
 
-	</div>
+	<main class="cd-main-content">
+		<nav class="cd-side-nav">
+			<ul>
+			<!--	<li class="cd-label"></li> -->
+				<li class="has-children overview"> 
+					<a href="#0">Account</a>
+				</li>
 
-	<script>
-	function w3_open() {
-	    document.getElementById("sideNav").style.display = "block";
-	}
-	function w3_close() {
- 	   document.getElementById("sideNav").style.display = "none";
-	}
-	</script>
-     
-	</body>
+				<li class="has-children overview">
+					<a href="#0">Main Calendar</a>
+				</li>
+
+				<li class="has-children comments">
+					<a href="#0">Assignment List</a>
+				</li>
+
+				<li class="has-children bookmarks">
+					<a href="#0">Create an Assignment</a>
+				</li>
+
+				<li class="has-children images">
+					<a href="#0">Help</a>			
+				</li>
+
+				<li class="has-children users">
+					<a href="#0">Sign Out</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="content-wrapper">
+			<h1>Main page stuff goes here</h1>
+		</div> <!-- .content-wrapper -->
+	</main> <!-- .cd-main-content -->
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery.menu-aim.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
 </html>

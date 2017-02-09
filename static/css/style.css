@@ -207,24 +207,6 @@ Header
 
 /* -------------------------------- 
 
-Top Navigation
-
--------------------------------- */
-/*
-.cd-nav { */
-  /* top nav - not visible on mobile devices */
- /*display: none;
-}  */
-/*
-@media only screen and (min-width: 768px) {
-  .cd-nav {
-    display: block;
-    float: right;
-    height: 100%;
-  }
-}
-/* -------------------------------- 
-
 Sidebar
 
 -------------------------------- */
