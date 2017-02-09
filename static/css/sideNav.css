@@ -1,1 +1,34 @@
- 
+/* css file to handle the sidebar navigation  */
+<!DOCTYPE html> 
+<html>
+	<title>sideNav.css</title>
+	<meta name="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/css/sideNav.css">
+
+	<body>
+		<nav class="collapsable sideNav" style="width:200px;" id="sideNav">
+			<a href="javascript:void(0)" oneclick="sideNav_close()" 
+			class="closeSideNav">Close &times;</a>
+			<a href="#">Main Calendar</a>
+			<a href="#">Assignment List</a>
+			<a href="#">Create Assignment</a>
+			<a href="#">Settings</a>
+			<a href="#">Help</a>
+			<a href="#">Sign Out</a>
+		</nav>
+
+		<div class="sideNav-main" style="margin-left:200px">
+		<header class="sizeNav-container">
+			<span class="sideNav-open/hide">&#9776;</span>
+		</header>
+
+		<script>
+		funciton sideNav_open() {
+			document.getElementById("sideNav").style.display = "block";
+		}
+		function sideNav_close() {
+			document.getElementById("sideNav").style.display = "none";
+		}
+		</script>
+	</body>
+</html>
