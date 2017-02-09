@@ -8,10 +8,9 @@ body {
 }
 
 h1 {
-    color: black;
+    color: 252D2D;
     background-color:powderblue;
     padding: 70px;
-    border-style:solid;
     border-width: 20px 20px 20px 20px;
 }
 
@@ -22,13 +21,21 @@ ul {
      color: 252D2D;
 }
 
+.assignments {
+    padding-top: 30px;
+     padding-bottom: 30px;
+     width: 100%;
+     background: grey;
+     color:white;
+}
+
 .hide {
     color: black;
     font-size: 20px;
     background-color:powderblue;
     padding-top: 30px;
     padding-bottom: 30px;
-    border-style:solid;
+    border-style:;
     border-width: 10px 10px 10px 10px;
 }
 
