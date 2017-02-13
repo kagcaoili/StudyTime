@@ -12,6 +12,7 @@ h1 {
     background-color:powderblue;
     padding: 50px;
     border-width: 20px 20px 20px 20px;
+    border-color:gray;
     font-weight: bold;
 }
 
@@ -24,20 +25,26 @@ ul {
 }
 
 .assignments {
-    padding-top: 30px;
+
+     padding-top: 30px;
      padding-bottom: 30px;
+     border-style:solid;
+     border-width: 10px 10px 10px 10px;
+     border-color: powderblue;
      width: 100%;
-     background: grey;
-     color:white;
+     background: gray;
 }
 
-.assignments input{
-    -webkit-transform: scale(2);
+#item1{
+    -webkit-transform:scale(2);
     padding: 10px;
 }
 
+.assignments ul li{
+    color: paleturquoise;
+}
+
 .hide {
-    color: black;
     font-size: 20px;
     background-color:powderblue;
     padding-top: 30px;
@@ -52,13 +59,13 @@ ul {
     -moz-appearance: button;
     appearance: button;
 
-    text-decoration: none;
-    background-color: powderblue;
+    background-color: lightgray;
     color:black;
 }
 
 #hide {
     color: black;
+    background-color: lightgrey;
 }
 
 
