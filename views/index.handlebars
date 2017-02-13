@@ -27,7 +27,7 @@
 					</li>
 
 					<li class="btn btn-default">
-						<a href="maincalendar">Main Calendar</a>
+						<a href="/">Main Calendar</a>
 					</li>
 
 					<li class="btn btn-default">
@@ -147,10 +147,9 @@
 
 				<div class="EventList">
 					<ul class="list">
-						<a href="listview"><li id="Assignment1">CSE 170/COGS 120 A5 Wireframe</li></a>
-						<a href="listview"><li id="Assignment2">CSE 165 Interaction Technique</li></a>
-						<a href="listview"><li id="Assignment1">CSE 170/COGS 120 A5 Skeleton</li></a>
-						<a href="listview"><li id="Assignment3">CSE 105 Homework 10</li></a>
+						{{#each assignments}}
+							<a href="listview"><li id="Assignment1">{{name}}</li></a>
+						{{/each}}
 					</ul>
 					
 				</div>

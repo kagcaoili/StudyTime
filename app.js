@@ -15,7 +15,6 @@ var createAssignment = require('./routes/createAssignment');
 var help = require('./routes/help');
 var listview = require('./routes/listview');
 var signOut = require('./routes/signOut');
-var maincalendar = require('./routes/maincalendar');
 // Example route
 // var user = require('./routes/user');
 
@@ -49,7 +48,6 @@ app.get('/createAssignment', createAssignment.view);
 app.get('/help', help.view);
 app.get('/listview', listview.view);
 app.get('/signout', signOut.view);
-app.get('/maincalendar', maincalendar.view);
 // Example route
 // app.get('/users', user.list);
 
