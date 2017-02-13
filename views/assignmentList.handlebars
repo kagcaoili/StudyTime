@@ -63,14 +63,10 @@
 
 	        <div class="assignments">
 				<ul> <!--unordered lists -->
-					<li> Assignment 1:   Due 02/09</li>
-					<br>
-					<li> Assignment 2:   Due 02/11 </li>
-					<br>
-					<li> Assignment 3:   Due 02/15 </li>
-					<br>
-					<li> Assignment 4:   Due 03/01 </li>
-					<br>
+					{{#each assignments}}
+						<li> {{name}}   Due: {{due_date}}</li>
+						<br>
+					{{/each}}
 					<li><a href="createAssignment" class="button">+ Add Assignment</li>
 					<br> 
 				</ul>
