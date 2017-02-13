@@ -1,15 +1,15 @@
 {
-  "name": "IntroHCI",
+  "name": "StudyTime",
   "version": "0.0.1",
-  "author": "Intro HCI Staff",
+  "author": "Thuy Nguyen, Allison Reiss, Kristin Agcaoili",
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab4"
+    "url": "https://github.com/kagcaoili/StudyTime"
   },
   "license": "MIT",
 
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "node app.js"
   },

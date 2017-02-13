@@ -1,0 +1,58 @@
+{
+	"assignments": [
+		{
+			"name": "A4: Show Your Flow",
+			"due_date": "02/02/2017",
+			"estimated_complete_time": "6 hours",
+			"sections": {
+				"1": {
+					"section_name": "Step 1",
+					"section_time": "1 hour"
+				},
+				"2": {
+					"section_name": "Step 2",
+					"section_time": ""
+				},
+				"3": {
+					"section_name": "Step 3",
+					"section_time": ""
+				},
+				"4": {
+					"section_name": "Step 4",
+					"section_time": ""
+				}
+			}
+		},
+		{
+			"name": "A6: Meat on the Bones",
+			"due_date": "02/16/2017",
+			"estimated_complete_time": "12 hours",
+			"section": {
+				"1": {
+					"section_name": "Step 4",
+					"section_time": "1 hour"
+				},
+				"2": {
+					"section_name": "Step 2",
+					"section_time": "2 hours"
+				},
+				"3": {
+					"section_name": "Step 3",
+					"section_time": "4 hour"
+				},
+				"4": {
+					"section_name": "Step 4",
+					"section_time": "1 hour"
+				},
+				"5": {
+					"section_name": "Step 5",
+					"section_time": "1 hour"
+				},
+				"6": {
+					"section_name": "Step 6",
+					"section_time": "1 hour"
+				}
+			}
+		}
+	]
+}
