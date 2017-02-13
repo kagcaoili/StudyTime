@@ -3,13 +3,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<!--<link rel="stylesheet" href="css/reset.css">  CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
 	<title>StudyTime</title>
+
+	<!-- link css -->
+		<link href="css/calendarview.css" rel = "stylesheet">
 </head>
 <body>
 	<header class="cd-main-header">
@@ -48,16 +49,118 @@
 		</nav>
 
 		<!-- code for Assignment Calendar View goes here -->
-		<div class="content-wrapper">
-			<h1>Assignment Calendar View</h1>
-			<div>
-				<a href= "listView">Assignment Timeline List View</a>
+			<div class="section-title">
+				<h1>Calendar View</h1>
 			</div>
-		</div> <!-- .content-wrapper -->
-	</main> <!-- .cd-main-content -->
-<script src="js/jquery-2.1.4.js"></script>
-<script src="js/jquery.menu-aim.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-</body>
+
+			</center>
+
+			<div class="month">
+				<ul> <!--unordered lists -->
+					<li class="calnav-prev" id="button">&lt;</li>
+					<li class="calnav-next" id="button">&gt;</li>
+					<center>
+					<li class="calnav-month"> February </li>
+					<li class="calnav-year"> 2017 </li>
+					</center>
+				</ul>
+			</div>
+
+			<ul class="weekdays">
+				<li>Sun</li>
+				<li>Mon</li>
+				<li>Tue</li>
+				<li>Wed</li>
+				<li>Thu</li>
+				<li>Fri</li>
+				<li>Sat</li>
+			</ul>
+
+			<!-- if the month is an odd month with 31 days, use this -->
+			<ul class="days-odd-month">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>
+				<li>13</li>
+				<li>14</li>
+				<li>15</li>
+				<li>16</li>
+				<li>17</li>
+				<li>18</li>
+				<li>19</li>
+				<li>20</li>
+				<li>21</li>
+				<li>22</li>
+				<li>23</li>
+				<li>24</li>
+				<li>25</li>
+				<li>26</li>
+				<li>27</li>
+				<li>28</li>
+				<li>29</li>
+				<li>30</li>
+				<li>31</li>
+			</ul>
+
+			<!-- if the month is an even month with 30 days, use this -->
+			<ul class="days-even-month">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
+				<li>10</li>
+				<li>11</li>
+				<li>12</li>
+				<li>13</li>
+				<li>14</li>
+				<li>15</li>
+				<li>16</li>
+				<li>17</li>
+				<li>18</li>
+				<li>19</li>
+				<li>20</li>
+				<li>21</li>
+				<li>22</li>
+				<li>23</li>
+				<li>24</li>
+				<li>25</li>
+				<li>26</li>
+				<li>27</li>
+				<li>28</li>
+				<li>29</li>
+				<li>30</li>
+			</ul>
+
+			<div class="SectionList">
+				<ul class="list">
+					{{#each sections}}
+						<a href="#0"><li id="Assignment1">{{section_name}}</li></a>
+					{{/each}}
+				</ul>
+				
+			</div>
+		</main> <!-- .cd-main-content -->
+		<script src="js/jquery-2.1.4.js"></script>
+		<script src="js/jquery.menu-aim.js"></script>
+		<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+		<!-- calendar scripts -->
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/calendar.js"></script>
+	</body>
 </html> 
 
