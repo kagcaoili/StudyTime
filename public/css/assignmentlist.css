@@ -31,6 +31,11 @@ ul {
      color:white;
 }
 
+.assignments input{
+    -webkit-transform: scale(2);
+    padding: 10px;
+}
+
 .hide {
     color: black;
     font-size: 20px;
@@ -48,7 +53,8 @@ ul {
     appearance: button;
 
     text-decoration: none;
-    color: powderblue;
+    background-color: powderblue;
+    color:black;
 }
 
 #hide {

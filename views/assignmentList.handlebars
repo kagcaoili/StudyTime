@@ -62,15 +62,24 @@
 			</div>
 
 	        <div class="assignments">
+			<form>
 				<ul> <!--unordered lists -->
 					{{#each assignments}}
-						<li> {{name}}   Due: {{due_date}}</li>
-						<br>
+				<li> 
+				<label for "item1">
+				<input type = "checkbox" id="item1" name="it1"> {{name}}   Due: {{due_date}}
+				</label>
+				</li>
+				<br>
 					{{/each}}
 					<li><a href="createAssignment" class="button">+ Add Assignment</li>
+						<!--<input type= "submit" value="Add Assignment">-->
 					<br> 
 				</ul>
+			</form>
 			</div>
+			<br>
+			<br>
 
 			<div class="hide"
 			<br>
