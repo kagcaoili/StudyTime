@@ -5,5 +5,7 @@ var data = require('../data.json');
  */
 
 exports.view = function(req, res){
-  res.render('calendarView', data.assignments[0]);
+  var id = req.params.id;
+  res.render('calendarView', data.assignments[id]);
+  console.log(data.assignments[id]);
 };

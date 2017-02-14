@@ -1,9 +1,10 @@
 {
 	"assignments": [
 		{
+			"id": "0",
 			"name": "A4: Show Your Flow",
 			"due_date": "02/02/2017",
-			"estimated_complete_time": "6 hours",
+			"class": "CSE 170/COGS 120",
 			"sections": {
 				"1": {
 					"section_name": "Step 1",
@@ -24,12 +25,13 @@
 			}
 		},
 		{
+			"id": "1",
 			"name": "A6: Meat on the Bones",
 			"due_date": "02/16/2017",
-			"estimated_complete_time": "12 hours",
-			"section": {
+			"class": "CSE 170/COGS 120",
+			"sections": {
 				"1": {
-					"section_name": "Step 4",
+					"section_name": "Step 1",
 					"section_time": "1 hour"
 				},
 				"2": {
