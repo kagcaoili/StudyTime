@@ -8,6 +8,10 @@
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<!-- link css -->
+		<link href="css/listview.css" rel = "stylesheet">
+
   	
 	<title>StudyTime</title>
 </head>
@@ -49,9 +53,24 @@
 
 		<!-- code for Assignment Timeline List View goes here -->
 		<div class="content-wrapper">
+
+			<div class"section-title">
 			<h1>Assignment List View</h1>
+	        <br>
 			<div>
-				<a href= "calendarView">Assignment Timeline Calendar View</a>
+
+<p> hello </p>
+
+<a href="#0"><li id="Assignment1">
+	{{name}}</li></a>
+
+
+			{{#each sections}}
+			<a href="#0"><li id="Assignment1">{{section_name}}</li></a>
+			{{/each}}	
+
+			<div>
+                <center><a href="calendarView" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>
 			</div>
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
