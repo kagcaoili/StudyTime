@@ -49,6 +49,7 @@
 
 			<!-- Code for main calendar goes here -->
 			<!--<div class="content-wrapper"> -->
+				<center>
 				<div class="section-title">
 					<h1>Main Calendar</h1>
 				</div>
@@ -148,7 +149,9 @@
 				<div class="EventList">
 					<ul class="list">
 						{{#each assignments}}
-							<a href="listview"><li id="Assignment1">{{name}}</li></a>
+							<div class="assignment" id="{{class}}">
+								<a href="calendarview/{{id}}"><li id="{{class}}">{{name}}</li></a>
+							</div>
 						{{/each}}
 					</ul>
 					

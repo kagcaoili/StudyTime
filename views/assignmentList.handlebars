@@ -6,7 +6,7 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
-		<link rel="stylesheet" href="css/reset.css"> <!-- CSS 	reset -->
+		<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 		<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
@@ -55,36 +55,41 @@
 
 		<!-- code for Assignment List goes here -->
 		<div class="content-wrapper">
+<<<<<<< HEAD
 			<div class="section-title">
 				<center><h1>Assignment List</h1>
 			<br> 
+=======
+			<div class="secition-title">
+				<center><h1>Assignment List</h1> 
+>>>>>>> c6231c59c73babb2ae07de2478f17314e85edae6
 			<br>
 			</div>
 
 	        <div class="assignments">
-			<form>
-				<ul> <!--unordered lists -->
-					{{#each assignments}}
-				<li> 
-				<label for "item1">
-				<input type = "checkbox" id="item1" name="it1"> {{name}}   Due: {{due_date}}
-				</label>
-				</li>
-				<br>
+				<form>
+					<ul> <!--unordered lists -->
+						{{#each assignments}}
+					<li> 
+						<label for "item1">
+							<input type = "checkbox" id="item1" name="it1"> {{name}}   Due: {{due_date}}
+						</label>
+					</li>
+					<br>
 					{{/each}}
 					<li><a href="createAssignment" class="button">+ Add Assignment</li>
 						<!--<input type= "submit" value="Add Assignment">-->
 					<br> 
-				</ul>
-			</form>
+					</ul>
+				</form>
 			</div>
 			<br>
 			<br>
 
-			<div class="hide"
+			<div class="hide">
 			<br>
-				<center><a href="#" class="button" id="hide">Hide Completed Assignments</a>
-			<div> 
+				<center><a href="#" class="button" id="hide">Hide Completed Assignments</a>  
+			</div> 
 
 
 			

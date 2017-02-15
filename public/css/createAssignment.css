@@ -1,0 +1,42 @@
+h1 {
+    color: black;
+    background-color:powderblue;
+    padding: 40px;
+    border-width: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+
+#inputInfo {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+/*
+#create {
+    background-color: powderblue;
+    border: none;
+    color: white;
+    padding: 15 px 32 px;
+    text-alight: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 40px;
+    font-family: Verdana, sans-serif;
+}
+*/
+
+.createTimeline {
+    color: black;
+    font-size: 20px;
+    background-color:powderblue;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-style:;
+    border-width: 10px 10px 10px 10px;
+    border-radius: 30px;
+}
+
+

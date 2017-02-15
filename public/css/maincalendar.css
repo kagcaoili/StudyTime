@@ -138,7 +138,7 @@ ul {
      display: block;
 }
 
-.EventList li {
+.EventList .assignment li {
      list-style-type: none;
      background: powderblue;
      padding-top: 15px;
