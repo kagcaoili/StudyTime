@@ -18,16 +18,20 @@
 
 	<br><br><br>
 	<!-- code for Login Screen goes here-->
-	<div class="content-wrapper" id="signInPage">
+	<div class="content-wrapper" id="createAccountPage">
 			
 		<h1>Study Time</h1>
-		<div class="login_create">
-			<center><a href= "createAccount.handlebar">Create Account</a>
+		<div class="validEmail">
+			<center><a href= "#">Please enter a valid email.</a>
 		</div>
 
 		<br><br>
 
-		<form id="signInForm" role="form" method="get" action="/add">
+		<form id="createAccountForm" role="form" method="get" action="/add">
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="text" class="form-control" id="email" placeholder="email" name="email">
+			</div>
 			<div class="form-group">
 				<label for="username">Username:</label>
 				<input type="text" class="form-control" id="username" placeholder="username" name="username">
@@ -40,8 +44,8 @@
 
 		<br>
 
-		<div class="login_create">
-			<center><a href= "/">Login</a>
+		<div class="signup">
+			<center><a href= "/">Signup</a>
 		</div>
 	</div> <!-- .content-wrapper -->
 

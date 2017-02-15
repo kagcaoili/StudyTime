@@ -1,5 +1,7 @@
 #signInPage {
 	position: relative;
+	font-family: Verdana, sans-serif;
+	font-size:20px;
 }
 
 h1 {
@@ -22,4 +24,6 @@ h1 {
     border-radius: 15px;
 }
 
-.
+.form-group {
+	margin-left: 20px;
+}
