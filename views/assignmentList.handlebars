@@ -55,14 +55,9 @@
 
 		<!-- code for Assignment List goes here -->
 		<div class="content-wrapper">
-<<<<<<< HEAD
 			<div class="section-title">
 				<center><h1>Assignment List</h1>
 			<br> 
-=======
-			<div class="secition-title">
-				<center><h1>Assignment List</h1> 
->>>>>>> c6231c59c73babb2ae07de2478f17314e85edae6
 			<br>
 			</div>
 
@@ -71,13 +66,13 @@
 					<ul> <!--unordered lists -->
 						{{#each assignments}}
 					<li> 
-						<label for "item1">
-							<input type = "checkbox" id="item1" name="it1"> {{name}}   Due: {{due_date}}
+						<label for "checkbox1">
+							<input type = "checkbox" id="checkbox1" name="cb1"> {{name}}   Due: {{due_date}}
 						</label>
 					</li>
 					<br>
 					{{/each}}
-					<li><a href="createAssignment" class="button">+ Add Assignment</li>
+					<li><input type ="submit" id="addButton" name "aB1" value= "+ Add Assignment"/></li>
 						<!--<input type= "submit" value="Add Assignment">-->
 					<br> 
 					</ul>
@@ -90,9 +85,6 @@
 			<br>
 				<center><a href="#" class="button" id="hide">Hide Completed Assignments</a>  
 			</div> 
-
-
-			
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
 <script src="js/jquery-2.1.4.js"></script>

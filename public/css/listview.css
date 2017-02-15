@@ -11,6 +11,30 @@ h1 {
     font-weight: bold;
 }
 
+#assignmentName{
+    color: pink;
+}
+
+
+#mainEditButton{
+    background-color:powderblue;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:5px;
+    border:2px solid gray;
+    display:inline-block;
+    cursor:pointer;
+    color:black;
+    font-family:Verdana;
+    font-size:15px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
+}
+ul{
+    list-style-type: none;
+}
+
 #calendarViewButton{
     background-color:powderblue;
     -moz-border-radius:28px;
@@ -27,44 +51,3 @@ h1 {
     text-shadow:0px 1px 0px #2f6627;
 }
 
-.AssignmentName{
-    color: black;
-}
-
-.SectionList {
-     background: grey;
-     margin: 0;
-     padding-top: 20px;
-     font-size: 10px;
-     color: black;
-     letter-spacing: 2px;
-}
-
-.SectionList ul{
-     padding-left: 10px;
-     padding-right: 10px;
-     padding-top: 10px;
-     padding-bottom:50px;
-
-
-     list-style-type: none;
-     margin-top: 0px;
-     background: white;
-     display: block;
-}
-
-.SectionList li {
-     list-style-type: none;
-     background: powderblue;
-     padding-top: 15px;
-     padding-bottom: 15px;
-     margin-bottom: 10px;
-
-     text-align: center;
-     /*padding-left: 200px*/
-
-}
-
-.SectionList li#Assignment1 {
-     background: gray;
-}

@@ -11,15 +11,11 @@ h1 {
     color: black;
     background-color:powderblue;
     padding: 50px;
-<<<<<<< HEAD
     border-width: 20px 20px 20px 20px;
     border-color:gray;
-=======
     border-width: 20px 20px 20px 20px; 
->>>>>>> c6231c59c73babb2ae07de2478f17314e85edae6
     font-weight: bold;
 }
-
 
 ul {
      list-style-type: none;
@@ -39,15 +35,13 @@ ul {
      background: gray;
 }
 
-#item1{
+#checkbox1{
     -webkit-transform:scale(2);
     padding: 10px;
 }
-
-<<<<<<< HEAD
 .assignments ul li{
     color: paleturquoise;
-=======
+
 .hide {
     color: black;
     font-size: 20px;
@@ -56,7 +50,6 @@ ul {
     padding-bottom: 20px; 
     border-width: 10px 10px 10px 10px;
     border-radius: 30px;
->>>>>>> c6231c59c73babb2ae07de2478f17314e85edae6
 }
 
 .button {
