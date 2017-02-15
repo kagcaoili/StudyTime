@@ -6,7 +6,6 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" href="css/signOut.css">
-	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	
@@ -15,19 +14,39 @@
 <body>
 	<header class="cd-main-header">
 		<a href="#0" class="cd-logo"><img src="images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>
-
-
 	</header> <!-- .cd-main-header -->
 
-		<!-- code for Login Screen goes here-->
-		<div class="content-wrapper" id="signInPage">
-			<p><br><br><br><br><br></p>
-			<center><h1>Login Screen</h1>
-			<div>
-				<center><a href= "/">Log In</a>
+	<p><br><br><br></p>
+	<!-- code for Login Screen goes here-->
+	<div class="content-wrapper" id="signInPage">
+			
+		<h1>Study Time</h1>
+		<div class="login_create">
+			<center><a href= "/">Create Account</a>
+		</div>
+
+		<br><br><br><br>
+
+		<form id="createAccountForm" role="form" method="get" action="/add">
+			<div class="form-group">
+				<label for="username">Username:</label>
+				<input type="text" class="form-control" id="username" placeholder="username" name="username">
 			</div>
-		</div> <!-- .content-wrapper -->
-	</main> <!-- .cd-main-content -->
+			<div class="form-group">
+				<label for="password">Password:</label>
+				<input type="text" class="form-control" id="password" placeholder="password" name="password">
+			</div>
+		</form>
+
+		<br>
+
+		<div class="login_create">
+			<center><a href= "/">Login</a>
+		</div>
+	</div> <!-- .content-wrapper -->
+
+
+
 <script src="js/jquery-2.1.4.js"></script>
 <script src="js/jquery.menu-aim.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
