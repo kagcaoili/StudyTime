@@ -68,20 +68,58 @@
 						<label for="class">Class:<br></label>
 						<input type="text" class="form control" placeholder="Type class name" id="class" name="class">
 					</div>
-					<form class="form-inline">
+				</form>
+				
+				<div>
+					<h3>Sections:</h3>
+					{{#each sections}}
+						<div>
+							<p>{{section_name}}</p>
+							<p>Estimated Time"{{section_time}}</p>
+						</div>
+					{{/each}}
+				<div> 
+
+	<!--				
+					<form action="list">
 						<h3>Sections</h3>
-				<!--		<label class="sr-only" for="inlineFormInput">Section Name</label> -->
-						<input type="text" class="form control" placeholder="Section name" name="section_name" id="section_name">
-						
-				<!--		<label class="sr-only" for="inlineFormInput">Section Time</label>  -->
-						<input type="text" class="form control" placeholder="Estimated Section Time" name="section_time" id="section_time">
+						<p>
+							1. 
+							<input type="text" class="SectionItem" placeholder="Section name" name="section_name" id="section_name1">
+							<input type="text" class="SectionItem" placeholder="Estimated Section Time" name="section_time" id="section_time1">
+						</p>
+						<p>
+							2. 
+							<input type="text" class="SectionItem" placeholder="Section name" name="section_name" id="section_name2">
+							<input type="text" class="SectionItem" placeholder="Estimated Section Time" name="section_time" id="section_time2">
+						</p>
+						<button type="button" oneclick="addSection()">Add Section</button>
 					</form>
+		-->
+				<form id="addSectionForm" role="form" method="get" action="/add">
+					<h3>Add Section</h3>
+					<p>
+						<br>
+					</p>
+					<div class="form-group">
+						<label for="section_name">Section Name:<br></label>
+						<input type="text" class="form-control" id="section_name" placeholder="Section Name" name="section_name">
+					</div>
+					<div class="form-group">
+						<label for="section_time">Time to Complete Section:<br></label>
+						<input type="text" class="form-control" id="section_name" placeholder="Time to Complete" name="section_name">
+					</div>
+					<input type="submit" id="submitBtn" class="btn btn-default" value="Add the section"></input>
+				</form>
 				<a href= "listView">Create Assignment Timeline</a>
 			</div>
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
 <script src="js/jquery-2.1.4.js"></script>
 <script src="js/jquery.menu-aim.js"></script>
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/hci-friends.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html> 
