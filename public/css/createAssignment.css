@@ -10,6 +10,23 @@ h1 {
 	margin-left: 20px;
 	margin-right: 20px;
 }
+/*
+#create {
+    background-color: powderblue;
+    border: none;
+    color: white;
+    padding: 15 px 32 px;
+    text-alight: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 40px;
+    font-family: Verdana, sans-serif;
+}
+*/
 
 .createTimeline {
     color: black;
@@ -21,4 +38,5 @@ h1 {
     border-width: 10px 10px 10px 10px;
     border-radius: 30px;
 }
+
 
