@@ -42,43 +42,6 @@ ul {
 .assignments ul li{
     color: paleturquoise;
 
-.hide {
-    color: black;
-    font-size: 20px;
-    background-color:powderblue;
-    padding-top: 5px;
-    padding-bottom: 20px; 
-    border-width: 10px 10px 10px 10px;
-    border-radius: 30px;
+input[type=submit] {
+ background:pink;
 }
-
-.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
-    background-color: lightgray;
-    color:black;
-}
-
-#hide {
-    /*color: black;
-    background-color: lightgrey;
-    background-color:powderblue;*/
-
-    -moz-border-radius:28px;
-    -webkit-border-radius:28px;
-    background-color: powderblue;
-    border-radius:5px;
-    border:2px solid gray;
-    display:inline-block;
-    cursor:pointer;
-    color:black;
-    font-family:Verdana;
-    font-size:15px;
-    padding:16px 31px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #2f6627;
-}
-
-

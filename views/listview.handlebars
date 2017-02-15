@@ -70,7 +70,8 @@
         <form>
 		<ul>
         {{#each sections}}
-            <li><input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">
+            <li>
+            	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">
 		    <a href="#0"><id="Assignment1">{{section_name}}:</a>
 		    <a href="../createAssignment" class="button" id="individualEditCheckpoint">Edit Checkpoint</a></li> <!--supposed to be link to mini calendar, instead of createAssignment--> 
 		{{/each}}
@@ -78,10 +79,11 @@
 	   </form>
 		<div>	
 		<br>
-		<br>	
-			<div>
+		<br>
+
+		<div class ="ATCalendarView">
                 <center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>
-			</div>
+		</div>
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
 <script src="../js/jquery-2.1.4.js"></script>
