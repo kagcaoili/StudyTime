@@ -5,5 +5,6 @@ var data = require('../data.json');
  */
 
 exports.view = function(req, res){
-  res.render('listview', data.assignments[0]);
+  var id = req.params.id;
+  res.render('listview', data.assignments[id]);
 };

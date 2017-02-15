@@ -6,18 +6,18 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
 <!--	<link rel="stylesheet" href="css/reset.css">--> <!-- CSS reset -->
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="stylesheet" href="../css/style.css"> <!-- Resource style -->
+	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
 
 	<!-- link css -->
-		<link href="css/listview.css" rel = "stylesheet">
+		<link href="../css/listview.css" rel = "stylesheet">
 
   	
 	<title>StudyTime</title>
 </head>
 <body>
 	<header class="cd-main-header">
-		<a href="#0" class="cd-logo"><img src="images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>
+		<a href="#0" class="cd-logo"><img src="../images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>
 
 		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
@@ -35,19 +35,19 @@
 				</li>
 
 				<li class="btn btn-default">
-					<a href="assignmentlist">Assignment List</a>
+					<a href="../assignmentlist">Assignment List</a>
 				</li>
 
 				<li class="btn btn-default">
-					<a href="createAssignment">Create an Assignment</a>
+					<a href="../createAssignment">Create an Assignment</a>
 				</li>
 
 				<li class="btn btn-default">
-					<a href="help">Help</a>			
+					<a href="../help">Help</a>			
 				</li>
 
 				<li class="btn btn-default">
-					<a href="signOut">Sign Out</a>
+					<a href="../signOut">Sign Out</a>
 				</li>
 		</nav>
 
@@ -63,7 +63,7 @@
         <div class ="AssignmentName">	
         <center><a href="#0"><id="assignmentName">
 	    {{name}}</a>
-	    <a href="createAssignment" class="button" id="mainEditButton">Edit</a>
+	    <a href="../createAssignment" class="button" id="mainEditButton">Edit</a>
         <div>
 
         <div class="stepsList">
@@ -72,7 +72,7 @@
         {{#each sections}}
             <li><input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">
 		    <a href="#0"><id="Assignment1">{{section_name}}:</a>
-		    <a href="createAssignment" class="button" id="individualEditCheckpoint">Edit Checkpoint</a></li> <!--supposed to be link to mini calendar, instead of createAssignment--> 
+		    <a href="../createAssignment" class="button" id="individualEditCheckpoint">Edit Checkpoint</a></li> <!--supposed to be link to mini calendar, instead of createAssignment--> 
 		{{/each}}
 		</ul>
 	   </form>
@@ -80,12 +80,12 @@
 		<br>
 		<br>	
 			<div>
-                <center><a href="calendarView" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>
+                <center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>
 			</div>
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
-<script src="js/jquery-2.1.4.js"></script>
-<script src="js/jquery.menu-aim.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="../js/jquery-2.1.4.js"></script>
+<script src="../js/jquery.menu-aim.js"></script>
+<script src="../js/main.js"></script> <!-- Resource jQuery -->
 </body>
 </html>
