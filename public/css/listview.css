@@ -17,7 +17,7 @@ h1 {
 
 
 #mainEditButton{
-    background-color:powderblue;
+    background-color:lightpink;
     -moz-border-radius:28px;
     -webkit-border-radius:28px;
     border-radius:5px;
@@ -27,20 +27,57 @@ h1 {
     color:black;
     font-family:Verdana;
     font-size:15px;
-    padding:16px 31px;
+    padding:6px 6px;
     text-decoration:none;
     text-shadow:0px 1px 0px #2f6627;
 }
-ul{
-    list-style-type: none;
+
+#individualEditCheckpoint{
+    background-color:NavajoWhite;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:5px;
+    border:2px solid gray;
+    display:inline-block;
+    cursor:pointer;
+    color:black;
+    font-family:Verdana;
+    font-size:15px;
+    padding:4px 4px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
 }
+
+ul {
+    list-style-type: none;
+     text-align: center;
+     font-size: 20px;
+}
+
+.stepsList ul li{
+    color:red;
+}
+#stepsCheckboxes{
+    -webkit-transform:scale(1.5);
+    padding: 10px;
+}
+
+/*.stepsList{
+    padding-top: 30px;
+     padding-bottom: 30px;
+     border-style:solid;
+     border-width: 10px 10px 10px 10px;
+     border-color: powderblue;
+     width: 100%;
+     background: gray;
+}*/
 
 #calendarViewButton{
     background-color:powderblue;
     -moz-border-radius:28px;
     -webkit-border-radius:28px;
     border-radius:5px;
-    border:2px solid gray;
+    border:2px solid royalblue;
     display:inline-block;
     cursor:pointer;
     color:black;
@@ -51,3 +88,13 @@ ul{
     text-shadow:0px 1px 0px #2f6627;
 }
 
+
+/*.stepsList{
+     padding-top: 30px;
+     padding-bottom: 30px;
+     border-style:solid;
+     border-width: 10px 10px 10px 10px;
+     border-color: powderblue;
+     width: 100%;
+     background: gray;
+}*/
