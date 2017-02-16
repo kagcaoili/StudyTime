@@ -25,5 +25,7 @@ exports.view = function(req, res){
   data['assignments'].push({"id":id,"name":name,"due_date":due_date,"class":class_name, "sections":sections});
   console.log(data);
 */
-  res.render('createAssignment');
+  res.render('createAssignment', {
+    'newIndex': len
+  });
 };
