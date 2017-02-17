@@ -11,8 +11,8 @@ h1 {
     font-weight: bold;
 }
 
-#assignmentName{
-    color: pink;
+.assignmentName{
+    font-size:20px;
 }
 
 
@@ -50,7 +50,6 @@ h1 {
 
 ul {
     list-style-type: none;
-     text-align: center;
      font-size: 20px;
 }
 
@@ -88,6 +87,10 @@ ul {
     text-shadow:0px 1px 0px #2f6627;
 }
 
+.dueDate{
+    font-size: 25px;
+    color:pink;
+}
 
 /*.stepsList{
      padding-top: 30px;
