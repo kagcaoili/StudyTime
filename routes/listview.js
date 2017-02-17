@@ -18,9 +18,9 @@ exports.view = function(req, res){
   //res.render('listview', data.assignments[idex]);
   //res.render('listview', req.body);
 
-  console.log("BEFORE: " + data.assignments);
+  console.log("BEFORE: " + data.assignments[0].name);
   data['assignments'].push({"id":req.body.id,"name":req.body.name,"due_date":req.body.due_date, "class":req.body.class, "sections":req.body.sections});
-  console.log("AFTER: " + data.assignments);
+  console.log("AFTER: " + data.assignments[2].name);
 
   res.render('listview', {
     'id': req.body.id,

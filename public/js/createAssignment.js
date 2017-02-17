@@ -36,7 +36,7 @@ function getNewAssignment(e) {
     var section_array = [{section_name: section_name, section_time: section_time}];
 
 	//$.post('listview/' + assignmentIndex, {id: assignmentIndex, name: name, due_date: due_date, class: assignment_class, sections: [ "1":  [section_name: section_name, section_time: section_time]]}, addAssignment);
-    $.post('listview/' + assignmentIndex, {id: assignmentIndex, name: name, due_date: "12/19/2019", class: assignment_class, sections: section_array}, addAssignment);
+    $.post('listview/' + assignmentIndex, {id: assignmentIndex, name: name, due_date: due_date, class: assignment_class, sections: section_array}, addAssignment);
 
 
 
