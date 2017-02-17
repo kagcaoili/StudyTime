@@ -10,14 +10,14 @@ jQuery(document).ready(function(){
 
 	//on resize, move search and top nav position according to window width
 	var resizing = false;
-	moveNavigation();
+	//moveNavigation();
 	$(window).on('resize', function(){
 		if( !resizing ) {
 			(!window.requestAnimationFrame) ? setTimeout(moveNavigation, 300) : window.requestAnimationFrame(moveNavigation);
 			resizing = true;
 		}
 	});
-
+/*
 	//on window scrolling - fix sidebar nav
 	var scrolling = false;
 	checkScrollbarPosition();
@@ -27,7 +27,7 @@ jQuery(document).ready(function(){
 			scrolling = true;
 		}
 	});
-
+*/
 	//mobile only - open sidebar when user clicks the hamburger menu
 	sidebarTrigger.on('click', function(event){
 		event.preventDefault();
@@ -84,7 +84,7 @@ jQuery(document).ready(function(){
     });
 
   */
-
+/*
 	function checkMQ() {
 		//check if mobile or desktop device
 		return window.getComputedStyle(document.querySelector('.cd-main-content'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
@@ -105,6 +105,7 @@ jQuery(document).ready(function(){
 		checkSelected(mq);
 		resizing = false;
 	}
+	*/
 
 	function detachElements() {
 		topNavigation.detach();
@@ -115,7 +116,7 @@ jQuery(document).ready(function(){
 		//on desktop, remove selected class from items selected on mobile/tablet version
 		if( mq == 'desktop' ) $('.has-children.selected').removeClass('selected');
 	}
-
+/*
 	function checkScrollbarPosition() {
 		var mq = checkMQ();
 		
@@ -129,4 +130,5 @@ jQuery(document).ready(function(){
 		}
 		scrolling = false;
 	}
+	*/
 });
