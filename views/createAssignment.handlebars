@@ -56,7 +56,7 @@
 			<h1>Create Assignment</h1>
 			<div class="middle">
 				<br>
-				<form id="addAssignemntForm" role="form" method="get" action="/add">
+				<form id="addAssignemntForm" role="form" method="post" action="/add">
 					<div class="form-group">
 						<label for="name">Assignment Name:<br></label>
 						<input type="text" class="form control" placeholder="Type assignment name" id="name" name="name">
@@ -97,7 +97,7 @@
 						<button type="button" oneclick="addSection()">Add Section</button>
 					</form>
 		-->
-				<form id="addSectionForm" role="form" method="get" action="/add">
+				<form id="addSectionForm" role="form" method="post" action="/add">
 					<h3>Add Section</h3>
 					<p>
 						<br>
@@ -108,14 +108,15 @@
 					</div>
 					<div class="form-group">
 						<label for="section_time">Time to Complete Section:<br></label>
-						<input type="text" class="form-control" id="section_name" placeholder="Time to Complete" name="section_name">
+						<input type="text" class="form-control" id="section_time" placeholder="Time to Complete" name="section_time">
 					</div>
 					<input type="submit" id="submitBtn" class="btn btn-default" value="Add the section"></input>
 				</form>
 
 				<div class="createTimeline">
 		<!--		<center><a href="listView" id="create"><button>Create Assignment Timeline</button></a>    -->
-					<center><a href= "listView/{{newIndex}}" class="button" id="{{newIndex}}">Create Assignment Timeline</a> 
+					<center><a href= "listview/{{newIndex}}" class="button" id="{{newIndex}}">Create Assignment Timeline</a>
+					<!--<center><a href= "listView" class="button" id="{{newIndex}}">Create Assignment Timeline</a>-->
 				</div>
 			</div>
 		</div> <!-- .content-wrapper -->

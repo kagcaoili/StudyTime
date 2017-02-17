@@ -15,6 +15,8 @@ exports.view = function(req, res){
   }
   len = array.length;
 
+  //console.log("bodybodybody: " + req.body);
+
   /*
   var id = (data.assignments[len-1].id - -1);
   var name = "Lab 3";
