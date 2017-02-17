@@ -47,7 +47,8 @@ app.get('/assignmentlist', assignmentList.view);
 app.get('/calendarview/:id', calendarView.view);
 app.get('/createAssignment', createAssignment.view);
 app.get('/help', help.view);
-app.get('/listview/:id', listview.view);
+app.post('/listview/:id', listview.view);
+app.get('/listview/:id', listview.defaultAssignment);
 app.get('/signout', signOut.view);
 app.get('/createAccount', createAccount.view);
 // Example route

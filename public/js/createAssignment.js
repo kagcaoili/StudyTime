@@ -14,14 +14,47 @@ function initializePage() {
 }
 
 function getNewAssignment(e) {
+
+	//e.preventDefault();
+
 	console.log("detect new assignment");
-	var assignmentIndex = $(this).closest(".button").attr('id');
+	var assignmentIndex = $('.createTimeline .button').attr('id');
 	console.log("The assignment index is: " + assignmentIndex);
-	$.get("listview/0", addAssignment);
+
+	var name = document.getElementById("name").value;
+    var due_date = document.getElementById("due_date").value;
+    var assignment_class = document.getElementById("class").value;
+    var section_name = document.getElementById("section_name").value;
+    var section_time = document.getElementById("section_time").value;
+    
+    console.log("name is: " + name);
+    console.log("due date is: " + due_date);
+    console.log("assignment class: " + assignment_class);
+    console.log("section name is: " + section_name);
+    console.log("section_time is " + section_time);
+
+    var section_array = [{section_name: section_name, section_time: section_time}];
+
+	//$.post('listview/' + assignmentIndex, {id: assignmentIndex, name: name, due_date: due_date, class: assignment_class, sections: [ "1":  [section_name: section_name, section_time: section_time]]}, addAssignment);
+    $.post('listview/' + assignmentIndex, {id: assignmentIndex, name: name, due_date: "12/19/2019", class: assignment_class, sections: section_array}, addAssignment);
+
+
+
+    /*
+	posting.done(function(data) {
+        var content = $(data).find('.testingfoo');
+        $(".testingfoo").append("helo");
+    });
+*/
+
+    //$.get("listview/0", addAssignment);
+    //$.get("createAssignment", addAssignment);
 }
 
 function addAssignment(result) {
-	console.log(result);
+	console.log("foo:");
+
+
 
 }
 
