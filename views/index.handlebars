@@ -1,171 +1,54 @@
-<html>
+<html lang="en" class="no-js">
 <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!--<link rel="stylesheet" href="css/reset.css">-->
-		<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-		<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<center><title>StudyTime</title></center>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
-		<!-- link css -->
-		<link href="css/maincalendar.css" rel = "stylesheet">
-	</head>
+	<link rel="stylesheet" href="css/signOut.css">
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	
+	<title>StudyTime</title>
+</head>
+<body>
+	<header class="cd-main-header">
+		<a href="#0" class="cd-logo"><img src="images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>
+	</header> <!-- .cd-main-header -->
 
-	<body>
-		<header class="cd-main-header">
-			<a href="#0" class="cd-logo"><img src="images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>
+	<br><br><br>
+	<!-- code for Login Screen goes here-->
+	<div class="content-wrapper" id="signInPage">
+			
+		<h1>Study Time</h1>
+		<div class="login_create">
+			<center><a href= "createAccount">Create Account</a>
+		</div>
 
-			<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+		<br><br>
 
-		</header>
+		<form id="signInForm" role="form" method="get" action="/add">
+			<div class="form-group">
+				<label for="username">Username:</label>
+				<input type="text" class="form-control" id="username" placeholder="username" name="username">
+			</div>
+			<div class="form-group">
+				<label for="password">Password:</label>
+				<input type="text" class="form-control" id="password" placeholder="password" name="password">
+			</div>
+		</form>
 
-		<main class="cd-main-content">
-			<nav class="cd-side-nav">
-					<li class="profileName"> 
-						<a href="#0">Profile Name</a>
-					</li>
+		<br>
 
-					<li class="btn btn-default">
-						<a href="/">Main Calendar</a>
-					</li>
+		<div class="login_create">
+			<center><a href= "mainCalendar">Login</a>
+		</div>
+	</div> <!-- .content-wrapper -->
 
-					<li class="btn btn-default">
-						<a href="assignmentlist">Assignment List</a>
-					</li>
 
-					<li class="btn btn-default">
-						<a href="createAssignment">Create an Assignment</a>
-					</li>
 
-					<li class="btn btn-default">
-						<a href="help">Help</a>			
-					</li>
-
-					<li class="btn btn-default">
-						<a href="signOut">Sign Out</a>
-					</li>
-			</nav>
-
-			<!-- Code for main calendar goes here -->
-			<!--<div class="content-wrapper"> -->
-				<center>
-				<div class="section-title">
-					<h1>Main Calendar</h1>
-				</div>
-
-				</center>
-
-				<div class="month">
-					<ul> <!--unordered lists -->
-						<li class="calnav-prev" id="button">&lt;</li>
-						<li class="calnav-next" id="button">&gt;</li>
-						<center>
-						<li class="calnav-month"> February </li>
-						<li class="calnav-year"> 2017 </li>
-						</center>
-					</ul>
-				</div>
-
-				<ul class="weekdays">
-					<li>Sun</li>
-					<li>Mon</li>
-					<li>Tue</li>
-					<li>Wed</li>
-					<li>Thu</li>
-					<li>Fri</li>
-					<li>Sat</li>
-				</ul>
-
-				<!-- if the month is an odd month with 31 days, use this -->
-				<ul class="days-odd-month">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li>10</li>
-					<li>11</li>
-					<li>12</li>
-					<li>13</li>
-					<li>14</li>
-					<li>15</li>
-					<li>16</li>
-					<li>17</li>
-					<li>18</li>
-					<li>19</li>
-					<li>20</li>
-					<li>21</li>
-					<li>22</li>
-					<li>23</li>
-					<li>24</li>
-					<li>25</li>
-					<li>26</li>
-					<li>27</li>
-					<li>28</li>
-					<li>29</li>
-					<li>30</li>
-					<li>31</li>
-				</ul>
-
-				<!-- if the month is an even month with 30 days, use this -->
-				<ul class="days-even-month">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li>10</li>
-					<li>11</li>
-					<li>12</li>
-					<li>13</li>
-					<li>14</li>
-					<li>15</li>
-					<li>16</li>
-					<li>17</li>
-					<li>18</li>
-					<li>19</li>
-					<li>20</li>
-					<li>21</li>
-					<li>22</li>
-					<li>23</li>
-					<li>24</li>
-					<li>25</li>
-					<li>26</li>
-					<li>27</li>
-					<li>28</li>
-					<li>29</li>
-					<li>30</li>
-				</ul>
-
-				<div class="EventList">
-					<ul class="list">
-						{{#each assignments}}
-							<div class="assignment" id="{{class}}">
-								<a href="calendarview/{{id}}"><li id="{{class}}">{{name}}</li></a>
-							</div>
-						{{/each}}
-					</ul>
-					
-				</div>
-			<!--</div>-->
-		</main>
-
-		<script src="js/jquery-2.1.4.js"></script>
-		<script src="js/jquery.menu-aim.js"></script>
-		<script src="js/main.js"></script> <!-- Resource jquery -->
-		
-		<!-- calendar scripts -->
-		<script src="js/jquery-1.11.0.js"></script>
-		<script src="js/calendar.js"></script>
-
-	</body>
-</html>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/jquery.menu-aim.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html> 
