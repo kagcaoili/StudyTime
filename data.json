@@ -8,19 +8,19 @@
 			"sections": {
 				"1": {
 					"section_name": "Step 1",
-					"section_time": "1 hour"
+					"section_time": "1 hr "
 				},
 				"2": {
 					"section_name": "Step 2",
-					"section_time": ""
+					"section_time": "2 hrs"
 				},
 				"3": {
 					"section_name": "Step 3",
-					"section_time": ""
+					"section_time": "3 hrs"
 				},
 				"4": {
 					"section_name": "Step 4",
-					"section_time": ""
+					"section_time": "4 hrs"
 				}
 			}
 		},

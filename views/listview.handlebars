@@ -60,8 +60,8 @@
 			<div>
         
 
-        <div class ="AssignmentName">	
-        <center><a href="#0"><id="assignmentName">
+        <div class ="assignmentName">	
+        <center><a href="#0"><id="assignmentName1">
 	    {{name}}</a>
 	    <a href="../createAssignment" class="button" id="mainEditButton">Edit</a>
         </div>
@@ -72,18 +72,24 @@
         {{#each sections}}
             <li>
             	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">
-		    <a href="#0"><id="Assignment1">{{section_name}}:</a>
-		    <a href="../createAssignment" class="button" id="individualEditCheckpoint">Edit Checkpoint</a></li> <!--supposed to be link to mini calendar, instead of createAssignment--> 
+		    <a href="#0"><id="Assignment1">{{section_name}}: {{section_time}}</a>
+		    <a href="../createAssignment" class="button" id="individualEditCheckpoint">Edit CkPt</a></li> <!--supposed to be link to mini calendar, instead of createAssignment--> 
 		{{/each}}
 		</ul>
 	   </form>
 		</div>	
 		<br>
-		<br>
 
 		<div class ="ATCalendarView">
                 <center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>
 		</div>
+        <br> 
+		
+		<div class ="dueDate">
+		<center><a href="#0"><id="dueDateWhole">Due Date: {{due_date}}</a>
+	    </div>
+
+
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
 <script src="../js/jquery-2.1.4.js"></script>
