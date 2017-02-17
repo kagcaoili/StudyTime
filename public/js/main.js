@@ -67,7 +67,7 @@ jQuery(document).ready(function(){
 			accountInfo.removeClass('selected');
 		}
 	});
-
+/*
 	//on desktop - differentiate between a user trying to hover over a dropdown item vs trying to navigate into a submenu's contents
 	sidebar.children('ul').menuAim({
         activate: function(row) {
@@ -82,6 +82,8 @@ jQuery(document).ready(function(){
         },
         submenuSelector: ".has-children",
     });
+
+  */
 
 	function checkMQ() {
 		//check if mobile or desktop device
