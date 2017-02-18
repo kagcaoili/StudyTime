@@ -8,6 +8,7 @@ jQuery(document).ready(function(){
 		searchForm = $('.cd-search'),
 		accountInfo = $('.account');
 
+/*
 	//on resize, move search and top nav position according to window width
 	var resizing = false;
 	//moveNavigation();
@@ -17,6 +18,7 @@ jQuery(document).ready(function(){
 			resizing = true;
 		}
 	});
+*/
 /*
 	//on window scrolling - fix sidebar nav
 	var scrolling = false;

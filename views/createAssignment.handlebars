@@ -11,8 +11,11 @@
 
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-  	
+  	<script src"/js/date.js"></script>
+
 	<title>StudyTime</title>
 </head>
 <body>
@@ -81,22 +84,6 @@
 					{{/each}}
 				<div> 
 
-	<!--				
-					<form action="list">
-						<h3>Sections</h3>
-						<p>
-							1. 
-							<input type="text" class="SectionItem" placeholder="Section name" name="section_name" id="section_name1">
-							<input type="text" class="SectionItem" placeholder="Estimated Section Time" name="section_time" id="section_time1">
-						</p>
-						<p>
-							2. 
-							<input type="text" class="SectionItem" placeholder="Section name" name="section_name" id="section_name2">
-							<input type="text" class="SectionItem" placeholder="Estimated Section Time" name="section_time" id="section_time2">
-						</p>
-						<button type="button" oneclick="addSection()">Add Section</button>
-					</form>
-		-->
 				<form id="addSectionForm" role="form" method="post" action="/add">
 					<h3>Add Section</h3>
 					<p>
