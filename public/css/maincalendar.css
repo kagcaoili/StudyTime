@@ -70,13 +70,8 @@ ul {
      padding:15px;
 }
 
+
 /*
- * activates button press for previous and next button
- */
-.depressed {
-
-}
-
 .weekdays {
      margin: 0;
      padding: 5px 0;
@@ -90,18 +85,26 @@ ul {
      text-align: center;
      font-size: 12px;
 }
+*/
 
-.days-odd-month {
+.weekdayinmonth th {
+     text-align: center;
+     color: grey;
+     font-size: 12px;
+     background-color: powderblue;
+     padding: 5px 0;
+     font-weight: normal;
+}
+
+/*
+.days-in-month {
      padding: 0;
      background: #eee;
      margin: 0;
 }
 
-.days-even-month {
-     display: none;
-}
 
-.days-odd-month li {
+.days-in-month li {
      list-style-type: none;
      display: inline-block;
      width: 11.5%;
@@ -114,6 +117,23 @@ ul {
      font-size: 10px;
      color: #777;
 
+}
+*/
+
+.daysmonth {
+     border-collapse: collapse;
+     table-layout: fixed;
+     text-align: center;
+     font-size: 10px;
+     color: #777;
+     margin-bottom: 10px;
+}
+
+.daysmonth td {
+     padding-top: 10px;
+     padding-bottom: 20px;
+     padding-left: 20px;
+     padding-right: 20px;
 }
 
 .EventList {

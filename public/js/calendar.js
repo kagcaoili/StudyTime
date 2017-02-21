@@ -44,6 +44,9 @@ function makeCalendar(month, year) {
 	var firstDay = new Date(current_year, current_month, 1);
 	var startingDay = firstDay.getDay();
 
+	console.log("starting day: " + startingDay);
+	console.log("days in week is: " + days_in_week_list[startingDay]);
+
 	var monthLength = days_in_month_list[current_month];
 
 	//Handle leap years
@@ -57,6 +60,16 @@ function makeCalendar(month, year) {
 	$('.calnav-month').text(monthName);
 	$('.calnav-year').text(current_year);
 
+	/*
+	var html = '';
+	for (var i = 1; i <= monthLength; i++) {
+		html += '<li>';
+		html += i;
+		html += '</li>';
+	}
+
+	$('.days-in-month').append(html);
+	*/
 
 }
 
