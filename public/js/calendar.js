@@ -13,6 +13,7 @@ $(document).ready(function() {
 
 function depressedButtonPrev(e) {
 	$('.calnav-month').text(getNewName(-1));
+	makeCalendar(current_date.getMonth(), current_date.getFullYear());
 
 }
 
@@ -60,16 +61,42 @@ function makeCalendar(month, year) {
 	$('.calnav-month').text(monthName);
 	$('.calnav-year').text(current_year);
 
-	/*
+	
 	var html = '';
+	var isBeginning = false;
+	var dayCount = 0;
 	for (var i = 1; i <= monthLength; i++) {
-		html += '<li>';
-		html += i;
-		html += '</li>';
-	}
+		//handle new row
 
-	$('.days-in-month').append(html);
-	*/
+		if (!isBeginning) { //still on the first row looking for the start date
+			html += '<tr>';
+			for (var j = 0; j < 7; j++) {
+				if (j == startingDay) {
+					isBeginning = true;
+					break;
+				} else {
+					html += '<td></td>';
+				}
+				dayCount++;
+			}
+		}
+
+		if (dayCount % 7 == 0) {
+			html += '</tr>';
+			html += '<tr>';
+		} 
+
+		html += '<td>';
+		html += i;
+		html += '</td>';
+		dayCount++;
+	}
+	html += '</tr>';
+
+	console.log("html is: " + html);
+
+	$('#days').append(html);
+	
 
 }
 

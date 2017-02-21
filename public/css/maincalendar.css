@@ -87,15 +87,6 @@ ul {
 }
 */
 
-.weekdayinmonth th {
-     text-align: center;
-     color: grey;
-     font-size: 12px;
-     background-color: powderblue;
-     padding: 5px 0;
-     font-weight: normal;
-}
-
 /*
 .days-in-month {
      padding: 0;
@@ -123,16 +114,30 @@ ul {
 .daysmonth {
      border-collapse: collapse;
      table-layout: fixed;
-     text-align: center;
      font-size: 10px;
      color: #777;
      margin-bottom: 10px;
 }
 
-.daysmonth td {
+.weekdayinmonth th {
+     text-align: center;
+     color: grey;
+     font-size: 12px;
+     background-color: powderblue;
+     padding: 5px 0;
+     font-weight: normal;
+}
+
+#days td{
+     border-collapse: collapse;
+     table-layout: fixed;
+     font-size: 10px;
+     color: #777;
+     margin-bottom: 10px;
+
      padding-top: 10px;
      padding-bottom: 20px;
-     padding-left: 20px;
+     padding-left: 10px;
      padding-right: 20px;
 }
 
