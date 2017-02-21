@@ -1,6 +1,26 @@
+/*var data = require("../data.json");
+
+exports.addAssignment = function(req, res) {
+	var name = req.query.name;
+	var due_date = req.query.due_date;
+	var className = req.query.class;
+
+	newAssignment = {
+		"id": 1,
+		"name" : name,
+		"due_date": due_date,
+		"class": className,	
+	}
+	console.log(data);
+	data.assignments.push(newAssignment);
+	res.render('listView.handlebars', data);
+}
+
+*/
 var data = require('../data.json');
 
-exports.dateDifferences = function (req, res) {
+exports.add = function (req, res) {
+	console.log("Date funciton called");
 
 	//store number of days in all months from Jan-Dec
 	var monthDays = new Array[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -38,6 +58,8 @@ exports.dateDifferences = function (req, res) {
 		n2 += monthDays[j];
 
 	var dateDifference = n2 - n1;
+	console.log(dateDifference);
 
 	res.json(dateDifference);
 }
+
