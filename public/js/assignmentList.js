@@ -7,14 +7,47 @@ $(document).ready(function() {
 
 //Function that is called when the document is ready
 function initializePage() {
-	$("#hide_show").click(function(e)) {
+/*	$("#hide_show").click(function(e) {
 		toggleClick(e);
 	});
+*/
+/*
+	$("#hide_show").click(function(e) {
+		
+	});
+*/
+		//toggleClick(e);
 }  
+
+function toggle(button) {
+	if(document.getElementById("hide_show").value=="Hide Completed Assignments") {
+		console.log("in if");
+		document.getElementById("hide_show").value="Show Completed Assignments";
+		$.each($("input[name='cb']:checked"), function() {
+			$(this).hide();
+		});
+	} else {
+		document.getElementById("hide_show").value="Hide Completed Assignments";
+		console.log("in else");
+		$.each($("input[name='cb']:checked"), function() {
+			$(this).show();
+		});
+	}
+}
 
 function toggleClick(e) {
 	e.preventDefault();
+/*
+	{{#each checkbox}}
+		if (document.getElementById())
 
+
+	{{/each}}
+	$("#hide_show").toggle("Show Completed Assignments");
+*/
+
+
+/*
 	var elem = document.getElementById("hide_show");
 	if (elem.value=="Hide Completed Assignments") {
 		elem.value = "Show Completed Assignments";
@@ -22,5 +55,5 @@ function toggleClick(e) {
 	else {
 		elem.value = "Hide Completed Assignments";
 	}
-
+*/
 }
