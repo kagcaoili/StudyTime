@@ -35,10 +35,10 @@ exports.view = function(req, res){
   }
 
 
-  console.log("BEFORE: " + data.assignments[0].name);
+  //console.log("BEFORE: " + data.assignments[0].name);
   //data['assignments'].push({"id":req.body.id,"name":req.body.name,"due_date":req.body.due_date, "class":req.body.class, "sections":req.body.sections});
   data.assignments.push(newAssignment);
-  console.log("AFTER: " + data.assignments[2].name);
+  //console.log("AFTER: " + data.assignments[2].name);
 
   res.render('listview', {
     'id': id,
@@ -50,7 +50,7 @@ exports.view = function(req, res){
 };
 
 exports.defaultAssignment = function (req, res) {
-	console.log("rendering default assignment");
+	//console.log("rendering default assignment");
 	var idex = req.params.id;
 
 	/*
@@ -67,7 +67,7 @@ exports.defaultAssignment = function (req, res) {
 
 //exports.dateDifferences = function (req, res) {
 function dateDifferences(due_date) {
-  console.log("in dateDifferences funciton");
+  //console.log("in dateDifferences funciton");
   //store number of days in all months from Jan-Dec
   var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
@@ -82,43 +82,43 @@ function dateDifferences(due_date) {
 
   /* Create a struct for today's date elements */
   var dateToday = {
-    day: todayDay,
-    month: todayMonth,
-    year: today.getFullYear()
+    day: parseInt(todayDay),
+    month: parseInt(todayMonth),
+    year: parseInt(today.getFullYear())
   }
-  console.log("todays day: " + dateToday.day);
+/*  console.log("todays day: " + dateToday.day);
   console.log("todays month: " + dateToday.month);
   console.log("todays year: " + dateToday.year);
-
+*/
   //get due date from data.json and split elements
   due = due_date;
   var dateElements = due.split('/');
 
   /* Create a struct for due date's elements */
   var dueDate = {
-    day: dateElements[1],
-    month: dateElements[0],
-    year: dateElements[2]
+    day: parseInt(dateElements[1]),
+    month: parseInt(dateElements[0]),
+    year: parseInt(dateElements[2])
   }
-
+/*
   console.log("due day: " + dueDate.day);
   console.log("due month: " + dueDate.month);
   console.log("due year: " + dueDate.year);
-
+*/
 
   var dueDays = dateToNumber(dueDate);
   var todayDays = dateToNumber(dateToday);
 
   var dateDifference = dueDays - todayDays;
+/*  console.log("dueDays is " + dueDays);
   console.log("todayDays is " + todayDays);
-  console.log("dueDays is " + dueDays);
   console.log("Dates difference is " + dateDifference);
-
+*/
   var start = todayDays;
 
   if (dateDifference > 29)
   {
-    console.log("over a month section");
+    //console.log("over a month section");
     var sectionDates = Math.floor(dateDifference/4);
 
     var firstNum = start+sectionDates;
@@ -141,7 +141,7 @@ function dateDifferences(due_date) {
 
   if (dateDifference > 8 && dateDifference <30)
   {
-    console.log("middle section");
+    //console.log("middle section");
     var sectionDates = Math.floor(dateDifference/3);
 
     var firstNum = start+sectionDates;
@@ -152,7 +152,7 @@ function dateDifferences(due_date) {
     var section_array = [{section_name: "Finish 1/3", section_time: first}, {section_name: "Finish 2/3", section_time: second}, {section_name: "Finish Assignment", section_time: due_date}];
   }
   
-  console.log("Section dates are: " + sectionDates);
+  //console.log("Section dates are: " + sectionDates);
   return section_array;
 
  // return dateDifference;
@@ -161,8 +161,16 @@ function dateDifferences(due_date) {
 
 /* Pass in date struct to convert to number version */
 function dateToNumber(date) {
+  //date.month = parseInt(date.month);
+  //console.log("date.month: " + date.month);
+  //var merp =date.month+9;
+  //console.log("date.month+9: " + merp);
+  //console.log("date.month: " + date.month);
   m = ((date.month + 9)%12);
-  y = (date.year - m/10);
+  //console.log("m: " + m);
+  //console.log("date.year: " + date.year);
+  y = (date.year - Math.round(m/10));
+  //console.log("y: " + y);
   return Math.ceil(y*365 + y/4 - y/100 + y/400 + (m*306+5)/10 + (date.day - 1));
 }
 
