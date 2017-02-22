@@ -25,7 +25,6 @@ exports.view = function(req, res){
   var sections = req.body.sections;
 
   var section_array = dateDifferences(due_date);
-  //var sectionDates = splitDates(due_date, totalDays);
 
   var newAssignment = {
     "id": id,
@@ -62,7 +61,7 @@ exports.defaultAssignment = function (req, res) {
   */
 
 
-	console.log("dthe id is: " + idex);
+	console.log("the id is: " + idex);
 	res.render('listview', data.assignments[idex]);
 }
 
@@ -90,6 +89,7 @@ function dateDifferences(due_date) {
   console.log("todays day: " + dateToday.day);
   console.log("todays month: " + dateToday.month);
   console.log("todays year: " + dateToday.year);
+
   //get due date from data.json and split elements
   due = due_date;
   var dateElements = due.split('/');
@@ -100,7 +100,7 @@ function dateDifferences(due_date) {
     month: dateElements[0],
     year: dateElements[2]
   }
-  
+
   console.log("due day: " + dueDate.day);
   console.log("due month: " + dueDate.month);
   console.log("due year: " + dueDate.year);
@@ -113,13 +113,22 @@ function dateDifferences(due_date) {
   console.log("todayDays is " + todayDays);
   console.log("dueDays is " + dueDays);
   console.log("Dates difference is " + dateDifference);
+
   var start = todayDays;
 
   if (dateDifference > 29)
   {
+    console.log("over a month section");
     var sectionDates = Math.floor(dateDifference/4);
-    
-    var section_array = [{section_name: "Finish 1/4", section_time: "no"}];
+
+    var firstNum = start+sectionDates;
+    var first = numberToDate(firstNum);
+    var secondNum = firstNum+sectionDates;
+    var second = numberToDate(secondNum);
+    var thirdNum = secondNum+sectionDates;
+    var third = numberToDate(thirdNum);
+
+    var section_array = [{section_name: "Finish 1/4", section_time: first}, {section_name: "Finish 1/2", section_time: second}, {section_name: "Finish 3/4", section_time: third}, {section_name: "Finish Assignment", section_time: due_date}];
   }
 
   if (dateDifference < 9)
@@ -127,45 +136,66 @@ function dateDifferences(due_date) {
     var sectionDates = Math.floor(dateDifference/2);
     var first = start+sectionDates;
     first = numberToDate(first);
-    console.log(first);
-    var section_array = [{section_name: "Finish 1/2", section_time: "no"}, {section_name: "Finish Assignment", section_time: "yes"}];
+    var section_array = [{section_name: "Finish 1/2", section_time: first}, {section_name: "Finish Assignment", section_time: due_date}];
   }
 
   if (dateDifference > 8 && dateDifference <30)
   {
+    console.log("middle section");
     var sectionDates = Math.floor(dateDifference/3);
+
+    var firstNum = start+sectionDates;
+    var first = numberToDate(firstNum);
+    var secondNum = firstNum+sectionDates;
+    var second = numberToDate(secondNum);
+
+    var section_array = [{section_name: "Finish 1/3", section_time: first}, {section_name: "Finish 2/3", section_time: second}, {section_name: "Finish Assignment", section_time: due_date}];
   }
   
-  console.log("Section dates are" + sectionDates);
+  console.log("Section dates are: " + sectionDates);
   return section_array;
 
  // return dateDifference;
  // res.json(dateDifference);
 }
 
+/* Pass in date struct to convert to number version */
 function dateToNumber(date) {
-  m = (date.month + 9)%12;
-  y = date.year - date.month/10;
-  return y*365 + y/4 - y/100 + y/400 + (m*306+5)/10 + (date.day - 1);
+  m = ((date.month + 9)%12);
+  y = (date.year - m/10);
+  return Math.ceil(y*365 + y/4 - y/100 + y/400 + (m*306+5)/10 + (date.day - 1));
 }
 
-function numberToDate(num) {
-  var y = (10000*num + 14780)/3652425;
-  var ddd = num - (y*365 + y/4 - y/100 + y/400);
+/* Pass in number of days to convert to date */
+function numberToDate(d) {
+  var y = Math.floor((10000*d + 14780)/3652425);
+  var ddd = d - (y*365 + y/4 - y/100 + y/400);
   if (ddd < 0)
   {
     y = y-1;
-    ddd = num-(y*365 + y/4 - y/100 +y/400);
+    ddd = d-(y*365 + y/4 - y/100 +y/400);
   }
-  var mi = (52 + 100*ddd)/3060;
+  var mi = Math.floor((52 + 100*ddd)/3060);
 
   var date = {
-    date: ddd - (mi*306 +5)/10+1,
-    month: (mi+2)%12+1,
-    year: y + (mi +2)/12
+    date: Math.floor(ddd - (mi*306 +5)/10+1),
+    month: Math.floor((mi+2)%12+1),
+    year: Math.floor(y + (mi +2)/12)
   }
 
-  return date;
+  if (date.date < 10)
+  {
+    date.date = "0" + date.date;
+  }
+
+  if (date.month < 10)
+  {
+    date.month = "0" + date.month;
+  }
+
+  var fullDate = date.month + "/" + date.date + "/" + date.year;
+
+  return fullDate;
 }
 /*
 //exports.splitDate = function(req, res) {
