@@ -45,8 +45,8 @@ function makeCalendar(month, year) {
 	var firstDay = new Date(current_year, current_month, 1);
 	var startingDay = firstDay.getDay();
 
-	console.log("starting day: " + startingDay);
-	console.log("days in week is: " + days_in_week_list[startingDay]);
+	//console.log("starting day: " + startingDay);
+	//console.log("days in week is: " + days_in_week_list[startingDay]);
 
 	var monthLength = days_in_month_list[current_month];
 
@@ -72,7 +72,7 @@ function makeCalendar(month, year) {
 			html += '<tr>';
 			for (var j = 0; j < 7; j++) {
 				if (j == startingDay) {
-					console.log(dayCount + ": found start day at " + j + "\n");
+					//console.log(dayCount + ": found start day at " + j + "\n");
 					isBeginning = true;
 					/*
 					html += '<td>';
@@ -81,7 +81,7 @@ function makeCalendar(month, year) {
 					*/
 					break;
 				} else {
-					console.log(dayCount + ": empty\n");
+					//console.log(dayCount + ": empty\n");
 					html += '<td></td>';
 				}
 				dayCount++;
@@ -91,21 +91,21 @@ function makeCalendar(month, year) {
 			if (dayCount % 7 == 0) {
 				html += '</tr>';
 				html += '<tr>';
-				console.log(dayCount + ": make new row\n");
+				//console.log(dayCount + ": make new row\n");
 			} 
 
 			html += '<td>';
 			html += i;
 			html += '</td>';
 			dayCount++;
-			console.log(dayCount + ": added data for " + i + "\n");
+			//console.log(dayCount + ": added data for " + i + "\n");
 		}
 
 		
 	}
 	html += '</tr>';
 
-	console.log("html is: " + html);
+	//console.log("html is: " + html);
 
 	$('.daysincal').append(html);
 	

@@ -24,13 +24,13 @@ function toggle(button) {
 		console.log("in if");
 		document.getElementById("hide_show").value="Show Completed Assignments";
 		$.each($("input[name='cb']:checked"), function() {
-			$(this).hide();
+			$(this).parent().hide();
 		});
 	} else {
 		document.getElementById("hide_show").value="Hide Completed Assignments";
 		console.log("in else");
 		$.each($("input[name='cb']:checked"), function() {
-			$(this).show();
+			$(this).parent().show();
 		});
 	}
 }
