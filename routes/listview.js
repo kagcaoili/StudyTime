@@ -24,7 +24,7 @@ exports.view = function(req, res){
   var class_name = req.body.class;
   var sections = req.body.sections;
 
-  var section_array = dateDifferences(due_date);
+  var section_array = autosplitSections(due_date);
 
   var newAssignment = {
     "id": id,
@@ -66,10 +66,7 @@ exports.defaultAssignment = function (req, res) {
 }
 
 //exports.dateDifferences = function (req, res) {
-function dateDifferences(due_date) {
-  //console.log("in dateDifferences funciton");
-  //store number of days in all months from Jan-Dec
-  var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+function autosplitSections(due_date) {
 
   var today = new Date();
   var todayDay = today.getDate();
@@ -115,6 +112,7 @@ function dateDifferences(due_date) {
   console.log("Dates difference is " + dateDifference);
 */
   var start = todayDays;
+
 
   if (dateDifference > 29)
   {
@@ -205,6 +203,48 @@ function numberToDate(d) {
 
   return fullDate;
 }
+
+function dateDifference(due_date) {
+  var today = new Date();
+  var todayDay = today.getDate();
+  if (todayDay < 10)
+    todayDay = "0" + todayDay;
+
+  var todayMonth = today.getMonth()+1;
+  if (todayMonth < 10)
+    todayMonth = "0" + todayMonth;
+
+  /* Create a struct for today's date elements */
+  var dateToday = {
+    day: parseInt(todayDay),
+    month: parseInt(todayMonth),
+    year: parseInt(today.getFullYear())
+  }
+
+  due = due_date;
+  var dateElements = due.split('/');
+
+  /* Create a struct for due date's elements */
+  var dueDate = {
+    day: parseInt(dateElements[1]),
+    month: parseInt(dateElements[0]),
+    year: parseInt(dateElements[2])
+  }
+
+  var dueDays = dateToNumber(dueDate);
+  var todayDays = dateToNumber(dateToday);
+
+  var dateDifference = dueDays - todayDays;
+
+  return dateDifference;
+}
+
+
+
+
+
+
+
 /*
 //exports.splitDate = function(req, res) {
 function splitDate(due_date, dates) {

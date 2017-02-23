@@ -30,6 +30,12 @@ ul {
      font-size: 13px;
 }
 
+.calsize {
+     width: 100%;
+     height: 50%;
+     /*pointer-events: none;*/
+}
+
 /*
  * Set the beginning positions of previous, month titles, and next
  * to 0 margin
@@ -128,17 +134,19 @@ ul {
      font-weight: normal;
 }
 
-#days td{
+.daysincal td{
      border-collapse: collapse;
      table-layout: fixed;
      font-size: 10px;
      color: #777;
      margin-bottom: 10px;
 
+
      padding-top: 10px;
      padding-bottom: 20px;
      padding-left: 10px;
      padding-right: 20px;
+     
 }
 
 .EventList {

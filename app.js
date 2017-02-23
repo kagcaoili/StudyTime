@@ -16,6 +16,8 @@ var createAssignment = require('./routes/createAssignment');
 var help = require('./routes/help');
 var listview = require('./routes/listview');
 var createAccount = require('./routes/createAccount');
+
+var add = require('./routes/add');
 // Example route
 // var user = require('./routes/user');
 
@@ -52,8 +54,9 @@ app.get('/help', help.view);
 app.post('/listview/:id', listview.view);
 app.get('/listview/:id', listview.defaultAssignment);
 
-
 app.get('/createAccount', createAccount.view);
+
+app.get('/add', add.addSection);
 // Example route
 // app.get('/users', user.list);
 

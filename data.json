@@ -1,58 +1,59 @@
 {
+	"sectionsInfo": [
+
+	],
+
+
 	"assignments": [
 		{
 			"id": "0",
-			"name": "A4: Show Your Flow",
-			"due_date": "02/02/2017",
+			"name": "A7: Ready for Testing",
+			"due_date": "02/23/2017",
 			"class": "CSE 170/COGS 120",
 			"sections": {
 				"1": {
-					"section_name": "Step 1",
-					"section_time": "1 hour"
+					"section_name": "User Testing Plan",
+					"section_time": "02/17/2017"
 				},
 				"2": {
-					"section_name": "Step 2",
-					"section_time": "2 hours"
+					"section_name": "Complete Functionality",
+					"section_time": "02/19/2017"
 				},
 				"3": {
-					"section_name": "Step 3",
-					"section_time": "3 hours"
+					"section_name": "Development Plan",
+					"section_time": "02/21/2017"
 				},
 				"4": {
-					"section_name": "Step 4",
-					"section_time": "4 hours"
+					"section_name": "Submit",
+					"section_time": "02/23/2017"
 				}
 			}
 		},
 		{
 			"id": "1",
-			"name": "A6: Meat on the Bones",
-			"due_date": "02/16/2017",
+			"name": "A8: Test your prototype",
+			"due_date": "03/02/2017",
 			"class": "CSE 170/COGS 120",
 			"sections": {
 				"1": {
-					"section_name": "Step 1",
-					"section_time": "1 hour"
+					"section_name": "Observations",
+					"section_time": "02/24/2017"
 				},
 				"2": {
-					"section_name": "Step 2",
-					"section_time": "2 hour"
+					"section_name": "Compile your findings",
+					"section_time": "02/26/2017"
 				},
 				"3": {
-					"section_name": "Step 3",
-					"section_time": "4 hour"
+					"section_name": "Create a Meaningful Redesign",
+					"section_time": "02/27/2017"
 				},
 				"4": {
-					"section_name": "Step 4",
-					"section_time": "1 hour"
+					"section_name": "Description of Online Test",
+					"section_time": "03/01/2017"
 				},
 				"5": {
-					"section_name": "Step 5",
-					"section_time": "1 hour"
-				},
-				"6": {
-					"section_name": "Step 6",
-					"section_time": "1 hour"
+					"section_name": "Updated Dev Plan",
+					"section_time": "03/02/2017"
 				}
 			}
 		}
