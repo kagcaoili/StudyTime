@@ -1,4 +1,4 @@
- <html lang="en" class="no-js">
+<html lang="en" class="no-js">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,8 @@
 
 	<!-- link css -->
 		<link href="../css/listview.css" rel = "stylesheet">
-       
+       <script src="js/assignmentlist.js"></script>
+
   	
 	<title>StudyTime</title>
 </head>
@@ -72,7 +73,7 @@
 		<ul>
         {{#each sections}}
             <li>
-            	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">
+            	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes" checked>
 		    <a href="#0"><id="Assignment1">{{section_name}}:  {{section_time}}</a>
 <!--		    <a href="../createAssignment" class="button" id="individualEditCheckpoint">Edit CkPt</a></li> --><!--supposed to be link to mini calendar, instead of createAssignment--> 
 		{{/each}}
@@ -97,6 +98,7 @@
 
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
+
 <script src="../js/jquery-2.1.4.js"></script>
 <!--<script src="../js/jquery.menu-aim.js"></script>-->
 <script src="../js/main.js"></script> <!-- Resource jQuery -->
