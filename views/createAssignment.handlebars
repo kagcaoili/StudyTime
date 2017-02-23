@@ -76,29 +76,31 @@
 				
 				<div>
 					<h3>Sections:</h3>
-					{{#each sections}}
+					{{#each sectionsInfo}}
 						<div>
 							<p>{{section_name}}</p>
-							<p>Estimated Time"{{section_time}}</p>
+							<p>Estimated Time:{{section_time}}</p>
 						</div>
+						<br>
 					{{/each}}
 				<div> 
 
-				<form id="addSectionForm" role="form" method="post" action="/add">
-					<h3>Add Section</h3>
+				<form id="addSectionForm" role="form" method="get" action="/add">
 					<p>
 						<br>
 					</p>
 					<div class="form-group">
-						<label for="section_name">Section Name:<br></label>
+						<label for="section_name">Add Section Name:<br></label>
 						<input type="text" class="form-control" id="section_name" placeholder="Section Name" name="section_name">
 					</div>
 					<div class="form-group">
-						<label for="section_time">Time to Complete Section:<br></label>
+						<label for="section_time">Add Time(hours) to Complete Section:<br></label>
 						<input type="text" class="form-control" id="section_time" placeholder="Time to Complete" name="section_time">
 					</div>
 					<input type="submit" id="submitBtn" class="btn btn-default" value="Add the section"></input>
 				</form>
+
+				<br>
 
 				<div class="createTimeline">
 		<!--		<center><a href="listView" id="create"><button>Create Assignment Timeline</button></a>    -->

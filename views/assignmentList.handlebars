@@ -70,11 +70,10 @@
 						{{#each assignments}}
 						<li>
 							<div class="form-group"> 
-								<label>
-									<input type = "checkbox" id={{name}} name = "cb" value="cb1"> {{name}}   Due: {{due_date}}
-								</label>
+								<label><span id = "{{name}}"><input type = "checkbox" name = "cb" value="cb1"> {{name}}   Due: {{due_date}}
+								</span></label>
 						</li>
-						
+
 						<br>
 						{{/each}}
 						<br>
@@ -91,6 +90,7 @@
 					</div> 
 				</form>
 			</div>
+
 			<br>
 
 <!--			<div class="hide">
