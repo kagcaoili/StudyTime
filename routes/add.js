@@ -13,6 +13,7 @@ exports.addSection = function (req, res) {
 
   data.sectionsInfo.push(newSection);
   
+  
   var array = [], len;
   for (assignment in data.assignments) {
     array.push(assignment);
