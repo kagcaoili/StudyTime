@@ -21,14 +21,14 @@ function initializePage() {
 
 function toggle(button) {
 	if(document.getElementById("hide_show").value=="Hide Completed Assignments") {
-		console.log("in if");
+		//console.log("in if");
 		document.getElementById("hide_show").value="Show Completed Assignments";
 		$.each($("input[name='cb']:checked"), function() {
 			$(this).parent().hide();
 		});
 	} else {
 		document.getElementById("hide_show").value="Hide Completed Assignments";
-		console.log("in else");
+		//console.log("in else");
 		$.each($("input[name='cb']:checked"), function() {
 			$(this).parent().show();
 		});
