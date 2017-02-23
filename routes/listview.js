@@ -15,8 +15,6 @@ exports.view = function(req, res){
   console.log("body 1sectionname: " + req.body.sections[0].section_name);
   console.log("body 1sectionname: " + req.body.sections[0].section_time);
 */
-  //res.render('listview', data.assignments[idex]);
-  //res.render('listview', req.body);
 
   var id = req.body.id;
   var name = req.body.name;
@@ -34,11 +32,9 @@ exports.view = function(req, res){
     "sections": section_array
   }
 
-
-  //console.log("BEFORE: " + data.assignments[0].name);
-  //data['assignments'].push({"id":req.body.id,"name":req.body.name,"due_date":req.body.due_date, "class":req.body.class, "sections":req.body.sections});
   data.assignments.push(newAssignment);
-  //console.log("AFTER: " + data.assignments[2].name);
+
+  console.log("new assignment in list: " + newAssignment);
 
   res.render('listview', {
     'id': id,
@@ -50,18 +46,9 @@ exports.view = function(req, res){
 };
 
 exports.defaultAssignment = function (req, res) {
-	//console.log("rendering default assignment");
+	console.log("rendering default assignment");
 	var idex = req.params.id;
 
-	/*
-	console.log("dbody id: " + req.body.id);
-  console.log("dbody name: " + req.body.name);
-  console.log("dbody due date: " + req.body.due_date);
-  console.log("dbody section name: " + req.body.section_name);
-  */
-
-
-	console.log("the id is: " + idex);
 	res.render('listview', data.assignments[idex]);
 }
 

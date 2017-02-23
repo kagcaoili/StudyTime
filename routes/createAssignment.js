@@ -15,19 +15,8 @@ exports.view = function(req, res){
   }
   len = array.length;
 
-  //console.log("bodybodybody: " + req.body);
-
-  /*
-  var id = (data.assignments[len-1].id - -1);
-  var name = "Lab 3";
-  var due_date = "02/14/2017";
-  var class_name = "CSE 165";
-  var sections = [1, 2, 3];
-
-  data['assignments'].push({"id":id,"name":name,"due_date":due_date,"class":class_name, "sections":sections});
-  console.log(data);
-*/
   res.render('createAssignment', {
+    'sections': data.sectionsInfo,
     'newIndex': len
   });
 };

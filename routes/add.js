@@ -10,8 +10,18 @@ exports.addSection = function (req, res) {
   	"section_name": name,
   	"section_time": time
   }
-  //console.log(newSection);
+
   data.sectionsInfo.push(newSection);
-  res.render('createAssignment.handlebars', data);
+  
+  var array = [], len;
+  for (assignment in data.assignments) {
+    array.push(assignment);
+  }
+  len = array.length;
+
+  res.render('createAssignment', {
+    'sections': data.sectionsInfo,
+    'newIndex': len
+  });
 }
 
