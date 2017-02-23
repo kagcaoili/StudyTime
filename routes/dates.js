@@ -5,10 +5,11 @@ exports.dateDifferences = function (req, res) {
 	//store number of days in all months from Jan-Dec
 	var monthDays = new Array[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
+	var today = new Date();
 	/* Create a struct for today's date elements */
 	var dateToday = {
 		day: today.getDate(),
-		month: today.getMonth(),
+		month: today.getMonth()+1,
 		year: today.getFullYear()
 	}
 

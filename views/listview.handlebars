@@ -17,7 +17,7 @@
 </head>
 <body>
 	<header class="cd-main-header">
-		<a href="#0" class="cd-logo"><img src="../images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>
+<!--		<a href="#0" class="cd-logo"><img src="../images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>  -->
 
 		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
@@ -63,7 +63,7 @@
         <div class ="assignmentName">	
         <center><a href="#0"><id="assignmentName1">
 	    {{name}}</a>
-	    <a href="../createAssignment" class="button" id="mainEditButton">Edit</a>
+<!--	    <a href="../createAssignment" class="button" id="mainEditButton">Edit</a>  -->
         </div>
 
         <div class="stepsList">
@@ -73,7 +73,7 @@
             <li>
             	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">
 		    <a href="#0"><id="Assignment1">{{section_name}}:  {{section_time}}</a>
-		    <a href="../createAssignment" class="button" id="individualEditCheckpoint">Edit CkPt</a></li> <!--supposed to be link to mini calendar, instead of createAssignment--> 
+<!--		    <a href="../createAssignment" class="button" id="individualEditCheckpoint">Edit CkPt</a></li> --><!--supposed to be link to mini calendar, instead of createAssignment--> 
 		{{/each}}
 		</ul>
 	   </form>
@@ -86,7 +86,11 @@
         <br> 
 		
 		<div class ="dueDate">
-		<center><a href="#0"><id="dueDateWhole">Due Date: {{due_date}}</a>
+			<center><a href="#0"><id="dueDateWhole">Due Date: {{due_date}}</a>
+	    </div>
+
+	    <div class = "assignmentClass">
+	    	<center><a href="#0"><id="classWhole">Class: {{class}}</a>
 	    </div>
 
 
