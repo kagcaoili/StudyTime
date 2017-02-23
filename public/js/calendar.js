@@ -72,30 +72,42 @@ function makeCalendar(month, year) {
 			html += '<tr>';
 			for (var j = 0; j < 7; j++) {
 				if (j == startingDay) {
+					console.log(dayCount + ": found start day at " + j + "\n");
 					isBeginning = true;
+					/*
+					html += '<td>';
+					html += 1;
+					html += '</td>';
+					*/
 					break;
 				} else {
+					console.log(dayCount + ": empty\n");
 					html += '<td></td>';
 				}
 				dayCount++;
 			}
+		} else {
+
+			if (dayCount % 7 == 0) {
+				html += '</tr>';
+				html += '<tr>';
+				console.log(dayCount + ": make new row\n");
+			} 
+
+			html += '<td>';
+			html += i;
+			html += '</td>';
+			dayCount++;
+			console.log(dayCount + ": added data for " + i + "\n");
 		}
 
-		if (dayCount % 7 == 0) {
-			html += '</tr>';
-			html += '<tr>';
-		} 
-
-		html += '<td>';
-		html += i;
-		html += '</td>';
-		dayCount++;
+		
 	}
 	html += '</tr>';
 
 	console.log("html is: " + html);
 
-	$('#days').append(html);
+	$('.daysincal').append(html);
 	
 
 }

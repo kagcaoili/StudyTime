@@ -2,13 +2,11 @@
   "name": "StudyTime",
   "version": "0.0.1",
   "author": "Thuy Nguyen, Allison Reiss, Kristin Agcaoili",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/kagcaoili/StudyTime"
   },
   "license": "MIT",
-
   "private": false,
   "scripts": {
     "start": "node app.js"
@@ -16,10 +14,12 @@
   "dependencies": {
     "express": "3.x",
     "express3-handlebars": "*",
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^16.1.0",
     "mongodb": "*",
     "mongoose": "*"
   },
   "engines": {
     "node": "0.10.x"
-  }  
+  }
 }
