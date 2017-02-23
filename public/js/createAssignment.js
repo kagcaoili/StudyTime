@@ -19,7 +19,7 @@ function getNewAssignment(e) {
 
 	console.log("detect new assignment");
 	var assignmentIndex = $('.createTimeline .button').attr('id');
-	console.log("The assignment index is: " + assignmentIndex);
+//	console.log("The assignment index is: " + assignmentIndex);
 
 	var name = document.getElementById("name").value;
     var due_date = document.getElementById("due_date").value;
@@ -27,12 +27,12 @@ function getNewAssignment(e) {
     var section_name = document.getElementById("section_name").value;
     var section_time = document.getElementById("section_time").value;
     
-    console.log("name is: " + name);
+ /*   console.log("name is: " + name);
     console.log("due date is: " + due_date);
     console.log("assignment class: " + assignment_class);
     console.log("section name is: " + section_name);
     console.log("section_time is " + section_time);
-
+*/
     var section_array = [{section_name: section_name, section_time: section_time}];
 
 	//$.post('listview/' + assignmentIndex, {id: assignmentIndex, name: name, due_date: due_date, class: assignment_class, sections: [ "1":  [section_name: section_name, section_time: section_time]]}, addAssignment);
