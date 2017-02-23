@@ -83,6 +83,7 @@ exports.view = function(req, res){
     section_array.push({section_name: sections[j].section_name, section_time: due_date});
 
 
+    data.sectionsInfo = [];
 
   }
 
