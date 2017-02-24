@@ -70,11 +70,11 @@ function handleSignoutClick(event) {
 *
 * @param {string} message Text to be placed in pre element.
 */
-function appendPre(message) {
-  var pre = document.getElementById('content');
-  var textContent = document.createTextNode(message + '\n');
-  pre.appendChild(textContent);
-}
+//function appendPre(message) {
+//  var pre = document.getElementById('content');
+//  var textContent = document.createTextNode(message + '\n');
+//  pre.appendChild(textContent);
+//}
 
 /**
 * Print the summary and start datetime/date of the next ten events in
@@ -91,7 +91,7 @@ function listUpcomingEvents() {
     'orderBy': 'startTime'
   }).then(function(response) {
     var events = response.result.items;
-    appendPre('Upcoming events:');
+    //appendPre('Upcoming events:');
 
     if (events.length > 0) {
     for (i = 0; i < events.length; i++) {
@@ -100,10 +100,10 @@ function listUpcomingEvents() {
       if (!when) {
         when = event.start.date;
       }
-      appendPre(event.summary + ' (' + when + ')')
+      //appendPre(event.summary + ' (' + when + ')')
     }
     } else {
-      appendPre('No upcoming events found.');
+      //appendPre('No upcoming events found.');
     }
   });
 }
@@ -131,11 +131,11 @@ function insertEvent() {
   });
 
   request.execute(function(event) {
-    appendPre('Event Created: ' + event.htmlLink);
-    appendPre('Event Name: ' + event.summary);
+    //appendPre('Event Created: ' + event.htmlLink);
+    //appendPre('Event Name: ' + event.summary);
   });
 
-  appendPre("Inserting...");
+  //appendPre("Inserting...");
 /*
   gapi.client.calendar.events.insert({
       'calendarId': 'sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com',
