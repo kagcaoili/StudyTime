@@ -112,7 +112,7 @@ function listUpcomingEvents() {
 
 
 var newEvent = {
-  'summary': 'Google I/O 2015',
+  'summary': 'Prototype Event',
   'start': {
     'dateTime': '2017-02-25T09:00:00-07:00',
     'timeZone': 'America/Los_Angeles'
@@ -131,11 +131,11 @@ function insertEvent() {
   });
 
   request.execute(function(event) {
-    appendPre('Event created: ' + event.htmlLink);
-    appendPre('event is: ' + event.summary);
+    //appendPre('Event Created: ' + event.htmlLink);
+    //appendPre('Event Name: ' + event.summary);
   });
 
-  appendPre("insereting");
+  //appendPre("Inserting...");
 /*
   gapi.client.calendar.events.insert({
       'calendarId': 'sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com',
