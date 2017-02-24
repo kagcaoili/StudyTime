@@ -20,9 +20,72 @@ exports.view = function(req, res){
   var name = req.body.name;
   var due_date = req.body.due_date;
   var class_name = req.body.class;
-  var sections = req.body.sections;
+  //var sections = req.body.sections;
 
-  var section_array = autosplitSections(due_date);
+
+  var sections = data.sectionsInfo;
+  
+
+  if (sections.length == 0)
+  {
+    var section_array = autosplitSections(due_date);
+  }
+
+  else {
+
+
+  var today = new Date();
+  var todayDay = today.getDate();
+  if (todayDay < 10)
+    todayDay = "0" + todayDay;
+
+  var todayMonth = today.getMonth()+1;
+  if (todayMonth < 10)
+    todayMonth = "0" + todayMonth;
+
+  var dateToday = {
+    day: parseInt(todayDay),
+    month: parseInt(todayMonth),
+    year: parseInt(today.getFullYear())
+  }
+
+  var todayDays = dateToNumber(dateToday);
+  /*console.log("today Days: "+todayDays);
+
+
+    console.log("sections: "+ sections);
+    console.log("section name: " + sections[0].section_name);
+    console.log(data.sectionsInfo);
+*/
+    var dateDif = dateDifference(due_date);
+    //console.log("Date difference: " + dateDif);
+    var num = 0;
+    for (i = 0; i < sections.length; i++) {
+       num++;
+    }
+   // console.log("number sections: " + num);
+    var sectionDates = Math.floor(dateDif/num);
+    var section_array = [];
+    var section;
+    var sectionNum = todayDays;
+    var sectionDate;
+    for (j = 0; j < sections.length - 1; j++) {
+      sectionNum = sectionNum + sectionDates;
+      section = numberToDate(sectionNum);
+
+      section_array.push({section_name: sections[j].section_name, section_time: section});
+ /*     console.log(section_array);
+      console.log("length: "+section_array.length);
+      console.log("first name: " + section_array[0].section_name);
+      console.log("first time: " + section_array[0].section_time);
+      */
+    }
+    section_array.push({section_name: sections[j].section_name, section_time: due_date});
+
+
+    data.sectionsInfo = [];
+
+  }
 
   var newAssignment = {
     "id": id,
@@ -34,7 +97,7 @@ exports.view = function(req, res){
 
   data.assignments.push(newAssignment);
 
-  console.log("new assignment in list: " + newAssignment);
+  //console.log("new assignment in list: " + newAssignment);
 
   res.render('listview', {
     'id': id,
@@ -46,7 +109,7 @@ exports.view = function(req, res){
 };
 
 exports.defaultAssignment = function (req, res) {
-	console.log("rendering default assignment");
+	//console.log("rendering default assignment");
 	var idex = req.params.id;
 
 	res.render('listview', data.assignments[idex]);
@@ -225,6 +288,10 @@ function dateDifference(due_date) {
 
   return dateDifference;
 }
+
+
+
+
 
 
 
