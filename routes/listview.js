@@ -298,7 +298,6 @@ function dateDifference(due_date) {
 
 
 
-
 /*
 //exports.splitDate = function(req, res) {
 function splitDate(due_date, dates) {
