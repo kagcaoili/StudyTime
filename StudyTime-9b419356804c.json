@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "lithe-maker-159605",
+  "private_key_id": "9b419356804c88acf0b53d4b5dde50750182c269",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQD+3iH9uSu2LWAb\n6LPHOXFLn0EWMYEEvdKf2cdbgK6jrLC5XUbwipwp5iLD4q0S1on+LRS8iel97wr/\nmy+lGlEKHIbb878aAHDbL+86ycjo7AkOBl5TGOZl6xnwHErUt+NOv7b4Q6d3xapS\nPvwBWrA/nGtknFC9eMrUg7VNu7Kuyy+0CjyugP6/9EPlolqISw50gyVDFfjMd6LP\nuCC3RUW2Wwi2cEWxu4lSvmEloI0sOQaAQxuyjvLOobqpZcWcygHCDI4xmVUUvz4S\nGZB5XTds+bAY6v2P7qI614w0DcQP7zuUlHvGAQHT9vk89iz6Noj8pnDysWbiqXF+\nt7aNUwadAgMBAAECggEAfHb0eJjmXOhZ6CdDLIbD6l9ShMkWLb+ZzZCoB+qW3r2l\n7FA+JZg7XUbTMYBQb0OwTh2r48sh6OtFHsCliuaILvzxaxbk+4i9lH0bQkVqxT0H\nyv6XL9OYKKuglh7q+Gj5K+r6KtG3RgmU/OdfYDXunpH/7DleQLltrEzJzLVeNHdy\nTwcfP7zdN6A9wDbKNXr9O1dm1KgyTRFx/PdI0PCwpRDe6mB8ro4fgZW+Bpu709VQ\nQrgqA5N0/8m4Gs4YuPPSG8fICdUn2Kk3zt0GGXFtdE5c8tVHIti0KXvNqsb+sfvL\nm0pwfOzSl4HsnAJdkLXvgBaM3DRTIgVsTwn3IRjWjQKBgQD/2JAznEm6epfX9SXQ\nQCTYl3cwhD3cDlUupBc5A5TPxHFggexLNBFDvom+KWzNqCaeVwSTNGfRA7TAHd85\nv1va4QS9DdyUk3g8pGx/lrCbiI92okWw1kxNfUqYU6tNU8wCfZPulcH9kGYhxhUc\nqIgnWuXgzgI85Lyp2waMjlDjVwKBgQD/BWswApwC5KsgVu4eePbLzi4Rv5yiR5xz\nRXJCE/dZVdxpSPUGO5Kw5HqlE/nyFmRUTtXCelFULMK66zR7opZOG6uVtkPOMTu9\nVZvw4PNHWwelVUHRypWxY3HoXJV76xQNet/KWA+7XmGn9dfwyZIIOLx31kl5JQ7w\nmvaVd4KBKwKBgGWg7/8gWQUzR3fokIG9ySUkXZsvHKd6Jgol8neaXZV+kg7k7Ske\nYLFJUcvxBqBW6ChDprSWv5p+X2FlPFPjGKjEc65pgDKgtcVZByRThonx4BMe+JH7\nPkoVt/j0W3qXC9X9bjL62BlSL8/AsIg2xgbkC6aWDruDnRHXyC0zJxx3AoGBAIz1\n8M6D0rpirRheFJaxZDE5EQvsbubgUGEC9OoDYUh3BjMICa/dQ/MVB5mxlgmzSNe1\nD8DEnam6aBSrp8HjF9OqxcgmDAqv+gZoiJ63qKE7dtlza8NLiDyZ7D901Ye+Y8Ij\ntgmBbYiy3aXaZPcKY/a5bauLvecBjeV+smfhvDgrAoGAbSvdPNCA8At9QiW4iQ3c\n1TvuVD3IcWq4v6D2ttHcRgYJWH0vdVorFWbFupoHvksM60t/Yg+e/jBrkWm+TLYJ\n82HUdIC83alPepMpwssrEsMaTt9lX6JBuiLcYMpsQv+HtMPyrLNOV3DcwXEqB0v2\nKnavFajSO3EEpo9xGV0o0Ec=\n-----END PRIVATE KEY-----\n",
+  "client_email": "studytimebot@lithe-maker-159605.iam.gserviceaccount.com",
+  "client_id": "118115668608042758564",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/studytimebot%40lithe-maker-159605.iam.gserviceaccount.com"
+}
