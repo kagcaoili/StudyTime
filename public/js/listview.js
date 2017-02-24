@@ -131,11 +131,11 @@ function insertEvent() {
   });
 
   request.execute(function(event) {
-    //appendPre('Event Created: ' + event.htmlLink);
-    //appendPre('Event Name: ' + event.summary);
+    appendPre('Event Created: ' + event.htmlLink);
+    appendPre('Event Name: ' + event.summary);
   });
 
-  //appendPre("Inserting...");
+  appendPre("Inserting...");
 /*
   gapi.client.calendar.events.insert({
       'calendarId': 'sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com',
