@@ -28,13 +28,12 @@ function initClient() {
     scope: SCOPES
   }).then(function () {
     // Listen for sign-in state changes.
-    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+    //gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
     // Handle the initial sign-in state.
-    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-    //authorizeButton.onclick = handleAuthClick;
-    //signoutButton.onclick = handleSignoutClick;
-    handleAuthClick();
+    //updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+    //handleAuthClick();
+    insertEvent();
   });
 }
 
@@ -112,13 +111,13 @@ function listUpcomingEvents() {
 
 
 var newEvent = {
-  'summary': 'Prototype Event',
+  'summary': 'HELLO WORLD',
   'start': {
-    'dateTime': '2017-02-25T09:00:00-07:00',
+    'dateTime': '2017-03-03T09:00:00-07:00',
     'timeZone': 'America/Los_Angeles'
   },
   'end': {
-    'dateTime': '2017-02-25T17:00:00-07:00',
+    'dateTime': '2017-03-03T17:00:00-07:00',
     'timeZone': 'America/Los_Angeles'
   }
 };
