@@ -6,6 +6,10 @@ var data = require('../data.json');
 
 exports.view = function(req, res){
   var idex = req.params.id;
+  console.log("the param isNew is: " + req.params.isNew);
+  var toBeInserted = (req.params.isNew === "true") ;
+  console.log("to be inserted is: " + toBeInserted);
+
 /*
   console.log("body id: " + req.body.id);
   console.log("body name: " + req.body.name);
@@ -15,6 +19,7 @@ exports.view = function(req, res){
   console.log("body 1sectionname: " + req.body.sections[0].section_name);
   console.log("body 1sectionname: " + req.body.sections[0].section_time);
 */
+
 
   var id = req.body.id;
   var name = req.body.name;
@@ -104,15 +109,32 @@ exports.view = function(req, res){
     'name': name,
     "due_date": due_date,
     "class": class_name,
-    'section_name': section_array
+    'section_name': section_array,
+    'isnew' : toBeInserted
   });
 };
 
 exports.defaultAssignment = function (req, res) {
-	//console.log("rendering default assignment");
+  var isNew = 0;
+	console.log("rendering default assignment with new: " + isNew);
 	var idex = req.params.id;
+  
 
-	res.render('listview', data.assignments[idex]);
+  var id = data.assignments[idex].id;
+  var name = data.assignments[idex].name;
+  var due_date = data.assignments[idex].due_date;
+  var class_name = data.assignments[idex].class;
+  var section_array = data.assignments[idex].sections;
+
+	res.render('listview', {
+    //'data': data.assignments[idex],
+    'id': id,
+    'name': name,
+    "due_date": due_date,
+    "class": class_name,
+    'section_name': section_array,
+    'isnew' : isNew
+  });
 }
 
 //exports.dateDifferences = function (req, res) {
@@ -288,6 +310,37 @@ function dateDifference(due_date) {
 
   return dateDifference;
 }
+
+
+/*
+* GOOGLE CALENDAR API INSERTION 
+*/
+
+
+
+
+
+/*
+ * END GOOGLE CALENDAR API INSERTION
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

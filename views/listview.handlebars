@@ -6,11 +6,11 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 
 <!--	<link rel="stylesheet" href="css/reset.css">--> <!-- CSS reset -->
-	<link rel="stylesheet" href="../css/style.css"> <!-- Resource style -->
-	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
+	<link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+	<script src="../../js/modernizr.js"></script> <!-- Modernizr -->
 
 	<!-- link css -->
-		<link href="../css/listview.css" rel = "stylesheet">
+		<link href="../../css/listview.css" rel = "stylesheet">
        
 
   	
@@ -32,20 +32,20 @@
 				</li>
 
 				<li class="btn btn-default">
-					<a href="../mainCalendar">Main Calendar</a>
+					<a href="../../mainCalendar">Main Calendar</a>
 				</li>
 
 				<li class="btn btn-default">
-					<a href="../assignmentlist">Assignment List</a>
+					<a href="../../assignmentlist">Assignment List</a>
 				</li>
 
 				<li class="btn btn-default">
 			
-					<a href="../createAssignment">Create an Assignment</a>
+					<a href="../../createAssignment">Create an Assignment</a>
 				</li>
 
 				<li class="btn btn-default">
-					<a href="../help">Help</a>			
+					<a href="../../help">Help</a>			
 				</li>
 
 				<li class="btn btn-default">
@@ -83,7 +83,7 @@
 		<br>
 
 		<div class ="ATCalendarView">
-                <center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>
+                <center><a href="../../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>
 		</div>
         <br> 
 		
@@ -94,18 +94,28 @@
 	    <div class = "assignmentClass">
 	    	<center><a href="#0"><id="classWhole">Class: {{class}}</a>
 	    </div>
-
-
+	    <!--
+{{#if "{{isnew}}"}}
+<div class = "assignmentClass">
+	    	gfhgyj
+	    </div>
+{{/if}} -->
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
 
-<script src="../js/jquery-2.1.4.js"></script>
+<script src="../../js/jquery-2.1.4.js"></script>
 <!--<script src="../js/jquery.menu-aim.js"></script>-->
-<script src="../js/main.js"></script> <!-- Resource jQuery -->
-<script src="../js/assignmentList.js"></script>
-<script src="../js/listview.js"></script>
+<script src="../../js/main.js"></script> <!-- Resource jQuery -->
+<script src="../../js/assignmentList.js"></script>
+<script src="../../js/listview.js"></script>
+
+<!--<script async defer src="https://apis.google.com/js/api.js"</script>-->
+
+{{#if "{{isnew}}"}}
 <script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
+      onload="alert('work!');this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
+{{/if}}
+
 </body>
 </html>
