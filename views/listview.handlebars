@@ -11,12 +11,13 @@
 
 	<!-- link css -->
 		<link href="../css/listview.css" rel = "stylesheet">
-       
+        
+         
 
   	
 	<title>StudyTime</title>
 </head>
-<body>
+<body onload="load()">
 	<header class="cd-main-header">
 <!--		<a href="#0" class="cd-logo"><img src="../images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>  -->
 
@@ -63,8 +64,7 @@
         
 
         <div class ="assignmentName">	
-        <center><a href="#0"><id="assignmentName1">
-	    {{name}}</a>
+        <center><id="assignmentName1">{{name}}
 <!--	    <a href="../createAssignment" class="button" id="mainEditButton">Edit</a>  -->
         </div>
 
@@ -73,17 +73,23 @@
 		<ul>
         {{#each sections}}
             <li>
-            	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">
-		    <a href="#0"><id="Assignment1">{{section_name}}:  {{section_time}}</a>
-<!--		    <a href="../createAssignment" class="button" id="individualEditCheckpoint">Edit CkPt</a></li> --><!--supposed to be link to mini calendar, instead of createAssignment--> 
+            	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">{{section_name}}:
+            <li>
+            {{section_time}}
+		    <!--<a href="#0"><id="Assignment1"></a>-->
 		{{/each}}
+
+<!--		    <a href="../createAssignment" class="button" id="individualEditCheckpoint">Edit CkPt</a></li> --><!--supposed to be link to mini calendar, instead of createAssignment--> 
+		
 		</ul>
 	   </form>
 		</div>	
 		<br>
 
 		<div class ="ATCalendarView">
-                <center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>
+                <!--<center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>-->
+                <center><a href="../calendarView/{{id}}"><input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View" onclick="save()"/></a>
+
 		</div>
         <br> 
 		
@@ -107,5 +113,6 @@
 <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
+
 </body>
 </html>

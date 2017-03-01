@@ -159,3 +159,38 @@ function insertEvent() {
       }
     }); */
 }
+
+/*This one save only the first checkbox*/
+function save(){
+  var checkbox = document.getElementById('stepsCheckboxes');
+  localStorage.setItem('stepsCheckboxes', checkbox.checked);
+}
+
+function load(){
+  var checked = JSON.parse(localStorage.getItem('stepsCheckboxes'));
+  document.getElementById("stepsCheckboxes").checked = checked;
+}
+
+load();
+
+/*function save(){
+    var checkbox = document.getElementById('stepsCheckboxes');
+    if(document.getElementById('stepsCheckboxes').checked) {
+        localStorage.setItem('stepsCheckboxes', true);
+    }
+}
+
+function load(){    
+    var checked = localStorage.getItem('stepsCheckboxes');
+    if (checked == "true") {
+        document.getElementById("stepsCheckboxes").setAttribute('checked','checked');
+    }
+}
+function wis(){
+    location.reload();
+    localStorage.clear()
+
+}
+
+load();*/
+
