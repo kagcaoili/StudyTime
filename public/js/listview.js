@@ -15,6 +15,7 @@ var SCOPES = "https://www.googleapis.com/auth/calendar";
 */
 function handleClientLoad() {
   gapi.load('client:auth2', initClient);
+  console.log("running");
 }
 
 /**
@@ -43,7 +44,6 @@ function initClient() {
 */
 function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
-    //listUpcomingEvents();
     insertEvent();
   } else {
   }
@@ -63,23 +63,6 @@ function handleSignoutClick(event) {
   gapi.auth2.getAuthInstance().signOut();
 }
 
-/**
-* Append a pre element to the body containing the given message
-* as its text node. Used to display the results of the API call.
-*
-* @param {string} message Text to be placed in pre element.
-*/
-//function appendPre(message) {
-//  var pre = document.getElementById('content');
-//  var textContent = document.createTextNode(message + '\n');
-//  pre.appendChild(textContent);
-//}
-
-/**
-* Print the summary and start datetime/date of the next ten events in
-* the authorized user's calendar. If no events are found an
-* appropriate message is printed.
-*/
 function listUpcomingEvents() {
   gapi.client.calendar.events.list({
     'calendarId': 'sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com',
@@ -90,20 +73,16 @@ function listUpcomingEvents() {
     'orderBy': 'startTime'
   }).then(function(response) {
     var events = response.result.items;
-    //appendPre('Upcoming events:');
 
     if (events.length > 0) {
-    for (i = 0; i < events.length; i++) {
-      var event = events[i];
-      var when = event.start.dateTime;
-      if (!when) {
-        when = event.start.date;
+      for (i = 0; i < events.length; i++) {
+        var event = events[i];
+        var when = event.start.dateTime;
+        if (!when) {
+          when = event.start.date;
+        }
       }
-      //appendPre(event.summary + ' (' + when + ')')
-    }
-    } else {
-      //appendPre('No upcoming events found.');
-    }
+    } 
   });
 }
 
@@ -130,10 +109,9 @@ function insertEvent() {
   });
 
   request.execute(function(event) {
-    //appendPre('Event Created: ' + event.htmlLink);
-    //appendPre('Event Name: ' + event.summary);
   });
 
+<<<<<<< HEAD
   //appendPre("Inserting...");
 /*
   gapi.client.calendar.events.insert({
@@ -194,3 +172,6 @@ function wis(){
 
 load();*/
 
+=======
+}
+>>>>>>> 3cebe052699c970dbda15d63a17126ce9a1b5b0a

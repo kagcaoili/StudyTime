@@ -51,8 +51,8 @@ app.get('/assignmentlist', assignmentList.view);
 app.get('/calendarview/:id', calendarView.view);
 app.get('/createAssignment', createAssignment.view);
 app.get('/help', help.view);
-app.post('/listview/:id', listview.view);
-app.get('/listview/:id', listview.defaultAssignment);
+app.post('/listview/:id/:isNew', listview.view);
+app.get('/listview/:id/:isNew', listview.defaultAssignment);
 
 app.get('/createAccount', createAccount.view);
 
