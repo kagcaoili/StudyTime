@@ -126,6 +126,9 @@ exports.defaultAssignment = function (req, res) {
   var class_name = data.assignments[idex].class;
   var section_array = data.assignments[idex].sections;
 
+  res.render( 'listview', data.assignments[idex]);
+
+/*
 	res.render('listview', {
     //'data': data.assignments[idex],
     'id': id,
@@ -135,6 +138,7 @@ exports.defaultAssignment = function (req, res) {
     'section_name': section_array,
     'isnew' : isNew
   });
+*/
 }
 
 //exports.dateDifferences = function (req, res) {
