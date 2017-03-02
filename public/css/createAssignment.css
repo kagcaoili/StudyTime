@@ -6,6 +6,17 @@ h1 {
     font-weight: bold;
 }
 
+.form-group {
+    font-weight: 700;
+}
+
+.sections {
+    font-weight: 700;
+}
+#required {
+    text-align:right ;
+}
+
 #inputInfo {
 	margin-left: 20px;
 	margin-right: 20px;
@@ -34,9 +45,22 @@ h1 {
     background-color:powderblue;
     padding-top: 30px;
     padding-bottom: 30px;
-    border-style:;
-    border-width: 10px 10px 10px 10px;
+    border-radius:35px;
+    border:2px solid midnightblue;
+}
+
+#submitBtn {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*border-width: 10px 10px 10px 10px; */
+    border-color: midnightblue;
     border-radius: 30px;
 }
 
+#addSectionForm {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 5px;
 
+}

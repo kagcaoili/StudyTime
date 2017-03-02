@@ -25,9 +25,6 @@
 	<main class="cd-main-content">
 		<nav class="cd-side-nav">
 			<!--	<li class="cd-label"></li> -->
-				<li class="profileName"> 
-					<a href="#0">Profile Name</a>
-				</li>
 
 				<li class="btn btn-default">
 					<a href="../../mainCalendar">Main Calendar</a>
@@ -55,7 +52,7 @@
 		<div class="content-wrapper">
 
 			<div class"section-title">
-			<h1>Assignment List View</h1>
+			<h1>Assignment Timeline</h1>
 	        <br>
 			<div>
         
@@ -70,9 +67,8 @@
 		<ul>
         {{#each sections}}
             <li>
-            	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">{{section_name}}:
-            <li>
-            {{section_time}}
+            	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">{{section_name}}: {{section_time}}
+            </li>
 		    <!--<a href="#0"><id="Assignment1"></a>-->
 		{{/each}}
 
@@ -85,8 +81,9 @@
 
 		<div class ="ATCalendarView">
                 <!--<center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>-->
-                <center><a href="../calendarView/{{id}}"><input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View" onclick="save()"/></a>
+                <center><a href="../../calendarView/{{id}}"><input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View" onclick="save()"/></a>
                 <!--<center><a href="../../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>-->
+
 		</div>
         <br> 
 		
@@ -119,6 +116,7 @@
       onload="alert('work!');this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
 {{/if}}
+
 
 </body>
 </html>

@@ -31,10 +31,6 @@
 	<main class="cd-main-content">
 		<nav class="cd-side-nav">
 			<!--	<li class="cd-label"></li> -->
-				<li class="profileName"> 
-					<a href="#0">Profile Name</a>
-				</li>
-
 				<li class="btn btn-default">
 					<a href="mainCalendar">Main Calendar</a>
 				</li>
@@ -70,7 +66,7 @@
 						{{#each assignments}}
 						<li>
 							<div class="form-group">
-								<label><span class="check"><input type = "checkbox" name = "cb" value="cb1"> {{name}}   Due: {{due_date}} 
+								<label><span class="check"><input type = "checkbox" name = "cb" value="cb1"><a href="listview/{{id}}/false" style="color:powderblue">{{name}}<br>Due: {{due_date}}</a>
 								</span></label>
 						</li>
 
@@ -78,7 +74,7 @@
 						{{/each}}
 						<br>
 
-						<li><a href="createAssignment" class="button" id="addAssignmentButton">+Add Assignment</a></li>
+						<li><a href="createAssignment" class="button" id="addAssignmentButton">+Create Assignment</a></li>
 					</ul>
 							</div>
 
