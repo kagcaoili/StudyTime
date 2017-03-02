@@ -59,23 +59,26 @@
 			<h1>Create Assignment</h1>
 			<div class="middle">
 				<br>
+				<div id="required">
+					<h3> * required field </h3>
+				</div>
 				<form id="addAssignemntForm" role="form" method="post" action="/">
 					<div class="form-group">
-						<label for="name">Assignment Name:<br></label>
+						<label for="name">* Assignment Name:<br></label>
 						<input type="text" class="form control" placeholder="Type assignment name" id="name" name="name">
 					</div>
 					<div class="form-group">
-						<label for="due-date">Due Date:<br></label>
+						<label for="due-date">* Due Date:<br></label>
 						<input type="text" class="form control" id="due_date" placeholder="mm/dd/yyyy" name="due_date">
 					</div>
 					<div class="form-group">
-						<label for="class">Class:<br></label>
+						<label for="class">* Class:<br></label>
 						<input type="text" class="form control" placeholder="Type class name" id="class" name="class">
 					</div>
 				</form>
 				
 				<div>
-					<h3>Assignment Sections (optional):</h3>
+					<h3 class="sections">Assignment Sections (optional):</h3>
 					{{#each sections}}
 						<div>
 							<p>{{section_name}}</p>
@@ -88,20 +91,21 @@
 						</script>-->
 					{{/each}}
 				<div> 
-
+				<br>
 				<form id="addSectionForm" role="form" method="get" action="/add">
+					<fieldset>
 					<p>
-						<br>
 					</p>
 					<div class="form-group">
 						<label for="section_name">Add Section Name:<br></label>
 						<input type="text" class="form-control" id="section_name" placeholder="Section Name" name="section_name">
 					</div>
 					<div class="form-group">
-						<label for="section_time">Add Time(hours) to Complete Section:<br></label>
-						<input type="text" class="form-control" id="section_time" placeholder="Time to Complete" name="section_time">
-					</div>
+						<label for="section_time">Time(hours) to Complete Section:<br></label>
+						<input type="text" class="form-control" id="section_time" placeholder="Time to Complete" name="section_time"> 
+					</div>    
 					<input type="submit" id="submitBtn" class="btn btn-default" value="Add the section"></input>
+					</fieldset>
 				</form>
 
 				<br>
@@ -109,7 +113,7 @@
 
 				<div class="createTimeline">
 		<!--		<center><a href="listView" id="create"><button>Create Assignment Timeline</button></a>    -->
-					<center><a href= "listview/{{newIndex}}" class="button" id="{{newIndex}}">Create Assignment Timeline</a>
+					<center><a href= "listview/{{newIndex}}" style="color:black" class="button" id="{{newIndex}}">Create Assignment Timeline</a>
 					<!--<center><a href= "listView" class="button" id="{{newIndex}}">Create Assignment Timeline</a>-->
 				</div>
 			</div>

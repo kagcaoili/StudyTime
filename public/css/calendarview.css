@@ -170,10 +170,8 @@ ul {
 
 #listViewButton{
     background-color:powderblue;
-    -moz-border-radius:28px;
-    -webkit-border-radius:28px;
-    border-radius:5px;
-    border:2px solid gray;
+    border-radius:35px;
+    border:2px solid midnightblue;
     display:inline-block;
     cursor:pointer;
     color:black;
