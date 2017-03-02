@@ -111,31 +111,6 @@ function insertEvent() {
   request.execute(function(event) {
   });
 
-<<<<<<< HEAD
-  //appendPre("Inserting...");
-/*
-  gapi.client.calendar.events.insert({
-      'calendarId': 'sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com',
-      'resource': newEvent
-    }).then(function(response) {
-      appendPre("response: " + response);
-      var events = response.result.items;
-      appendPre("the events is: " + events + "\n");
-      appendPre('Upcoming events:');
-
-      if (events.length > 0) {
-        for (i = 0; i < events.length; i++) {
-          var event = events[i];
-          var when = event.start.dateTime;
-          if (!when) {
-            when = event.start.date;
-          }
-          appendPre(event.summary + ' (' + when + ')')
-        }
-      } else {
-        appendPre('No upcoming events found.');
-      }
-    }); */
 }
 
 /*This one save only the first checkbox*/
@@ -171,7 +146,3 @@ function wis(){
 }
 
 load();*/
-
-=======
-}
->>>>>>> 3cebe052699c970dbda15d63a17126ce9a1b5b0a
