@@ -1,61 +1,17 @@
-<html lang="en" class="no-js">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Calendar API Quickstart</title>
+    <meta charset='utf-8' />
+  </head>
+  <body>
+    <p>Google Calendar API Quickstart</p>
 
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-
-	<link rel="stylesheet" href="css/signOut.css">
-	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
-	<script src="js/modernizr.js"></script> <!-- Modernizr -->
-  	
-	<title>StudyTime</title>
-</head>
-<body>
-	<header class="cd-main-header">
-	<!--	<a href="#0" class="cd-logo"><img src="images/cd-logo.svg" alt="Left-hand logo CHANGE"></a> -->
-	</header> <!-- .cd-main-header -->
-
-	<br><br><br>
-	<!-- code for Login Screen goes here-->
-	<div class="content-wrapper" id="signInPage">
-			
-		<h1>Study Time</h1>
-		<div class="login_create">
-			<center><a href= "createAccount">Create Account</a>
-		</div>
-
-		<br><br>
-
-		<form id="signInForm" role="form" method="get" action="/add">
-			<div class="form-group">
-				<label for="username">Username:</label>
-				<input type="text" class="form-control" id="username" placeholder="username" name="username">
-			</div>
-			<div class="form-group">
-				<label for="password">Password:</label>
-				<input type="text" class="form-control" id="password" placeholder="password" name="password">
-			</div>
-		</form>
-
-		<br>
-
-		<!--
-		<div class="login_create">
-			<center><a href= "mainCalendar">Login</a>
-		</div>
-	--><a href="mainCalendar">
-		<div class="login_create" id="authorize-button"><center>Login</center></div> </a>
-
-<!--
-		Add buttons to initiate auth sequence and sign out
+    <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize-button" style="display: none;">Authorize</button>
     <button id="signout-button" style="display: none;">Sign Out</button>
-    <pre id="content"></pre> -->
-	</div> <!-- .content-wrapper -->
 
-
-<pre id="content"></pre>
+    <pre id="content"></pre>
 
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
@@ -69,6 +25,7 @@
       var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
 
       var authorizeButton = document.getElementById('authorize-button');
+      var signoutButton = document.getElementById('signout-button');
 
       /**
        *  On load, called to load the auth2 library and API client library.
@@ -93,6 +50,7 @@
           // Handle the initial sign-in state.
           updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
           authorizeButton.onclick = handleAuthClick;
+          signoutButton.onclick = handleSignoutClick;
         });
       }
 
@@ -102,10 +60,12 @@
        */
       function updateSigninStatus(isSignedIn) {
         if (isSignedIn) {
-          //authorizeButton.style.display = 'none';
+          authorizeButton.style.display = 'none';
+          signoutButton.style.display = 'block';
           listUpcomingEvents();
         } else {
-          //authorizeButton.style.display = 'block';
+          authorizeButton.style.display = 'block';
+          signoutButton.style.display = 'none';
         }
       }
 
@@ -113,9 +73,7 @@
        *  Sign in the user upon button click.
        */
       function handleAuthClick(event) {
-        if (!isSignedIn) {
-          gapi.auth2.getAuthInstance().signIn();
-        }
+        gapi.auth2.getAuthInstance().signIn();
       }
 
       /**
@@ -175,18 +133,5 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-
-
-<script src="js/jquery-2.1.4.js"></script>
-<!--<script src="js/jquery.menu-aim.js"></script> -->
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<!--<script src="js/googleInteract.js"></script>-->
-<!--<script src="../js/listview.js"></script> -->
-
-<!--
-<script async defer src="https://apis.google.com/js/api.js"
-      onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script> -->
-</body>
-</html> 
+  </body>
+</html>
