@@ -54,7 +54,7 @@ ul {
 }
 
 .stepsList ul li{
-    color:red;
+    color:#4C74C9;
 }
 #stepsCheckboxes{
     -webkit-transform:scale(1.5);
@@ -87,7 +87,7 @@ ul {
 
 .dueDate{
     font-size: 25px;
-    color:pink;
+    color:royalblue;
 }
 
 /*.stepsList{
