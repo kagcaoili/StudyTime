@@ -10,15 +10,9 @@
 	<script src="../../js/modernizr.js"></script> <!-- Modernizr -->
 
 	<!-- link css -->
-<<<<<<< HEAD
 
 		<link href="../../css/listview.css" rel = "stylesheet">
-       
 
-=======
-		<link href="../../css/listview.css" rel = "stylesheet">
->>>>>>> 90eb5de6052d7c8152480d545993c7f4198720bd
-  	
 	<title>StudyTime</title>
 </head>
 <body>
@@ -72,34 +66,34 @@
 		<ul> 
         {{#each sections}} 
             <li>
-<<<<<<< HEAD
+
             	<input type = "checkbox" class="stepsCheckboxes" id="stepsCheckboxes{{@index}}" name="stepsCheckboxes">{{section_name}}:<br>
 	            &nbsp;&nbsp;&nbsp;&ensp; {{section_time}}
-=======
+<!-- MERGE CONFLICT
             	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">{{section_name}}: {{section_time}}
             </li>
->>>>>>> 90eb5de6052d7c8152480d545993c7f4198720bd
+-->
 		    <!--<a href="#0"><id="Assignment1"></a>-->
 		{{/each}}
 	</div>
 
 
-<<<<<<< HEAD
-      	<div class ="ATCalendarView">
+
+      	<div class ="ATCalendarView"> 
 
                 <!--<center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>-->
-                
+            
                 <center><a href="../../calendarView/{{id}}">
                 	<input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View">
                 </a>
                 
-=======
-		<div class ="ATCalendarView">
+<!-- MERGE CONFLICT
+		<div class ="ATCalendarView"> -->
                 <!--<center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>-->
-                <center><a href="../../calendarView/{{id}}"><input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View" onclick="save()"/></a>
+ <!-- MERGE CONFLICT               <center><a href="../../calendarView/{{id}}">
+                	<input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View" onclick="save()"/></a>  -->
                 <!--<center><a href="../../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>-->
 
->>>>>>> 90eb5de6052d7c8152480d545993c7f4198720bd
 		</div>
         <br> 
 		
@@ -131,13 +125,7 @@
 <script async defer src="https://apis.google.com/js/api.js"
       onload="alert('work!');this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
-<<<<<<< HEAD
-
 {{/if}}
-=======
-{{/if}}
-
->>>>>>> 90eb5de6052d7c8152480d545993c7f4198720bd
 
 </body>
 </html>

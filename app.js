@@ -57,6 +57,8 @@ app.get('/listview/:id/:isNew', listview.defaultAssignment);
 app.get('/createAccount', createAccount.view);
 
 app.get('/add', add.addSection);
+//app.post('/add', add.addSection);
+
 // Example route
 // app.get('/users', user.list);
 
