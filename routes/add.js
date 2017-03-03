@@ -9,8 +9,9 @@ exports.addSection = function (req, res) {
   	"section_time": time
   }
 
+  console.log(name);
   data.sectionsInfo.push(newSection);
-  
+  console.log(newSection);
   
   var array = [], len;
   for (assignment in data.assignments) {
