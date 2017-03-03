@@ -111,7 +111,6 @@ function insertEvent() {
   request.execute(function(event) {
   });
 
-<<<<<<< HEAD
   //appendPre("Inserting...");
 /*
   gapi.client.calendar.events.insert({
@@ -138,40 +137,51 @@ function insertEvent() {
     }); */
 }
 
+$(document).ready(function() {
 /*This one save only the first checkbox*/
 function save(){
-  var checkbox = document.getElementById('stepsCheckboxes');
-  localStorage.setItem('stepsCheckboxes', checkbox.checked);
+  $('.stepsCheckboxes').each(function(index) {
+    console.log(index);
+    var checkbox = document.getElementById('stepsCheckboxes'+index);
+    localStorage.setItem('stepsCheckboxes'+index, checkbox.checked);
+  });
 }
+$("#SaveSubmitButton").click(save);
 
 function load(){
-  var checked = JSON.parse(localStorage.getItem('stepsCheckboxes'));
-  document.getElementById("stepsCheckboxes").checked = checked;
+  $('.stepsCheckboxes').each(function(index) {
+  var checked = JSON.parse(localStorage.getItem('stepsCheckboxes'+index));
+  console.log(index);
+  console.log('stepsCheckboxes' + index);
+  console.log(document.getElementById('stepsCheckboxes' + index))
+  document.getElementById("stepsCheckboxes"+index).checked = checked;
+  });
 }
+
 
 load();
+});
+
 
 /*function save(){
-    var checkbox = document.getElementById('stepsCheckboxes');
-    if(document.getElementById('stepsCheckboxes').checked) {
-        localStorage.setItem('stepsCheckboxes', true);
-    }
+    $("li").each(function(index) {
+    var checkbox = document.getElementById('stepsCheckboxes'+index);
+    if(document.getElementById('stepsCheckboxes'+index).checked) {
+        localStorage.setItem('stepsCheckboxes'+index, true);
+    });
 }
 
-function load(){    
-    var checked = localStorage.getItem('stepsCheckboxes');
+function load(){ 
+    $("li").each(function(index) {   
+    var checked = localStorage.getItem('stepsCheckboxes'+index);
     if (checked == "true") {
-        document.getElementById("stepsCheckboxes").setAttribute('checked','checked');
-    }
+        document.getElementById("stepsCheckboxes"+index).setAttribute('checked','checked');
+    });
 }
 function wis(){
     location.reload();
     localStorage.clear()
 
-}
-
+}*
 load();*/
 
-=======
-}
->>>>>>> 3cebe052699c970dbda15d63a17126ce9a1b5b0a

@@ -10,19 +10,14 @@
 	<script src="../../js/modernizr.js"></script> <!-- Modernizr -->
 
 	<!-- link css -->
-<<<<<<< HEAD
-		<link href="../css/listview.css" rel = "stylesheet">
-        
-         
-=======
+
 		<link href="../../css/listview.css" rel = "stylesheet">
        
->>>>>>> 3cebe052699c970dbda15d63a17126ce9a1b5b0a
 
   	
 	<title>StudyTime</title>
 </head>
-<body onload="load()">
+<body>
 	<header class="cd-main-header">
 <!--		<a href="#0" class="cd-logo"><img src="../images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>  -->
 
@@ -65,9 +60,7 @@
 			<div class"section-title">
 			<h1>Assignment List View</h1>
 	        <br>
-			<div>
-        
-
+			</div>
         <div class ="assignmentName">	
         <center><id="assignmentName1">{{name}}
 <!--	    <a href="../createAssignment" class="button" id="mainEditButton">Edit</a>  -->
@@ -75,30 +68,24 @@
 
         <div class="stepsList">
         <form>
-		<ul>
-        {{#each sections}}
+		<ul> 
+        {{#each sections}} 
             <li>
-            	<input type = "checkbox" id="stepsCheckboxes" name="stepsCheckboxes">{{section_name}}:
-            <li>
-            {{section_time}}
+            	<input type = "checkbox" class="stepsCheckboxes" id="stepsCheckboxes{{@index}}" name="stepsCheckboxes">{{section_name}}:<br>
+	            &nbsp;&nbsp;&nbsp;&ensp; {{section_time}}
 		    <!--<a href="#0"><id="Assignment1"></a>-->
 		{{/each}}
+	</div>
 
-<!--		    <a href="../createAssignment" class="button" id="individualEditCheckpoint">Edit CkPt</a></li> --><!--supposed to be link to mini calendar, instead of createAssignment--> 
-		
-		</ul>
-	   </form>
-		</div>	
-		<br>
 
-		<div class ="ATCalendarView">
-<<<<<<< HEAD
+      	<div class ="ATCalendarView">
+
                 <!--<center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>-->
-                <center><a href="../calendarView/{{id}}"><input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View" onclick="save()"/></a>
-
-=======
-                <center><a href="../../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>
->>>>>>> 3cebe052699c970dbda15d63a17126ce9a1b5b0a
+                
+                <center><a href="../../calendarView/{{id}}">
+                	<input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View">
+                </a>
+                
 		</div>
         <br> 
 		
@@ -130,10 +117,8 @@
 <script async defer src="https://apis.google.com/js/api.js"
       onload="alert('work!');this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
-<<<<<<< HEAD
-=======
+
 {{/if}}
->>>>>>> 3cebe052699c970dbda15d63a17126ce9a1b5b0a
 
 </body>
 </html>
