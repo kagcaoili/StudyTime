@@ -9,6 +9,8 @@
 -->
 	<link href="css/createAssignment.css" rel="stylesheet" />
 
+    <script src="https://code.jquery.com/jquery.js"></script>
+
 	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
 	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
 
@@ -60,16 +62,16 @@
 				</div>
 				<form id="addAssignemntForm" role="form" method="post" action="/">
 					<div class="form-group">
+						<label for="class">* Class:<br></label>
+						<input type="text" class="form control" placeholder="Type class name" id="class" name="class">
+					</div>
+					<div class="form-group">
 						<label for="name">* Assignment Name:<br></label>
 						<input type="text" class="form control" placeholder="Type assignment name" id="name" name="name">
 					</div>
 					<div class="form-group">
 						<label for="due-date">* Due Date:<br></label>
 						<input type="text" class="form control" id="due_date" placeholder="mm/dd/yyyy" name="due_date">
-					</div>
-					<div class="form-group">
-						<label for="class">* Class:<br></label>
-						<input type="text" class="form control" placeholder="Type class name" id="class" name="class">
 					</div>
 				</form>
 				

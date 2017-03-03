@@ -10,15 +10,9 @@
 	<script src="../../js/modernizr.js"></script> <!-- Modernizr -->
 
 	<!-- link css -->
-<<<<<<< HEAD
 
 		<link href="../../css/listview.css" rel = "stylesheet">
-       
 
-=======
-		<link href="../../css/listview.css" rel = "stylesheet">
->>>>>>> 90eb5de6052d7c8152480d545993c7f4198720bd
-  	
 	<title>StudyTime</title>
 </head>
 <body>
@@ -75,18 +69,13 @@
 
             	<input type = "checkbox" class="stepsCheckboxes" id="stepsCheckboxes{{@index}}" name="stepsCheckboxes">{{section_name}}:<br>
 	            &nbsp;&nbsp;&nbsp;&ensp; {{section_time}}
-            
             </li>
 
 		{{/each}}
 	</div>
 
-
-
-      	<div class ="ATCalendarView">
-
-                <!--<center><a href="../calendarView/{{id}}" class="button" id="calendarViewButton">Assignment Timeline Calendar View</a>-->
-                
+      	<div class ="ATCalendarView"> 
+            
                 <center><a href="../../calendarView/{{id}}">
                 	<input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View">
                 </a>
@@ -122,6 +111,7 @@
       onload="alert('work!');this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
 {{/if}
+
 
 </body>
 </html>
