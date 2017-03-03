@@ -18,12 +18,19 @@ body {
      font-weight: normal;
 }
 
-.calsize {
-     width: 100%;
-     height: 50%;
-     /*pointer-events: none;*/
+#assignmentListBtn {
+     background-color:powderblue;
+    border-radius:35px;
+    border:2px solid midnightblue;
+    display:inline-block;
+    cursor:pointer;
+    color:black;
+    font-family:Verdana;
+    font-size:15px;
+    padding:10px 10px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #2f6627;
 }
-
 ul {
      list-style-type: none;
 }
@@ -34,6 +41,12 @@ ul {
      width: 100%;
      background: grey;
      font-size: 13px;
+}
+
+.calsize {
+     width: 100%;
+     height: 50%;
+     /*pointer-events: none;*/
 }
 
 /*
@@ -58,7 +71,7 @@ ul {
 
 }
 
-.SectionList a {
+.EventList a {
      text-decoration: none;
      color:inherit;
 }
@@ -76,13 +89,8 @@ ul {
      padding:15px;
 }
 
+
 /*
- * activates button press for previous and next button
- */
-.depressed {
-
-}
-
 .weekdays {
      margin: 0;
      padding: 5px 0;
@@ -96,18 +104,17 @@ ul {
      text-align: center;
      font-size: 12px;
 }
+*/
 
-.days-odd-month {
+/*
+.days-in-month {
      padding: 0;
      background: #eee;
      margin: 0;
 }
 
-.days-even-month {
-     display: none;
-}
 
-.days-odd-month li {
+.days-in-month li {
      list-style-type: none;
      display: inline-block;
      width: 11.5%;
@@ -121,8 +128,41 @@ ul {
      color: #777;
 
 }
+*/
 
-.SectionList {
+.daysmonth {
+     border-collapse: collapse;
+     table-layout: fixed;
+     font-size: 10px;
+     color: #777;
+     margin-bottom: 10px;
+}
+
+.weekdayinmonth th {
+     text-align: center;
+     color: grey;
+     font-size: 12px;
+     background-color: powderblue;
+     padding: 5px 0;
+     font-weight: normal;
+}
+
+.daysincal td{
+     border-collapse: collapse;
+     table-layout: fixed;
+     font-size: 10px;
+     color: #777;
+     margin-bottom: 10px;
+
+
+     padding-top: 10px;
+     padding-bottom: 20px;
+     padding-left: 10px;
+     padding-right: 20px;
+     
+}
+
+.EventList {
      background: grey;
      margin: 0;
      padding-top: 20px;
@@ -131,12 +171,11 @@ ul {
      letter-spacing: 2px;
 }
 
-.SectionList ul{
+.EventList ul{
      padding-left: 10px;
      padding-right: 10px;
      padding-top: 10px;
-     padding-bottom:20px;
-
+     padding-bottom:50px;
 
      list-style-type: none;
      margin-top: 0px;
@@ -144,40 +183,27 @@ ul {
      display: block;
 }
 
-.SectionList li {
+.EventList .assignment li {
      list-style-type: none;
      background: powderblue;
      padding-top: 15px;
      padding-bottom: 15px;
      margin-bottom: 10px;
-
+     border-radius:35px;
+     border:2px solid black;
      text-align: center;
      /*padding-left: 200px*/
 
 }
 
-.SectionList li#Assignment1 {
+.EventList li#Assignment1 {
      background: mistyrose;
 }
 
-.SectionList li#Assignment2 {
+.EventList li#Assignment2 {
      background:lightgreen;
 }
 
-.SectionList li#Assignment3 {
+.EventList li#Assignment3 {
      background: paleturquoise;
-}
-
-#listViewButton{
-    background-color:powderblue;
-    border-radius:35px;
-    border:2px solid midnightblue;
-    display:inline-block;
-    cursor:pointer;
-    color:black;
-    font-family:Verdana;
-    font-size:15px;
-    padding:16px 31px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #2f6627;
 }

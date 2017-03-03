@@ -111,6 +111,7 @@ function insertEvent() {
   request.execute(function(event) {
   });
 
+<<<<<<< HEAD
   //appendPre("Inserting...");
 /*
   gapi.client.calendar.events.insert({
@@ -135,6 +136,8 @@ function insertEvent() {
         appendPre('No upcoming events found.');
       }
     }); */
+=======
+>>>>>>> 90eb5de6052d7c8152480d545993c7f4198720bd
 }
 
 $(document).ready(function() {
@@ -184,4 +187,7 @@ function wis(){
 
 }*
 load();*/
+<<<<<<< HEAD
 
+=======
+>>>>>>> 90eb5de6052d7c8152480d545993c7f4198720bd

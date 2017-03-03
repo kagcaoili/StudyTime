@@ -54,7 +54,7 @@ ul {
 }
 
 .stepsList ul li{
-    color:red;
+    color:#4C74C9;
 }
 #stepsCheckboxes{
     -webkit-transform:scale(1.5);
@@ -73,10 +73,8 @@ ul {
 
 #SaveSubmitButton{
     background-color:powderblue;
-    -moz-border-radius:28px;
-    -webkit-border-radius:28px;
-    border-radius:5px;
-    border:2px solid royalblue;
+    border-radius:35px;
+    border:2px solid midnightblue;
     display:inline-block;
     cursor:pointer;
     color:black;
@@ -89,7 +87,7 @@ ul {
 
 .dueDate{
     font-size: 25px;
-    color:pink;
+    color:royalblue;
 }
 
 /*.stepsList{
