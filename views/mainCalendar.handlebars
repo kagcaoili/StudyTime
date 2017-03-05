@@ -87,6 +87,20 @@
 
 				<center><a href="assignmentList" class="button" id="assignmentListBtn">View Full Assignment List</a>
 
+				{{#if B}}
+				A TEST
+				<div class="EventList_B">
+					<ul class="list">
+						{{#each assignments}}
+							<div class="assignment" id="{{class}}">
+								<a href="listview/{{id}}/false"><li id="{{class}}">{{name}}</li></a>
+							</div>
+						{{/each}}
+					</ul>
+				</div>
+				
+				{{else}}
+				B TEST
 				<div class="EventList">
 					<ul class="list">
 						{{#each assignments}}
@@ -95,8 +109,8 @@
 							</div>
 						{{/each}}
 					</ul>
-					
 				</div>
+				{{/if}}
 			<!--</div>-->
 		</main>
 
@@ -109,7 +123,7 @@
 		<script src="js/calendar.js"></script>
 		<script src="https://apis.google.com/js/api.js"></script>
 		<!--<script src="js/googleInteract.js"></script>-->
-
+		{{> ga}}
 
 	</body>
 </html>
