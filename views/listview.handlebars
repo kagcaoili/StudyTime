@@ -107,11 +107,16 @@
 <!--<script async defer src="https://apis.google.com/js/api.js"</script>-->
 
 {{#if "{{isnew}}"}}
+<!--
 <script async defer src="https://apis.google.com/js/api.js"
       onload="alert('work!');this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>-->
+      <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
 {{/if}}
 
+{{> ga}}
 
 </body>
 </html>

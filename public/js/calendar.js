@@ -30,9 +30,15 @@ function initializePage() {
 	console.log("Javascript connected!");
 	$(".calnav-prev").click(depressedButtonPrev);
 	$(".calnav-next").click(depressedButtonNext);
+	$('.EventList .assignment li').click(detectAssignmentClick);
+	$('.EventList_B .assignment li').click(detectAssignmentClick);
 	setClassColors();
 
 	makeCalendar(current_date.getMonth(), current_date.getFullYear());
+}
+
+function detectAssignmentClick(e) {
+	ga("send", "event", 'assignment', 'click');
 }
 
 
@@ -128,6 +134,13 @@ function makeCalendar(month, year) {
  */
 function setClassColors() {
 	$('.EventList .assignment li').each(function(index) {
+		var classname = $(this).attr('id');
+		var newcolor = "#" + inttoRGB(hashCode(classname));
+		$(this).css('background', newcolor);
+		var color3 = $(this).css('background-color');
+	});
+
+	$('.EventList_B .assignment li').each(function(index) {
 		var classname = $(this).attr('id');
 		var newcolor = "#" + inttoRGB(hashCode(classname));
 		$(this).css('background', newcolor);

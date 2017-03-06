@@ -207,3 +207,59 @@ ul {
 .EventList li#Assignment3 {
      background: paleturquoise;
 }
+
+/*
+ * A/B TESTING B DESIGN
+ */
+
+.EventList_B a {
+     text-decoration: none;
+     color:inherit;
+}
+
+.EventList_B {
+     background: grey;
+     margin: 0;
+     padding-top: 20px;
+     font-size: 10px;
+     color: black;
+     letter-spacing: 2px;
+}
+
+.EventList_B ul{
+     padding-left: 10px;
+     padding-right: 10px;
+     padding-top: 10px;
+     padding-bottom:50px;
+
+     list-style-type: none;
+     margin-top: 0px;
+     background: white;
+     display: block;
+}
+
+.EventList_B .assignment li {
+     list-style-type: none;
+     background: powderblue;
+     padding-top: 15px;
+     padding-bottom: 15px;
+     margin-bottom: 10px;
+     border-radius:35px;
+     border:2px solid black;
+     text-align: center;
+     /*padding-left: 200px*/
+
+}
+
+.EventList_B li#Assignment1 {
+     background: mistyrose;
+}
+
+.EventList_B li#Assignment2 {
+     background:lightgreen;
+}
+
+.EventList_B li#Assignment3 {
+     background: paleturquoise;
+}
+
