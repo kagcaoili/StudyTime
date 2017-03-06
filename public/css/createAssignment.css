@@ -18,8 +18,9 @@ h1 {
 }
 
 .cd-logo {
-    font-size: 25px;
+    font-size: 23px;
     font-family: verdana;
+    font-weight:700;
 }
 
 #inputInfo {
