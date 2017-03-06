@@ -1,8 +1,9 @@
 var data = require('../data.json');
 
 exports.addSection = function (req, res) {
-  var name = req.query.section_name;
-  var time = req.query.section_time;
+  console.log(req.body);
+  var name = req.body.section_name;
+  var time = req.body.section_time;
 
   newSection = {
   	"section_name": name,
@@ -20,9 +21,11 @@ exports.addSection = function (req, res) {
   len = array.length;
  // $.post('../createAssignment.handlebars', newSection);
   //$(".sections").append("test");
- res.render('createAssignment', {
+/* res.render('createAssignment', {
     'sections': data.sectionsInfo,
     'newIndex': len
-  }); 
+  }); */
+
+res.send(newSection);
 }
 
