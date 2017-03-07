@@ -199,6 +199,9 @@ ul {
      text-align: center;
      /*padding-left: 200px*/
 
+     border-radius:20px;
+     border:2px solid black;
+
 }
 
 .EventList li#Assignment1 {
