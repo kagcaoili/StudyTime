@@ -6,6 +6,11 @@ body {
      width: 100%;
 }
 
+.cd-logo {
+    font-size: 23px;
+    font-family: verdana;
+    font-weight:700;
+}
 
 .section-title {
      text-align: center;
@@ -193,6 +198,9 @@ ul {
 
      text-align: center;
      /*padding-left: 200px*/
+
+     border-radius:20px;
+     border:2px solid black;
 
 }
 

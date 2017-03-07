@@ -2,8 +2,31 @@
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-	initializePage();
-})
+	//initializePage();
+	console.log("Javascript on CreateAssignment connected!");
+	$('.createTimeline .button').click(getNewAssignment);
+
+	$('#addSectionForm').submit(function(e) {
+		e.preventDefault();
+
+
+		var sectionName = $('#section_name').val();
+		var sectionTime = $('#section_time').val();
+
+		$.post('add', { section_name: sectionName, section_time: sectionTime} , postCallback);
+	});
+});
+
+function postCallback(res) {
+	// res {
+	// 	section_name: "...",
+	// 	section_time: "..."
+	// }
+	$('.sections').append('<li>' + res.section_name + "<br>" + "Estimated Time: "+ res.section_time+ '</li>');
+
+	$('#section_name').val('');
+	$('#section_time').val('');
+}
 
 /*
  * Function that is called when the document is ready.

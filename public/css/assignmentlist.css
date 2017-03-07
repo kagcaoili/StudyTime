@@ -10,11 +10,16 @@ body {
 h1 {
     color: black;
     background-color:powderblue;
-    padding: 50px;
+    padding: 50px; 
     border-width: 20px 20px 20px 20px;
     border-color:gray;
     border-width: 20px 20px 20px 20px; 
     font-weight: bold;
+}
+.cd-logo {
+    font-size: 23px;
+    font-family: verdana;
+    font-weight:700;
 }
 
 ul {

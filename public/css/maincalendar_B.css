@@ -6,6 +6,25 @@ body {
      width: 100%;
 }
 
+.cd-logo {
+    font-size: 23px;
+    font-family: verdana;
+    font-weight:700;
+}
+
+/*
+.EventList {
+     column-count: 2;
+     -webkit-column-count: 2;
+     -mox-column-count:2;
+}
+
+li {
+     columns:2;
+     -webkit-columns:2;
+     -moz-columns:2;
+}
+*/
 
 .section-title {
      text-align: center;
@@ -195,7 +214,13 @@ ul {
      /*padding-left: 200px*/
 
 }
-
+/*
+.EventList_B {
+     column-count: 2;
+     -webkit-column-count: 2;
+     -mox-column-count:2;
+}
+*/
 .EventList_B li#Assignment1 {
      background: mistyrose;
 }

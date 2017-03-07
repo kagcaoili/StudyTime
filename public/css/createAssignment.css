@@ -17,6 +17,12 @@ h1 {
     text-align:right ;
 }
 
+.cd-logo {
+    font-size: 23px;
+    font-family: verdana;
+    font-weight:700;
+}
+
 #inputInfo {
 	margin-left: 20px;
 	margin-right: 20px;
