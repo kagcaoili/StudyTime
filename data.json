@@ -3,6 +3,17 @@
 
 	],
 
+	"calendarInfo": [
+		{
+			"CSE 170/COGS 120": {
+				"calendarid": "don5uqsdhe4rkmrglqdfr504ts@group.calendar.google.com"
+			},
+			"CSE 105": {
+				"calendarid": "sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com"
+			}
+		}
+	],
+
 
 	"assignments": [
 		{
@@ -54,6 +65,22 @@
 				"5": {
 					"section_name": "Updated Dev Plan",
 					"section_time": "03/02/2017"
+				}
+			}
+		},
+		{
+			"id": "2",
+			"name": "Assignment 42",
+			"due_date": "03/10/2017",
+			"class": "CSE 105",
+			"sections": {
+				"1": {
+					"section_name": "Part 1",
+					"section_time": "02/24/2017"
+				},
+				"2": {
+					"section_name": "Part 2",
+					"section_time": "02/26/2017"
 				}
 			}
 		}

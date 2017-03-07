@@ -115,8 +115,9 @@ exports.view = function(req, res){
 };
 
 exports.defaultAssignment = function (req, res) {
-  var isNew = 0;
-	console.log("rendering default assignment with new: " + isNew);
+  //var isNew = 0;
+  var toBeInserted = (req.params.isNew === "true") ;
+	console.log("rendering default assignment with new: " + toBeInserted);
 	var idex = req.params.id;
   
 
@@ -126,20 +127,20 @@ exports.defaultAssignment = function (req, res) {
   var class_name = data.assignments[idex].class;
   var section_array = data.assignments[idex].sections;
 
-  res.render( 'listview', data.assignments[idex]);
+  //res.render( 'listview', data.assignments[idex]);
 
-/*
+
 	res.render('listview', {
     //'data': data.assignments[idex],
     'id': id,
     'name': name,
     "due_date": due_date,
     "class": class_name,
-    'section_name': section_array,
-    'isnew' : isNew
+    'sections': section_array,
+    'isnew' : toBeInserted
   });
-*/
-}
+
+};
 
 //exports.dateDifferences = function (req, res) {
 function autosplitSections(due_date) {

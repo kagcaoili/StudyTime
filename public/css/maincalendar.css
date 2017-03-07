@@ -234,19 +234,27 @@ ul {
 
      list-style-type: none;
      margin-top: 0px;
+     margin-bottom: 10px;
      background: white;
      display: block;
 }
 
 .EventList_B .assignment li {
      list-style-type: none;
+
+     /*display: inline-block;*/
+     /*width: 11.5%;
+     height: 25px;*/
+     float:left;
+     width: 50%;
+
      background: powderblue;
      padding-top: 15px;
-     padding-bottom: 15px;
+     padding-bottom: 15px; 
      margin-bottom: 10px;
      border-radius:35px;
      border:2px solid black;
-     text-align: center;
+     /*text-align: center;*/
      /*padding-left: 200px*/
 
 }
