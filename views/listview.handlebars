@@ -67,8 +67,9 @@
         {{#each sections}} 
             <li>
 
-            	<input type = "checkbox" class="stepsCheckboxes" id="stepsCheckboxes{{@index}}" name="stepsCheckboxes">{{section_name}}:<br>
+            	<input type = "checkbox" class="stepsCheckboxes" id="{{@index}}"   name="stepsCheckboxes">{{section_name}}:<br>
 	            &nbsp;&nbsp;&nbsp;&ensp; {{section_time}}
+	            
             </li>
 
 		{{/each}}
@@ -113,7 +114,7 @@
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>-->
       <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>-->
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
 {{/if}}
 
 

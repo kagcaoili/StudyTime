@@ -144,24 +144,26 @@ $(document).ready(function() {
 function save(){
   $('.stepsCheckboxes').each(function(index) {
     console.log(index);
-    var checkbox = document.getElementById('stepsCheckboxes'+index);
-    localStorage.setItem('stepsCheckboxes'+index, checkbox.checked);
+
+    var checkbox = document.getElementById($('.stepsCheckboxes').get(index).id);
+    localStorage.setItem($('.stepsCheckboxes').get(index).id, checkbox.checked);
   });
 }
 $("#SaveSubmitButton").click(save);
 
 function load(){
   $('.stepsCheckboxes').each(function(index) {
-  var checked = JSON.parse(localStorage.getItem('stepsCheckboxes'+index));
+  var checked = JSON.parse(localStorage.getItem($('.stepsCheckboxes').get(index).id));
   console.log(index);
-  console.log('stepsCheckboxes' + index);
-  console.log(document.getElementById('stepsCheckboxes' + index))
-  document.getElementById("stepsCheckboxes"+index).checked = checked;
+  console.log($('.stepsCheckboxes').get(index).id);
+  console.log(document.getElementById($('.stepsCheckboxes').get(index).id))
+  document.getElementById($('.stepsCheckboxes').get(index).id).checked = checked;
   });
 }
 
 
 load();
+
 });
 
 
