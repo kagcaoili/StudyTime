@@ -183,25 +183,4 @@ load();
 });
 
 
-/*function save(){
-    $("li").each(function(index) {
-    var checkbox = document.getElementById('stepsCheckboxes'+index);
-    if(document.getElementById('stepsCheckboxes'+index).checked) {
-        localStorage.setItem('stepsCheckboxes'+index, true);
-    });
-}
-
-function load(){ 
-    $("li").each(function(index) {   
-    var checked = localStorage.getItem('stepsCheckboxes'+index);
-    if (checked == "true") {
-        document.getElementById("stepsCheckboxes"+index).setAttribute('checked','checked');
-    });
-}
-function wis(){
-    location.reload();
-    localStorage.clear()
-
-}*
-load();*/
 
