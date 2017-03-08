@@ -21,7 +21,8 @@ h1 {
     border-width: 10px 10px 10px 10px;
     margin-left: 70px;
     margin-right: 70px;
-    border-radius: 15px;
+    border-radius: 30px;
+    border:2px solid midnightblue;
 }
 
 .form-group {
