@@ -55,11 +55,13 @@ app.get('/help', help.view);
 app.post('/listview/:id/:isNew', listview.view);
 app.get('/listview/:id/:isNew', listview.defaultAssignment);
 
-app.get('/mainCalendar_B', mainCalendar_B.view);
+//app.get('/mainCalendar_B', mainCalendar_B.view);
+app.get('/mainCalendar_B', mainCalendar.viewB);
 app.get('/createAccount', createAccount.view);
 
-app.get('/add', add.addSection);
-//app.post('/add', add.addSection);
+//app.get('/add', add.addSection);
+app.post('/add', add.addSection);
+//app.post('/addSection', add.addSection);
 
 // Example route
 // app.get('/users', user.list);

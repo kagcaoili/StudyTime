@@ -17,6 +17,7 @@
 </head>
 <body>
 	<header class="cd-main-header">
+		<a href="../../mainCalendar" class="cd-logo" style="color:powderblue">StudyTime</a> 
 <!--		<a href="#0" class="cd-logo"><img src="../images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>  -->
 
 		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
@@ -57,7 +58,7 @@
 	        <br>
 			</div>
         <div class ="assignmentName">	
-        <center><id="assignmentName1">{{name}}
+        <center><id="GETTHISNAME">{{name}}
 <!--	    <a href="../createAssignment" class="button" id="mainEditButton">Edit</a>  -->
         </div>
 
@@ -107,16 +108,18 @@
 
 <!--<script async defer src="https://apis.google.com/js/api.js"</script>-->
 
-{{#if "{{isnew}}"}}
+{{#if isnew}}
 <!--
 <script async defer src="https://apis.google.com/js/api.js"
       onload="alert('work!');this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>-->
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script> -->
       <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
+
 {{/if}}
 
+{{> ga}}
 
 </body>
 </html>

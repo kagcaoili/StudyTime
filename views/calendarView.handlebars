@@ -14,6 +14,7 @@
 </head>
 <body>
 	<header class="cd-main-header">
+		<a href="../mainCalendar" class="cd-logo" style="color:powderblue">StudyTime</a> 
 	<!--	<a href="#0" class="cd-logo"><img src="../images/cd-logo.svg" alt="Left-hand logo CHANGE"></a> -->
 
 		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
@@ -56,11 +57,16 @@
 
 			</center>
 
-			<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sk3u2tr3dhradfgd7t4j4ie690%40group.calendar.google.com&amp;color=%23182C57&amp;src=don5uqsdhe4rkmrglqdfr504ts%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FLos_Angeles" 
+			<!--<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src={{calendarid}}&amp;color=%232F6309&amp;ctz=America%2FLos_Angeles" 
 			style="border-width:0;" 
 			class="calsize"
 			frameborder="0" 
-			scrolling="no"></iframe>
+			scrolling="no"></iframe>-->
+			<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sk3u2tr3dhradfgd7t4j4ie690%40group.calendar.google.com&amp;color=%23182C57&amp;src=don5uqsdhe4rkmrglqdfr504ts%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FLos_Angeles" 
+					style="border-width:0;" 
+					class="calsize"
+					frameborder="0" 
+					scrolling="no"></iframe>
 
 			<div class="SectionList">
 				<ul class="list">
@@ -82,6 +88,7 @@
 		<!-- calendar scripts -->
 		<script src="../js/jquery-1.11.0.js"></script>
 		<script src="../js/calendar.js"></script>
+		{{> ga}}
 	</body>
 </html> 
 

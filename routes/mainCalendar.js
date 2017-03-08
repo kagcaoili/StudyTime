@@ -5,5 +5,11 @@ var data = require('../data.json');
  */
 
 exports.view = function(req, res){
+  data["B"] = false;
   res.render('mainCalendar', data);
+};
+
+exports.viewB = function(req, res) {
+	data["B"] = true;
+	res.render('mainCalendar', data);
 };

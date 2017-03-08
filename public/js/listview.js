@@ -89,20 +89,36 @@ function listUpcomingEvents() {
 
 
 
+/*
 var newEvent = {
   'summary': 'HELLO WORLD',
   'start': {
-    'dateTime': '2017-03-03T09:00:00-07:00',
+    'dateTime': '2017-03-08T09:00:00-07:00',
     'timeZone': 'America/Los_Angeles'
   },
   'end': {
-    'dateTime': '2017-03-03T17:00:00-07:00',
+    'dateTime': '2017-03-08T17:00:00-07:00',
     'timeZone': 'America/Los_Angeles'
+  }
+};
+*/
+var newEvent = {
+  'summary': 'HELLO WORLD',
+  'start': {
+    'dateTime': '2017-03-08T13:00:00-07:00',
+  },
+  'end': {
+    'dateTime': '2017-03-08T15:00:00-07:00',
   }
 };
 
 function insertEvent() {
   
+  //var summary = document.getElementById("GETTHISNAME").textContent;
+  var summary = $(".assignmentName#GETTHISNAME").text();
+  console.log("summary is: " + summary);
+
+
   var request = gapi.client.calendar.events.insert({
     'calendarId': 'sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com',
     'resource': newEvent

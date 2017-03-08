@@ -6,6 +6,25 @@ body {
      width: 100%;
 }
 
+.cd-logo {
+    font-size: 23px;
+    font-family: verdana;
+    font-weight:700;
+}
+
+/*
+.EventList {
+     column-count: 2;
+     -webkit-column-count: 2;
+     -mox-column-count:2;
+}
+
+li {
+     columns:2;
+     -webkit-columns:2;
+     -moz-columns:2;
+}
+*/
 
 .section-title {
      text-align: center;
@@ -71,7 +90,7 @@ ul {
 
 }
 
-.EventList a {
+.EventList_B a {
      text-decoration: none;
      color:inherit;
 }
@@ -162,7 +181,7 @@ ul {
      
 }
 
-.EventList {
+.EventList_B {
      background: grey;
      margin: 0;
      padding-top: 20px;
@@ -171,7 +190,7 @@ ul {
      letter-spacing: 2px;
 }
 
-.EventList ul{
+.EventList_B ul{
      padding-left: 10px;
      padding-right: 10px;
      padding-top: 10px;
@@ -183,7 +202,7 @@ ul {
      display: block;
 }
 
-.EventList .assignment li {
+.EventList_B .assignment li {
      list-style-type: none;
      background: powderblue;
      padding-top: 15px;
@@ -195,15 +214,21 @@ ul {
      /*padding-left: 200px*/
 
 }
-
-.EventList li#Assignment1 {
+/*
+.EventList_B {
+     column-count: 2;
+     -webkit-column-count: 2;
+     -mox-column-count:2;
+}
+*/
+.EventList_B li#Assignment1 {
      background: mistyrose;
 }
 
-.EventList li#Assignment2 {
+.EventList_B li#Assignment2 {
      background:lightgreen;
 }
 
-.EventList li#Assignment3 {
+.EventList_B li#Assignment3 {
      background: paleturquoise;
 }

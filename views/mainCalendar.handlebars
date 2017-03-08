@@ -1,5 +1,31 @@
 <html>
 <head>
+
+
+<!-- Google Analytics Content Experiment code --> 
+
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='141859870-1',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script> 
+<!-- End of Google Analytics Content Experiment code -->
+
+
+
+
+
+
+
+
+	
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--<link rel="stylesheet" href="css/reset.css">-->
@@ -14,6 +40,7 @@
 
 	<body>
 		<header class="cd-main-header">
+			<a href="mainCalendar" class="cd-logo" style="color:powderblue">StudyTime</a> 
 		<!--	<a href="#0" class="cd-logo"><img src="images/cd-logo.svg" alt="Left-hand logo CHANGE"></a> -->
 
 			<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
@@ -79,7 +106,7 @@
 				  </tr>
 				</table>
 				</ul>  -->
-					<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sk3u2tr3dhradfgd7t4j4ie690%40group.calendar.google.com&amp;color=%23182C57&amp;src=don5uqsdhe4rkmrglqdfr504ts%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FLos_Angeles" 
+					<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sk3u2tr3dhradfgd7t4j4ie690%40group.calendar.google.com&amp;color=%23182C57&amp;src=don5uqsdhe4rkmrglqdfr504ts%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FLos_Angeles" 
 					style="border-width:0;" 
 					class="calsize"
 					frameborder="0" 
@@ -87,6 +114,20 @@
 
 				<center><a href="assignmentList" class="button" id="assignmentListBtn">View Full Assignment List</a>
 
+				{{#if B}}
+				
+				<div class="EventList_B">
+					<ul class="list">
+						{{#each assignments}}
+							<div class="assignment" id="{{class}}">
+								<a href="listview/{{id}}/false"><li id="{{class}}">{{name}}</li></a>
+							</div>
+						{{/each}}
+					</ul>
+				</div>
+				
+				{{else}}
+				
 				<div class="EventList">
 					<ul class="list">
 						{{#each assignments}}
@@ -95,8 +136,8 @@
 							</div>
 						{{/each}}
 					</ul>
-					
 				</div>
+				{{/if}}
 			<!--</div>-->
 		</main>
 
@@ -109,7 +150,7 @@
 		<script src="js/calendar.js"></script>
 		<script src="https://apis.google.com/js/api.js"></script>
 		<!--<script src="js/googleInteract.js"></script>-->
-
+		{{> ga}}
 
 	</body>
 </html>
