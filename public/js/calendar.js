@@ -38,7 +38,8 @@ function initializePage() {
 }
 
 function detectAssignmentClick(e) {
-	ga("send", "event", 'assignment', 'click');
+	ga('create', 'UA-92514823-2', 'auto');
+	ga('send', 'event', 'assignment', 'click');
 }
 
 
