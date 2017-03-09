@@ -14,6 +14,15 @@
 		}
 	],
 
+	"allCalendar": [
+		{
+			"calendars": {
+				"CSE 170/COGS 120": "don5uqsdhe4rkmrglqdfr504ts@group.calendar.google.com",
+				"CSE 105": "sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com"
+			}
+		}
+	],
+
 
 	"assignments": [
 		{

@@ -5,7 +5,8 @@
 
 {{else}}
 
-<!-- Google Analytics Content Experiment code -->
+
+<!-- Google Analytics Content Experiment code --> <!--
 <script>function utmx_section(){}function utmx(){}(function(){var
 k='141859870-2',d=document,l=d.location,c=d.cookie;
 if(l.search.indexOf('utm_expid='+k)>0)return;
@@ -17,7 +18,7 @@ length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
 '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
 valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
+</script><script>utmx('url','A/B');</script> -->
 <!-- End of Google Analytics Content Experiment code -->
 
 {{/if}}
@@ -111,8 +112,13 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				  	
 				  </tr>
 				</table>
-				</ul>  -->
+				</ul>  --> <!--
 					<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=sk3u2tr3dhradfgd7t4j4ie690%40group.calendar.google.com&amp;color=%23182C57&amp;src=don5uqsdhe4rkmrglqdfr504ts%40group.calendar.google.com&amp;color=%232F6309&amp;ctz=America%2FLos_Angeles" 
+					style="border-width:0;" 
+					class="calsize"
+					frameborder="0" 
+					scrolling="no"></iframe> -->
+					<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=1&amp;showTz=0&amp;mode=WEEK&amp;height=250&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;{{calendarsString}}ctz=America%2FLos_Angeles" 
 					style="border-width:0;" 
 					class="calsize"
 					frameborder="0" 
