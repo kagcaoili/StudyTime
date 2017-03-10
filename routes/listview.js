@@ -27,7 +27,32 @@ exports.view = function(req, res){
   var class_name = req.body.class;
   //var sections = req.body.sections;
 
+  var reqCalInfo = req.body.dataCalInfo;
+  var reqAllCal = req.body.dataAllCal;
+  console.log("calinfo is: " + reqCalInfo + " and all call is: " + reqAllCal);
 
+  //for reading new calendar data
+  var dataCalendarInfo;
+  if (req.body.dataCalInfo) {
+    dataCalendarInfo = req.body.dataCalInfo;
+    console.log("Previous Calendar Info: " + data.calendarInfo);
+    console.log("Received New Calendar Info: " + dataCalendarInfo + " has : " + dataCalendarInfo.assignmentClass.calendarid);
+    data.calendarInfo.push(dataCalendarInfo);
+    console.log("complete information in calendar info: " + data.calendarInfo);
+  } else {
+    console.log("no new calendar info");
+  }
+  var dataAllCalendars;
+  if (req.body.dataAllCal) {
+    dataAllCalendars = req.body.dataAllCal;
+    console.log("Previous All Calendar: " + data.allCalendar[0].calendars);
+    console.log("Received New All Calendar: " + dataAllCalendars + " has: " + dataAllCalendars.assignmentClass);
+    (data.allCalendar[0].calendars).push(dataAllCalendars);
+    console.log("complete information in all calendar: " + data.allCalendar[0].calendars);
+  } else {
+    console.log("no new all calendar");
+  }
+    
   var sections = data.sectionsInfo;
   
 
@@ -101,8 +126,31 @@ exports.view = function(req, res){
   }
 
   data.assignments.push(newAssignment);
+/*
+  var assignmentClass_test = "Assignment";
 
-  //console.log("new assignment in list: " + newAssignment);
+
+  var calendarInfoPush = {
+        assignmentClass_test: {
+          'calendarid': "43332"
+        }
+      };
+
+
+  console.log("Testing calendar reading get this out later: " + calendarInfoPush.assignmentClass_test.calendarid); */
+
+
+
+
+
+  var keys = Object.keys(data.allCalendar[0].calendars);
+  console.log("keys: " +  keys);
+
+  var array = [];
+  for (var i = 0; i < keys.length; i++) {
+    console.log("pushing: " + data.allCalendar[0].calendars[keys[i]]);
+    array.push(data.allCalendar[0].calendars[keys[i]]);
+  }
 
   res.render('listview', {
     'id': id,
@@ -110,7 +158,11 @@ exports.view = function(req, res){
     "due_date": due_date,
     "class": class_name,
     'section_name': section_array,
-    'isnew' : toBeInserted
+    'isnew' : toBeInserted,
+    'listOfCalKeys' : keys,
+    'listOfCalValues' : array,
+    'dataAllCalendars': data.allCalendar[0].calendars,
+    'dataCalendarInfo': data.calendarInfo[0]
   });
 };
 
@@ -129,6 +181,12 @@ exports.defaultAssignment = function (req, res) {
 
   //res.render( 'listview', data.assignments[idex]);
 
+  var keys = Object.keys(data.allCalendar[0].calendars);
+  var array = [];
+  for (var i = 0; i < keys.length; i++) {
+    console.log("pushing: " + data.allCalendar[0].calendars[keys[i]]);
+    array.push(data.allCalendar[0].calendars[keys[i]]);
+  }
 
 	res.render('listview', {
     //'data': data.assignments[idex],
@@ -137,7 +195,11 @@ exports.defaultAssignment = function (req, res) {
     "due_date": due_date,
     "class": class_name,
     'sections': section_array,
-    'isnew' : toBeInserted
+    'isnew' : toBeInserted,
+    'listOfCalKeys' : keys,
+    'listOfCalValues' : array,
+    'dataAllCalendars': data.allCalendar[0].calendars,
+    'dataCalendarInfo': data.calendarInfo[0]
   });
 
 };

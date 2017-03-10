@@ -5,10 +5,13 @@
 
 	"calendarInfo": [
 		{
-			"CSE 170/COGS 120": {
+			"A7: Ready for Testing": {
 				"calendarid": "don5uqsdhe4rkmrglqdfr504ts@group.calendar.google.com"
 			},
-			"CSE 105": {
+			"A8: Test your prototype": {
+				"calendarid": "1imkn53avpk6toho8st5ahp3l4@group.calendar.google.com"
+			},
+			"Assignment 42": {
 				"calendarid": "sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com"
 			}
 		}
@@ -17,8 +20,9 @@
 	"allCalendar": [
 		{
 			"calendars": {
-				"CSE 170/COGS 120": "don5uqsdhe4rkmrglqdfr504ts@group.calendar.google.com",
-				"CSE 105": "sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com"
+				"A7: Ready for Testing": "don5uqsdhe4rkmrglqdfr504ts@group.calendar.google.com",
+				"A8: Test your prototype": "1imkn53avpk6toho8st5ahp3l4@group.calendar.google.com",
+				"Assignment 42": "sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com"
 			}
 		}
 	],

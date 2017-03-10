@@ -58,7 +58,7 @@
 	        <br>
 			</div>
         <div class ="assignmentName">	
-        <center><id="GETTHISNAME">{{name}}
+        <center><div id="GETTHISNAME">{{name}}</div>
 <!--	    <a href="../createAssignment" class="button" id="mainEditButton">Edit</a>  -->
         </div>
 
@@ -85,18 +85,25 @@
         <br> 
 		
 		<div class ="dueDate">
-			<center><a href="#0"><id="dueDateWhole">Due Date: {{due_date}}</a>
+			<center><a href="#0"><div id="dueDateWhole">Due Date: <div id="specificDueDate">{{due_date}}</div></div></a>
 	    </div>
 
 	    <div class = "assignmentClass">
-	    	<center><a href="#0"><id="classWhole">Class: {{class}}</a>
+	    	<center><a href="#0"><id="classWhole">Class: <div id = "specificClass">{{class}}</div></a>
 	    </div>
-	    <!--
-{{#if "{{isnew}}"}}
-<div class = "assignmentClass">
-	    	gfhgyj
-	    </div>
-{{/if}} -->
+
+	    <!-- Keep this for listview.js because needed for determining list of calendars in algorithm -->
+	    <div class="calendarIDList" id= "hiddenClasses" style="display:none">{{listOfCalKeys}}</div>
+	    <div class="calendarValueList" id= "hiddenClasses" style="display:none">{{listOfCalValues}}</div>
+	    <div class="assignmentID" id = "hiddenClasses" style="display:none">{{id}}</div>
+	    <div class="assignmentSections" id ="hiddenClasses" style="display:none">{{sections}}</div>
+	    <div class="dataAllCalendars" id = "hiddenClasses" style="display:none">{{dataAllCalendars}}</div>
+	    <div class="dataCalendarInfo" id = "hiddenClasses" style="display:none">{{dataCalendarInfo}}</div>
+	    {{#each sections}}
+	    <div class="sectionNameInsert" id = "hiddenClasses" style="display:none" name="{{section_name}}">{{section_name}},</div>
+	    <div class="sectionTimeInsert" id = "hiddenClasses" style="display:none" name="{{section_time}}">{{section_time}},</div>
+	    {{/each}}
+
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
 
