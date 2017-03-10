@@ -152,6 +152,7 @@ function insertEvent() {
   var isNewCalendar = true;
   var calIndex; //for getting the key if needed
 
+  /*
   for (var i = 0; i < calendarArray.length; i++) {
     if (summary === calendarArray[i]) {
       console.log(summary + " is equal to " + calendarArray[i]);
@@ -161,7 +162,9 @@ function insertEvent() {
       console.log(summary + " is not equal to " + calendarArray[i]);
     }
   }
+  */
 
+/*
   var insertionCalendarID;
 
   if (isNewCalendar) {
@@ -234,7 +237,7 @@ var request = gapi.client.calendar.events.insert({
     sectionrequest.execute(function(event) {
     });
 
-  }
+  }*/
 
 
 
@@ -247,7 +250,7 @@ var request = gapi.client.calendar.events.insert({
 
 
 
-      
+
       //attempt to push to the JSON allCalendar and calendarInfo data failed
       /*
 
@@ -277,9 +280,9 @@ var request = gapi.client.calendar.events.insert({
       console.log("calendarinfo push: " + calendarInfoPush.summary.calendarid); 
       $.post('../../listview/' + assignmentIndex + '/true', {id: assignmentIndex, name: summary, due_date: dueDate, class: assignmentClass, sections: sectionsArray, dataAllCal: allCalendarPush, dataCalInfo: calendarInfoPush}, listViewReload);
       */
-    });
+    //});
 
-        
+    /*    
   } else {
     console.log("Getting old calendar");
     var valueList = $(".calendarValueList").text();
@@ -348,69 +351,7 @@ var request = gapi.client.calendar.events.insert({
 
   }
   }
-
-  /*
-  console.log("22the insertion id is: " + insertionCalendarID);
-  var request = gapi.client.calendar.events.insert({
-    'calendarId': insertionCalendarID,
-    'resource': newEvent
-      });
-
-      request.execute(function(event) {
-      });
-
-  //inserting all the sections
-  var sectionsList = $(".sectionsToInsert").text();
-  console.log("sectionsList to split apart!: " + sectionsList);
-
-
-  var listNames = $(".sectionNameInsert").text();
-  var listTimes = $(".sectionTimeInsert").text();
-  console.log("list name: " + listNames);
-  console.log("list times: " + listTimes);
-  var sectionNameArray = listNames.split(",");
-  var sectionTimeArray = listTimes.split(",");
-  for (var k = 0; k < sectionNameArray.length-1; k++) {
-    console.log(sectionNameArray[k]);
-    console.log(sectionTimeArray[k]);
-
-    var tempName = sectionNameArray[k];
-    var tempTime = sectionTimeArray[k];
-
-    var sectionDateArray = tempTime.split("/");
-    var sectionmonth = sectionDateArray[0];
-    var sectionday = sectionDateArray[1];
-    var sectionyear = sectionDateArray[2];
-
-    var sectionstartDate = sectionyear + "-" + sectionmonth +"-" + sectionday + "T13:00:00-07:00";
-    var sectionendDate = sectionyear + "-" + sectionmonth +"-" + sectionday + "T15:00:00-07:00";
-
-    console.log("sectionstart: " + sectionstartDate);
-    console.log("sectionend:" + sectionendDate);
-
-    var newSection = {
-      'summary': tempName,
-      'start': {
-        'dateTime': sectionstartDate,
-      },
-      'end': {
-        'dateTime': sectionendDate,
-      }
-    };
-
-    var sectionrequest = gapi.client.calendar.events.insert({
-    'calendarId': insertionCalendarID,
-    'resource': newSection
-    });
-
-    sectionrequest.execute(function(event) {
-    });
-
-  }
-  */
-
-
-
+*/
 
 }
 
