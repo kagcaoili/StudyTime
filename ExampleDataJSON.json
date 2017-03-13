@@ -1,0 +1,106 @@
+{
+	"sectionsInfo": [
+
+	],
+
+	"calendarInfo": [
+		{
+			"A7: Ready for Testing": [{
+				"calendarid": "don5uqsdhe4rkmrglqdfr504ts@group.calendar.google.com"
+			}],
+			"A8: Test your prototype": [{
+				"calendarid": "1imkn53avpk6toho8st5ahp3l4@group.calendar.google.com"
+			}],
+			"Assignment 42": [{
+				"calendarid": "sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com"
+			}]
+		}
+	],
+
+	"allCalendar": [
+		{
+			"calendars": [
+			{ 
+				"A7: Ready for Testing": "don5uqsdhe4rkmrglqdfr504ts@group.calendar.google.com"
+			},
+			{
+				"A8: Test your prototype": "1imkn53avpk6toho8st5ahp3l4@group.calendar.google.com"
+			},
+			{
+				"Assignment 42": "sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com"
+			}]
+		}
+	],
+
+
+	"assignments": [
+		{
+			"id": "0",
+			"name": "A7: Ready for Testing",
+			"due_date": "02/23/2017",
+			"class": "CSE 170/COGS 120",
+			"sections": {
+				"1": {
+					"section_name": "User Testing Plan",
+					"section_time": "02/17/2017"
+				},
+				"2": {
+					"section_name": "Complete Functionality",
+					"section_time": "02/19/2017"
+				},
+				"3": {
+					"section_name": "Development Plan",
+					"section_time": "02/21/2017"
+				},
+				"4": {
+					"section_name": "Submit",
+					"section_time": "02/23/2017"
+				}
+			}
+		},
+		{
+			"id": "1",
+			"name": "A8: Test your prototype",
+			"due_date": "03/02/2017",
+			"class": "CSE 170/COGS 120",
+			"sections": {
+				"1": {
+					"section_name": "Observations",
+					"section_time": "02/24/2017"
+				},
+				"2": {
+					"section_name": "Compile your findings",
+					"section_time": "02/26/2017"
+				},
+				"3": {
+					"section_name": "Create a Meaningful Redesign",
+					"section_time": "02/27/2017"
+				},
+				"4": {
+					"section_name": "Description of Online Test",
+					"section_time": "03/01/2017"
+				},
+				"5": {
+					"section_name": "Updated Dev Plan",
+					"section_time": "03/02/2017"
+				}
+			}
+		},
+		{
+			"id": "2",
+			"name": "Assignment 42",
+			"due_date": "03/10/2017",
+			"class": "CSE 105",
+			"sections": {
+				"1": {
+					"section_name": "Part 1",
+					"section_time": "02/24/2017"
+				},
+				"2": {
+					"section_name": "Part 2",
+					"section_time": "02/26/2017"
+				}
+			}
+		}
+	]
+}
