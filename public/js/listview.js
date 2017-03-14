@@ -32,9 +32,9 @@ function initClient() {
     //gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
     // Handle the initial sign-in state.
-    //updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
     //handleAuthClick();
-    insertEvent();
+    //insertEvent();
   });
 }
 
