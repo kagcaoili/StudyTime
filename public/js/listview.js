@@ -279,20 +279,12 @@ function insertEvent() {
       console.log("the insertion id is: " + insertionCalendarID); */
 
       //creates the variable to push to the array of all the calendars
-      // var allCalendarPush = {
-      //   summary: insertionCalendarID
-      // };
       var allCalendarPush = {};
       allCalendarPush[summary] = insertionCalendarID;
 
       console.log("all calendar push: " + allCalendarPush[summary]);
 
       //creates the variable to push to the array of calendar info
-      //var calendarInfoPush = {
-     ///   summary: {
-      //    'calendarid': insertionCalendarID
-      //  }
-     // };
       var calendarInfoPush = {};
       calendarInfoPush[summary] = {
         'calendarid': insertionCalendarID
