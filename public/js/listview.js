@@ -119,6 +119,7 @@ function listViewReload(res) {
 
 function insertEvent() {
   
+  console.log("Inserting a New Event");
 
   var summary = $("#GETTHISNAME").text(); //get the name of the assignment
   var dueDate = $("#specificDueDate").text(); //get the due date of the assignment
