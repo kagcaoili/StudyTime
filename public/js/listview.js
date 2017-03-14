@@ -147,6 +147,9 @@ function insertEvent() {
     }
   };
 
+  var isNewCalendar = true;
+
+  /*
   //Get list of calendar IDs
   var calendarList = $(".calendarIDList").text();
   console.log("calendarlist in js is: " + calendarList);
@@ -167,6 +170,7 @@ function insertEvent() {
       console.log(summary + " is not equal to " + calendarArray[i]);
     }
   }
+  */
   
   //begin checking if we need to make a new calendar
   var insertionCalendarID;
@@ -263,15 +267,16 @@ function insertEvent() {
       console.log("readin new calendar id: " + event.id);
       console.log("the insertion id is: " + insertionCalendarID);
 
+      
       var assignmentIndex = $(".assignmentID").text(); //gets the ID/index of the assignment selected
-      var dataAllCalendars = $(".dataAllCalendars").text(); //gets the data of all the calendars
-      var dataCalendarInfo = $(".dataCalendarInfo").text(); //gets the info of a specific calendar
+      //var dataAllCalendars = $(".dataAllCalendars").text(); //gets the data of all the calendars
+      //var dataCalendarInfo = $(".dataCalendarInfo").text(); //gets the info of a specific calendar
       var sectionsArray = $(".assignmentSections").text(); //gets a list of sections 
-      console.log("the data in listview js  all calendars is: " + dataAllCalendars);
+      /*console.log("the data in listview js  all calendars is: " + dataAllCalendars);
       console.log("the data in listview js  calendar info is: " + dataCalendarInfo);
       console.log("assignment sections is: " + sectionsArray);
 
-      console.log("the insertion id is: " + insertionCalendarID);
+      console.log("the insertion id is: " + insertionCalendarID); */
 
       //creates the variable to push to the array of all the calendars
       // var allCalendarPush = {
