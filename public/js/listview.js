@@ -43,6 +43,7 @@ function initClient() {
 *  appropriately. After a sign-in, the API is called.
 */
 function updateSigninStatus(isSignedIn) {
+  console.log("isSignedIn: " + isSignedIn);
   if (isSignedIn) {
     insertEvent();
   } else {
