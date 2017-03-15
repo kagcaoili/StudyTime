@@ -88,32 +88,6 @@ function listUpcomingEvents() {
 }
 
 
-
-
-/*
-var newEvent = {
-  'summary': 'HELLO WORLD',
-  'start': {
-    'dateTime': '2017-03-08T09:00:00-07:00',
-    'timeZone': 'America/Los_Angeles'
-  },
-  'end': {
-    'dateTime': '2017-03-08T17:00:00-07:00',
-    'timeZone': 'America/Los_Angeles'
-  }
-};
-*/
-/*
-var newEvent = {
-  'summary': 'HELLO WORLD',
-  'start': {
-    'dateTime': '2017-03-08T13:00:00-07:00',
-  },
-  'end': {
-    'dateTime': '2017-03-08T15:00:00-07:00',
-  }
-}; */
-
 function listViewReload(res) {
   console.log("Calling Post and Reload");
 }
@@ -270,14 +244,7 @@ function insertEvent() {
 
       
       var assignmentIndex = $(".assignmentID").text(); //gets the ID/index of the assignment selected
-      //var dataAllCalendars = $(".dataAllCalendars").text(); //gets the data of all the calendars
-      //var dataCalendarInfo = $(".dataCalendarInfo").text(); //gets the info of a specific calendar
       var sectionsArray = $(".assignmentSections").text(); //gets a list of sections 
-      /*console.log("the data in listview js  all calendars is: " + dataAllCalendars);
-      console.log("the data in listview js  calendar info is: " + dataCalendarInfo);
-      console.log("assignment sections is: " + sectionsArray);
-
-      console.log("the insertion id is: " + insertionCalendarID); */
 
       //creates the variable to push to the array of all the calendars
       var allCalendarPush = {};
@@ -297,78 +264,7 @@ function insertEvent() {
       
     });
     
-  } /*else { //it is not a new calendar and you are editing it
-
-    console.log("Getting old calendar");
-
-    var valueList = $(".calendarValueList").text(); //gets the list of values in all calendar
-    console.log("calendarlist in js is: " + valueList);
-
-    var valueArray = valueList.split(","); //gets the array by splitting the list
-    console.log("the key for this calendar is: " + valueArray[calIndex]);
-    insertionCalendarID = valueArray[calIndex]; //gets the actual insertionCalendarID
- 
-    console.log("the insertion id is: " + insertionCalendarID);
-
-    //prepares to insert into calendar 
-    var request = gapi.client.calendar.events.insert({
-      'calendarId': insertionCalendarID,
-      'resource': newEvent
-    });
-
-    request.execute(function(event) {
-    });
-
-    //inserting all the sections
-    var sectionsList = $(".sectionsToInsert").text();
-    console.log("sectionsList to split apart!: " + sectionsList);
-
-
-    var listNames = $(".sectionNameInsert").text();
-    var listTimes = $(".sectionTimeInsert").text();
-    console.log("list name: " + listNames);
-    console.log("list times: " + listTimes);
-    var sectionNameArray = listNames.split(",");
-    var sectionTimeArray = listTimes.split(",");
-
-    //begin inserting all the sections into the calendar
-    for (var k = 0; k < sectionNameArray.length-1; k++) {
-      console.log(sectionNameArray[k]);
-      console.log(sectionTimeArray[k]);
-
-      var tempName = sectionNameArray[k];
-      var tempTime = sectionTimeArray[k];
-
-      var sectionDateArray = tempTime.split("/");
-      var sectionmonth = sectionDateArray[0];
-      var sectionday = sectionDateArray[1];
-      var sectionyear = sectionDateArray[2];
-
-      var sectionstartDate = sectionyear + "-" + sectionmonth +"-" + sectionday + "T13:00:00-07:00";
-      var sectionendDate = sectionyear + "-" + sectionmonth +"-" + sectionday + "T15:00:00-07:00";
-
-      console.log("sectionstart: " + sectionstartDate);
-      console.log("sectionend:" + sectionendDate);
-
-      var newSection = {
-        'summary': tempName,
-        'start': {
-          'dateTime': sectionstartDate,
-        },
-        'end': {
-          'dateTime': sectionendDate,
-        }
-      };
-
-      var sectionrequest = gapi.client.calendar.events.insert({
-      'calendarId': insertionCalendarID,
-      'resource': newSection
-      });
-
-      sectionrequest.execute(function(event) {
-      });
-    }
-  }*/
+  } 
 
   //END INSERTION OF EVENT INTO NEW CALENDAR OR OLD CALENDAR
 

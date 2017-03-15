@@ -18,7 +18,6 @@
 <body>
 	<header class="cd-main-header">
 		<a href="../../mainCalendar" class="cd-logo" style="color:powderblue">StudyTime</a> 
-<!--		<a href="#0" class="cd-logo"><img src="../images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>  -->
 
 		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
@@ -92,9 +91,6 @@
 	    	<center><a href="#0"><id="classWhole">Class: <div id = "specificClass">{{class}}</div></a>
 	    </div>
 
-	    <!-- Keep this for listview.js because needed for determining list of calendars in algorithm -->
-	    <!--<div class="calendarIDList" id= "hiddenClasses" style="display:none">{{listOfCalKeys}}</div>
-	    <div class="calendarValueList" id= "hiddenClasses" style="display:none">{{listOfCalValues}}</div> -->
 	    <div class="assignmentID" id = "hiddenClasses" style="display:none">{{id}}</div>
 	    <div class="assignmentSections" id ="hiddenClasses" style="display:none">{{sections}}</div>
 	    <div class="dataAllCalendars" id = "hiddenClasses" style="display:none">{{dataAllCalendars}}</div>
@@ -108,16 +104,12 @@
 	</main> <!-- .cd-main-content -->
 
 <script src="../../js/jquery-2.1.4.js"></script>
-<!--<script src="../js/jquery.menu-aim.js"></script>-->
 <script src="../../js/main.js"></script> <!-- Resource jQuery -->
 <script src="../../js/assignmentList.js"></script>
 <script src="../../js/listview.js"></script>
 
 {{#if isnew}}
-<!--
-<script async defer src="https://apis.google.com/js/api.js"
-      onload="alert('work!');this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script> -->
+
       <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>

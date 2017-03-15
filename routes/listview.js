@@ -121,32 +121,6 @@ exports.view = function(req, res){
     }
 
     data.assignments.push(newAssignment);
-  /*
-    var assignmentClass_test = "Assignment";
-
-
-    var calendarInfoPush = {
-          assignmentClass_test: {
-            'calendarid': "43332"
-          }
-        };
-
-
-    console.log("Testing calendar reading get this out later: " + calendarInfoPush.assignmentClass_test.calendarid); */
-
-
-
-
-    /*
-    var keys = Object.keys(data.allCalendar[0].calendars);
-    console.log("keys: " +  keys);
-
-    var array = [];
-    for (var i = 0; i < keys.length; i++) {
-      console.log("pushing: " + data.allCalendar[0].calendars[keys[i]]);
-      array.push(data.allCalendar[0].calendars[keys[i]]);
-    }
-    */
   }
   
 
@@ -374,43 +348,6 @@ function dateDifference(due_date) {
 
   return dateDifference;
 }
-
-
-/*
-* GOOGLE CALENDAR API INSERTION 
-*/
-
-
-
-
-
-/*
- * END GOOGLE CALENDAR API INSERTION
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
