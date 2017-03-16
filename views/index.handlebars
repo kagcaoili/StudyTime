@@ -56,7 +56,7 @@
 
       // Authorization scopes required by the API; multiple scopes can be
       // included, separated by spaces.
-      var SCOPES = "https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.readonly";
+      var SCOPES = "https://www.googleapis.com/auth/calendar";
 
       var authorizeButton = document.getElementById('authorize-button');
 
@@ -72,11 +72,10 @@
        *  listeners.
        */
       function initClient() {
-        gapi.auth2.init({
+        gapi.client.init({
           discoveryDocs: DISCOVERY_DOCS,
           clientId: CLIENT_ID,
-          scope: SCOPES,
-          ux_mode: 'redirect'
+          scope: SCOPES
         }).then(function () {
           // Listen for sign-in state changes.
           gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
