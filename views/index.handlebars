@@ -75,7 +75,8 @@
         gapi.client.init({
           discoveryDocs: DISCOVERY_DOCS,
           clientId: CLIENT_ID,
-          scope: SCOPES
+          scope: SCOPES,
+          ux_mode: 'redirect'
         }).then(function () {
           // Listen for sign-in state changes.
           gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
