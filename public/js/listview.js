@@ -155,8 +155,8 @@ function insertEvent() {
 
 }
 
+/*Saving checkboxes with localStorage...unchecked/checked by id"*/
 $(document).ready(function() {
-/*This one save only the first checkbox*/
 function save(){
   $('.stepsCheckboxes').each(function(index) {
     console.log(index);

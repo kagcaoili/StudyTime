@@ -1,8 +1,9 @@
 h1 {
     color: black;
     background-color:powderblue;
-    padding: 40px;
-    border-width: 10px 10px 10px 10px;
+    padding: 50px;
+    border-width: 20px 20px 20px 20px;
+    border-color:gray;
     font-weight: bold;
 }
 
@@ -26,6 +27,7 @@ h1 {
 #inputInfo {
 	margin-left: 20px;
 	margin-right: 20px;
+    font-weight: bold;
 }
 /*
 #create {
@@ -53,6 +55,7 @@ h1 {
     padding-bottom: 30px;
     border-radius:35px;
     border:2px solid midnightblue;
+    font-weight:normal;
 }
 
 #submitBtn {
