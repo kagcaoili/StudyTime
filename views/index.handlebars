@@ -72,7 +72,7 @@
        *  listeners.
        */
       function initClient() {
-        gapi.client.init({
+        gapi.auth2.init({
           discoveryDocs: DISCOVERY_DOCS,
           clientId: CLIENT_ID,
           scope: SCOPES,
