@@ -101,10 +101,10 @@
        */
       function handleAuthClick(event) {
         //authenticate user, then redirect to the mainCalendar page
-        gapi.auth2.getAuthInstance().signIn();
-        //gapi.auth2.getAuthInstance().signIn().then(function() {
-        //  window.location.href = "/mainCalendar";
-        //});
+        //gapi.auth2.getAuthInstance().signIn();
+        gapi.auth2.getAuthInstance().signIn().then(function() {
+          window.location.href = "/mainCalendar";
+        });
       }
 
       /**
