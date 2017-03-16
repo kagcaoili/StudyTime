@@ -49,7 +49,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/mainCalendar', mainCalendar.view);
 app.get('/assignmentlist', assignmentList.view);
-app.get('/calendarview/:id', calendarView.view);
+app.get('/calendarView/:id', calendarView.view);
 app.get('/createAssignment', createAssignment.view);
 app.get('/help', help.view);
 app.post('/listview/:id/:isNew', listview.view);

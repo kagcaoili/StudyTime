@@ -29,12 +29,12 @@ function initClient() {
     scope: SCOPES
   }).then(function () {
     // Listen for sign-in state changes.
-    //gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
     // Handle the initial sign-in state.
-    //updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
     //handleAuthClick();
-    insertEvent();
+    //insertEvent();
   });
 }
 
@@ -43,6 +43,7 @@ function initClient() {
 *  appropriately. After a sign-in, the API is called.
 */
 function updateSigninStatus(isSignedIn) {
+  console.log("isSignedIn: " + isSignedIn);
   if (isSignedIn) {
     insertEvent();
   } else {
@@ -87,71 +88,185 @@ function listUpcomingEvents() {
 }
 
 
-
-
-/*
-var newEvent = {
-  'summary': 'HELLO WORLD',
-  'start': {
-    'dateTime': '2017-03-08T09:00:00-07:00',
-    'timeZone': 'America/Los_Angeles'
-  },
-  'end': {
-    'dateTime': '2017-03-08T17:00:00-07:00',
-    'timeZone': 'America/Los_Angeles'
-  }
-};
-*/
-var newEvent = {
-  'summary': 'HELLO WORLD',
-  'start': {
-    'dateTime': '2017-03-08T13:00:00-07:00',
-  },
-  'end': {
-    'dateTime': '2017-03-08T15:00:00-07:00',
-  }
-};
+function listViewReload(res) {
+  console.log("Calling Post and Reload");
+}
 
 function insertEvent() {
   
-  //var summary = document.getElementById("GETTHISNAME").textContent;
-  var summary = $(".assignmentName#GETTHISNAME").text();
-  console.log("summary is: " + summary);
+  console.log("Inserting a New Event");
 
+  var summary = $("#GETTHISNAME").text(); //get the name of the assignment
+  var dueDate = $("#specificDueDate").text(); //get the due date of the assignment
+  var assignmentClass = $("#specificClass").text(); //get the name of the class the assignment is for
+  //removejicforposting to json var sections = $("#specificSections").text();
 
-  var request = gapi.client.calendar.events.insert({
-    'calendarId': 'sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com',
-    'resource': newEvent
-  });
+  //retrieve the month, day, and year specifically for organizing the date into proper order
+  var dueDateArrays = dueDate.split("/");
+  var month = dueDateArrays[0];
+  var day = dueDateArrays[1];
+  var year = dueDateArrays[2];
 
-  request.execute(function(event) {
-  });
+  //set the variable to be year-month-day
+  var startDate = year + "-" + month +"-" + day + "T13:00:00-07:00";
+  var endDate = year + "-" + month +"-" + day + "T15:00:00-07:00";
 
+  //make the event that will be inserted
+  var newEvent = {
+    'summary': summary,
+    'start': {
+      'dateTime': startDate,
+    },
+    'end': {
+      'dateTime': endDate,
+    }
+  };
 
-  //appendPre("Inserting...");
-/*
-  gapi.client.calendar.events.insert({
-      'calendarId': 'sk3u2tr3dhradfgd7t4j4ie690@group.calendar.google.com',
-      'resource': newEvent
-    }).then(function(response) {
-      appendPre("response: " + response);
-      var events = response.result.items;
-      appendPre("the events is: " + events + "\n");
-      appendPre('Upcoming events:');
+  var isNewCalendar = true;
 
-      if (events.length > 0) {
-        for (i = 0; i < events.length; i++) {
-          var event = events[i];
-          var when = event.start.dateTime;
-          if (!when) {
-            when = event.start.date;
+  /*
+  //Get list of calendar IDs
+  var calendarList = $(".calendarIDList").text();
+  console.log("calendarlist in js is: " + calendarList);
+
+  //set it into an array so that it can be accessed individually
+  var calendarArray = calendarList.split(",");
+
+  var isNewCalendar = true; //detects whether the calendar is a previous calendar of it we need to make a new one
+  var calIndex; //for getting the key if needed
+
+  //loops through the array of calendars and checks if there is an existing calendar of the event
+  for (var i = 0; i < calendarArray.length; i++) {
+    if (summary === calendarArray[i]) {
+      console.log(summary + " is equal to " + calendarArray[i]);
+      isNewCalendar = false;
+      calIndex = i;
+    } else {
+      console.log(summary + " is not equal to " + calendarArray[i]);
+    }
+  }
+  */
+  
+  //begin checking if we need to make a new calendar
+  var insertionCalendarID;
+
+  if (isNewCalendar) { //if we need to make a new calendar
+    console.log("Making new calendar");
+
+    //created a new calendar event 
+    var newCalendarEvent = {
+      'summary': summary,
+      'timeZone': 'America/Los_Angeles'
+    };
+
+    //insert the calendar
+    var calRequest = gapi.client.calendar.calendars.insert({
+    'resource': newCalendarEvent
+    });
+
+    calRequest.execute(function(event) { //execute the actual request for a new calendar
+
+      insertionCalendarID = event.id; //save the insertionCalendarID
+      console.log("the insertion id is: " + insertionCalendarID);
+
+      //insert the new event into this calendar
+      var request = gapi.client.calendar.events.insert({
+        'calendarId': insertionCalendarID,
+        'resource': newEvent
+      });
+
+      request.execute(function(event) { //executes the event insertion
+      });
+
+      //inserting all the sections belonging to the event
+      var sectionsList = $(".sectionsToInsert").text();
+      console.log("sectionsList to split apart!: " + sectionsList);
+
+      //gets a list of the names and times for each section
+      var listNames = $(".sectionNameInsert").text();
+      var listTimes = $(".sectionTimeInsert").text();
+      console.log("list name: " + listNames);
+      console.log("list times: " + listTimes);
+
+      //turns the list of names and times into array for each section
+      var sectionNameArray = listNames.split(",");
+      var sectionTimeArray = listTimes.split(",");
+
+      //iterate through the array of sections, minus the blank name after the last comma
+      for (var k = 0; k < sectionNameArray.length-1; k++) {
+        console.log(sectionNameArray[k]);
+        console.log(sectionTimeArray[k]);
+
+        //retrieve the name of the section in this iteration
+        var tempName = sectionNameArray[k];
+        var tempTime = sectionTimeArray[k];
+
+        //turn the date that the section is due into month, date, year for insertion
+        var sectionDateArray = tempTime.split("/");
+        var sectionmonth = sectionDateArray[0];
+        var sectionday = sectionDateArray[1];
+        var sectionyear = sectionDateArray[2];
+
+        //save the start date and end date to be inserted with the event
+        var sectionstartDate = sectionyear + "-" + sectionmonth +"-" + sectionday + "T13:00:00-07:00";
+        var sectionendDate = sectionyear + "-" + sectionmonth +"-" + sectionday + "T15:00:00-07:00";
+
+        console.log("sectionstart: " + sectionstartDate);
+        console.log("sectionend:" + sectionendDate);
+
+        //create the newSection variable to hold the details of the section
+        var newSection = {
+          'summary': tempName,
+          'start': {
+            'dateTime': sectionstartDate,
+          },
+          'end': {
+            'dateTime': sectionendDate,
           }
-          appendPre(event.summary + ' (' + when + ')')
-        }
-      } else {
-        appendPre('No upcoming events found.');
+        };
+
+        //create the request to insert the section
+        var sectionrequest = gapi.client.calendar.events.insert({
+          'calendarId': insertionCalendarID,
+          'resource': newSection
+        });
+
+        //insert the section in the calendar
+        sectionrequest.execute(function(event) {
+        });
+
       }
-    }); */
+
+      //FINISHED INSERTING ALL THE SECTIONS INTO THE NEW CALENDAR
+      //BEGIN PUSHING NEW DATA TO ALLCALENDAR AND CALENDARINFO JSON      
+      console.log("readin new calendar id: " + event.id);
+      console.log("the insertion id is: " + insertionCalendarID);
+
+      
+      var assignmentIndex = $(".assignmentID").text(); //gets the ID/index of the assignment selected
+      var sectionsArray = $(".assignmentSections").text(); //gets a list of sections 
+
+      //creates the variable to push to the array of all the calendars
+      var allCalendarPush = {};
+      allCalendarPush[summary] = insertionCalendarID;
+
+      console.log("all calendar push: " + allCalendarPush[summary]);
+
+      //creates the variable to push to the array of calendar info
+      var calendarInfoPush = {};
+      calendarInfoPush[summary] = {
+        'calendarid': insertionCalendarID
+      };
+      console.log("calendarinfo push: " + calendarInfoPush[summary].calendarid); 
+
+      //post to the listview and add the new calendar information to the JSON
+      $.post('../../listview/' + assignmentIndex + '/true', {id: assignmentIndex, name: summary, due_date: dueDate, class: assignmentClass, sections: sectionsArray, dataAllCal: allCalendarPush, dataCalInfo: calendarInfoPush}, listViewReload);
+      
+    });
+    
+  } 
+
+  //END INSERTION OF EVENT INTO NEW CALENDAR OR OLD CALENDAR
 
 }
 
@@ -176,6 +291,8 @@ function load(){
   document.getElementById($('.stepsCheckboxes').get(index).id).checked = checked;
   });
 }
+
+
 
 
 load();

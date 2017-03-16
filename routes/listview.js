@@ -6,103 +6,123 @@ var data = require('../data.json');
 
 exports.view = function(req, res){
   var idex = req.params.id;
-  console.log("the param isNew is: " + req.params.isNew);
-  var toBeInserted = (req.params.isNew === "true") ;
-  console.log("to be inserted is: " + toBeInserted);
-
-/*
-  console.log("body id: " + req.body.id);
-  console.log("body name: " + req.body.name);
-  console.log("body due date: " + req.body.due_date);
-  console.log("body class: " + req.body.class);
-  console.log("body sections: " + req.body.sections);
-  console.log("body 1sectionname: " + req.body.sections[0].section_name);
-  console.log("body 1sectionname: " + req.body.sections[0].section_time);
-*/
-
+  var toBeInserted = (req.params.isNew === "true");
+  var isRefreshingListView = false;
 
   var id = req.body.id;
   var name = req.body.name;
   var due_date = req.body.due_date;
   var class_name = req.body.class;
-  //var sections = req.body.sections;
+
+  //for reading new calendar data
+  var dataCalendarInfo;
+  if (req.body.dataCalInfo) {
+    isRefreshingListView = true;
+    dataCalendarInfo = req.body.dataCalInfo;
+    console.log("Previous Calendar Info: ");
+    console.log(data.calendarInfo);
+    console.log("Received New Calendar Info: " + dataCalendarInfo + " has : " + dataCalendarInfo[name].calendarid);
+    //data.calendarInfo[0].push(dataCalendarInfo);
+
+    var keyObj = Object.keys(dataCalendarInfo)[0];
+    data.calendarInfo[0][keyObj] = [dataCalendarInfo[keyObj]];
 
 
-  var sections = data.sectionsInfo;
+    console.log("complete information in calendar info: ");
+    console.log(data.calendarInfo);
+  } else {
+    console.log("no new calendar info");
+  }
+  var dataAllCalendars;
+  if (req.body.dataAllCal) {
+    isRefreshingListView = true;
+    dataAllCalendars = req.body.dataAllCal;
+    console.log("Previous All Calendar: ");
+    console.log(data.allCalendar[0].calendars);
+    console.log("Received New All Calendar: " + dataAllCalendars + " has: " + dataAllCalendars[name]);
+    (data.allCalendar[0].calendars).push(dataAllCalendars);
+    console.log("complete information in all calendar: ");
+    console.log(data.allCalendar[0].calendars);
+  } else {
+    console.log("no new all calendar");
+  }
   
+  //don't push to section arrays or into assignment if we are refreshing after pushing data into the calendar JSON arrays
+  if (!isRefreshingListView) {
+    var sections = data.sectionsInfo;
 
-  if (sections.length == 0)
-  {
-    var section_array = autosplitSections(due_date);
-  }
-
-  else {
-
-
-  var today = new Date();
-  var todayDay = today.getDate();
-  if (todayDay < 10)
-    todayDay = "0" + todayDay;
-
-  var todayMonth = today.getMonth()+1;
-  if (todayMonth < 10)
-    todayMonth = "0" + todayMonth;
-
-  var dateToday = {
-    day: parseInt(todayDay),
-    month: parseInt(todayMonth),
-    year: parseInt(today.getFullYear())
-  }
-
-  var todayDays = dateToNumber(dateToday);
-  /*console.log("today Days: "+todayDays);
-
-
-    console.log("sections: "+ sections);
-    console.log("section name: " + sections[0].section_name);
-    console.log(data.sectionsInfo);
-*/
-    var dateDif = dateDifference(due_date);
-    //console.log("Date difference: " + dateDif);
-    var num = 0;
-    for (i = 0; i < sections.length; i++) {
-       num++;
+    if (sections.length == 0)
+    {
+      var section_array = autosplitSections(due_date);
     }
-   // console.log("number sections: " + num);
-    var sectionDates = Math.floor(dateDif/num);
-    var section_array = [];
-    var section;
-    var sectionNum = todayDays;
-    var sectionDate;
-    for (j = 0; j < sections.length - 1; j++) {
-      sectionNum = sectionNum + sectionDates;
-      section = numberToDate(sectionNum);
 
-      section_array.push({section_name: sections[j].section_name, section_time: section});
- /*     console.log(section_array);
-      console.log("length: "+section_array.length);
-      console.log("first name: " + section_array[0].section_name);
-      console.log("first time: " + section_array[0].section_time);
-      */
+    else {
+
+
+    var today = new Date();
+    var todayDay = today.getDate();
+    if (todayDay < 10)
+      todayDay = "0" + todayDay;
+
+    var todayMonth = today.getMonth()+1;
+    if (todayMonth < 10)
+      todayMonth = "0" + todayMonth;
+
+    var dateToday = {
+      day: parseInt(todayDay),
+      month: parseInt(todayMonth),
+      year: parseInt(today.getFullYear())
     }
-    section_array.push({section_name: sections[j].section_name, section_time: due_date});
+
+    var todayDays = dateToNumber(dateToday);
+    /*console.log("today Days: "+todayDays);
 
 
-    data.sectionsInfo = [];
+      console.log("sections: "+ sections);
+      console.log("section name: " + sections[0].section_name);
+      console.log(data.sectionsInfo);
+  */
+      var dateDif = dateDifference(due_date);
+      //console.log("Date difference: " + dateDif);
+      var num = 0;
+      for (i = 0; i < sections.length; i++) {
+         num++;
+      }
+     // console.log("number sections: " + num);
+      var sectionDates = Math.floor(dateDif/num);
+      var section_array = [];
+      var section;
+      var sectionNum = todayDays;
+      var sectionDate;
+      for (j = 0; j < sections.length - 1; j++) {
+        sectionNum = sectionNum + sectionDates;
+        section = numberToDate(sectionNum);
 
+        section_array.push({section_name: sections[j].section_name, section_time: section});
+   /*     console.log(section_array);
+        console.log("length: "+section_array.length);
+        console.log("first name: " + section_array[0].section_name);
+        console.log("first time: " + section_array[0].section_time);
+        */
+      }
+      section_array.push({section_name: sections[j].section_name, section_time: due_date});
+
+
+      data.sectionsInfo = [];
+
+    }
+
+    var newAssignment = {
+      "id": id,
+      "name": name,
+      "due_date": due_date,
+      "class": class_name,
+      "sections": section_array
+    }
+
+    data.assignments.push(newAssignment);
   }
-
-  var newAssignment = {
-    "id": id,
-    "name": name,
-    "due_date": due_date,
-    "class": class_name,
-    "sections": section_array
-  }
-
-  data.assignments.push(newAssignment);
-
-  //console.log("new assignment in list: " + newAssignment);
+  
 
   res.render('listview', {
     'id': id,
@@ -110,14 +130,17 @@ exports.view = function(req, res){
     "due_date": due_date,
     "class": class_name,
     'section_name': section_array,
-    'isnew' : toBeInserted
+    'isnew' : toBeInserted,
+    //'listOfCalKeys' : keys,
+    //'listOfCalValues' : array,
+    'dataAllCalendars': data.allCalendar[0].calendars,
+    'dataCalendarInfo': data.calendarInfo[0]
   });
 };
 
 exports.defaultAssignment = function (req, res) {
   //var isNew = 0;
   var toBeInserted = (req.params.isNew === "true") ;
-	console.log("rendering default assignment with new: " + toBeInserted);
 	var idex = req.params.id;
   
 
@@ -129,6 +152,12 @@ exports.defaultAssignment = function (req, res) {
 
   //res.render( 'listview', data.assignments[idex]);
 
+  /*
+  var keys = Object.keys(data.allCalendar[0].calendars);
+  var array = [];
+  for (var i = 0; i < keys.length; i++) {
+    array.push(data.allCalendar[0].calendars[keys[i]]);
+  }*/
 
 	res.render('listview', {
     //'data': data.assignments[idex],
@@ -137,7 +166,11 @@ exports.defaultAssignment = function (req, res) {
     "due_date": due_date,
     "class": class_name,
     'sections': section_array,
-    'isnew' : toBeInserted
+    'isnew' : toBeInserted,
+    //'listOfCalKeys' : keys,
+    //'listOfCalValues' : array,
+    'dataAllCalendars': data.allCalendar[0].calendars,
+    'dataCalendarInfo': data.calendarInfo[0]
   });
 
 };
@@ -315,43 +348,6 @@ function dateDifference(due_date) {
 
   return dateDifference;
 }
-
-
-/*
-* GOOGLE CALENDAR API INSERTION 
-*/
-
-
-
-
-
-/*
- * END GOOGLE CALENDAR API INSERTION
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

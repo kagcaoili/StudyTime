@@ -18,7 +18,6 @@
 <body>
 	<header class="cd-main-header">
 		<a href="../../mainCalendar" class="cd-logo" style="color:powderblue">StudyTime</a> 
-<!--		<a href="#0" class="cd-logo"><img src="../images/cd-logo.svg" alt="Left-hand logo CHANGE"></a>  -->
 
 		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
 
@@ -58,7 +57,7 @@
 	        <br>
 			</div>
         <div class ="assignmentName">	
-        <center><id="GETTHISNAME">{{name}}
+        <center><div id="GETTHISNAME">{{name}}</div>
 <!--	    <a href="../createAssignment" class="button" id="mainEditButton">Edit</a>  -->
         </div>
 
@@ -85,34 +84,32 @@
         <br> 
 		
 		<div class ="dueDate">
-			<center><a href="#0"><id="dueDateWhole">Due Date: {{due_date}}</a>
+			<center><a href="#0"><div id="dueDateWhole">Due Date: <div id="specificDueDate">{{due_date}}</div></div></a>
 	    </div>
 
 	    <div class = "assignmentClass">
-	    	<center><a href="#0"><id="classWhole">Class: {{class}}</a>
+	    	<center><a href="#0"><id="classWhole">Class: <div id = "specificClass">{{class}}</div></a>
 	    </div>
-	    <!--
-{{#if "{{isnew}}"}}
-<div class = "assignmentClass">
-	    	gfhgyj
-	    </div>
-{{/if}} -->
+
+	    <div class="assignmentID" id = "hiddenClasses" style="display:none">{{id}}</div>
+	    <div class="assignmentSections" id ="hiddenClasses" style="display:none">{{sections}}</div>
+	    <div class="dataAllCalendars" id = "hiddenClasses" style="display:none">{{dataAllCalendars}}</div>
+	    <div class="dataCalendarInfo" id = "hiddenClasses" style="display:none">{{dataCalendarInfo}}</div>
+	    {{#each sections}}
+	    <div class="sectionNameInsert" id = "hiddenClasses" style="display:none" name="{{section_name}}">{{section_name}},</div>
+	    <div class="sectionTimeInsert" id = "hiddenClasses" style="display:none" name="{{section_time}}">{{section_time}},</div>
+	    {{/each}}
+
 		</div> <!-- .content-wrapper -->
 	</main> <!-- .cd-main-content -->
 
 <script src="../../js/jquery-2.1.4.js"></script>
-<!--<script src="../js/jquery.menu-aim.js"></script>-->
 <script src="../../js/main.js"></script> <!-- Resource jQuery -->
 <script src="../../js/assignmentList.js"></script>
 <script src="../../js/listview.js"></script>
 
-<!--<script async defer src="https://apis.google.com/js/api.js"</script>-->
-
 {{#if isnew}}
-<!--
-<script async defer src="https://apis.google.com/js/api.js"
-      onload="alert('work!');this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script> -->
+
       <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
