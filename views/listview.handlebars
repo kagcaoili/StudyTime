@@ -76,10 +76,20 @@
 	</div>
 
       	<div class ="ATCalendarView"> 
-            
+      			<center>
+                	<input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View">
+                </center>
+            	<!--{{#if isRefreshingListView}}
+            	Calendar is ready
                 <center><a href="../../calendarView/{{id}}">
                 	<input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View">
                 </a>
+                {{else}}
+                Calendar is not ready
+                <center>
+                	<input type= "button" id="SaveSubmitButton" value="Assignment Timeline Calendar View">
+                
+                {{/if}} -->
 		</div>
         <br> 
 		
@@ -113,6 +123,12 @@
       <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()"> </script>
+
+{{else}}
+
+	<script>
+	var submitButton = document.getElementById('SaveSubmitButton');
+  	submitButton.onclick = submitClick; </script>
 
 {{/if}}
 

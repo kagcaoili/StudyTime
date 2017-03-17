@@ -90,6 +90,14 @@ function listUpcomingEvents() {
 
 function listViewReload(res) {
   console.log("Calling Post and Reload");
+  var submitButton = document.getElementById('SaveSubmitButton');
+  submitButton.onclick = submitClick;
+}
+
+function submitClick(event) {
+  var stringSubmit = "../../calendarView/" + $(".assignmentID").text();
+  console.log("AAAAAstring submit is: " + stringSubmit);
+  window.location.href = stringSubmit;
 }
 
 function insertEvent() {

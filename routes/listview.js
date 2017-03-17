@@ -7,7 +7,7 @@ var data = require('../data.json');
 exports.view = function(req, res){
   var idex = req.params.id;
   var toBeInserted = (req.params.isNew === "true");
-  var isRefreshingListView = false;
+  data["isRefreshingListView"] = false;
 
   var id = req.body.id;
   var name = req.body.name;
@@ -17,7 +17,7 @@ exports.view = function(req, res){
   //for reading new calendar data
   var dataCalendarInfo;
   if (req.body.dataCalInfo) {
-    isRefreshingListView = true;
+    
     dataCalendarInfo = req.body.dataCalInfo;
     console.log("Previous Calendar Info: ");
     console.log(data.calendarInfo);
@@ -30,12 +30,14 @@ exports.view = function(req, res){
 
     console.log("complete information in calendar info: ");
     console.log(data.calendarInfo);
+
+    data["isRefreshingListView"] = true;
   } else {
     console.log("no new calendar info");
   }
   var dataAllCalendars;
   if (req.body.dataAllCal) {
-    isRefreshingListView = true;
+    
     dataAllCalendars = req.body.dataAllCal;
     console.log("Previous All Calendar: ");
     console.log(data.allCalendar[0].calendars);
@@ -43,12 +45,14 @@ exports.view = function(req, res){
     (data.allCalendar[0].calendars).push(dataAllCalendars);
     console.log("complete information in all calendar: ");
     console.log(data.allCalendar[0].calendars);
+
+    data["isRefreshingListView"] = true;
   } else {
     console.log("no new all calendar");
   }
   
   //don't push to section arrays or into assignment if we are refreshing after pushing data into the calendar JSON arrays
-  if (!isRefreshingListView) {
+  if (data["isRefreshingListView"] == false) {
     var sections = data.sectionsInfo;
 
     if (sections.length == 0)
