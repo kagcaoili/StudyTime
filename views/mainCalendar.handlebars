@@ -5,10 +5,15 @@
 
 {{else}}
 
-
-<!--Google Analytics Content Experiment code --> 
+<!-- <<<<<<<<< HEAD
 <script>function utmx_section(){}function utmx(){}(function(){var
+k='141859870-1',d=document,l=d.location,c=d.cookie;
+=======
+
+<!-Google Analytics Content Experiment code -->
+<!--<script>function utmx_section(){}function utmx(){}(function(){var
 k='141859870-2',d=document,l=d.location,c=d.cookie;
+>>>>>>> 3802c6f71a8013f1e90b7f3beefc60eadc3667cd
 if(l.search.indexOf('utm_expid='+k)>0)return;
 function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
 indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
@@ -18,7 +23,11 @@ length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
 '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
 valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+<<<<<<< HEAD
+</script><script>utmx('url','A/B');</script>
+=======
 </script><script>utmx('url','A/B');</script> 
+>>>>>>> 3802c6f71a8013f1e90b7f3beefc60eadc3667cd-->
 <!-- End of Google Analytics Content Experiment code -->
 
 {{/if}}
